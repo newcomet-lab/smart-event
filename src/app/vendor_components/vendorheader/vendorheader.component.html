@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default" style="background-color: white; margin-bottom: 0px; box-shadow: 1px 1px 5px #888888;">
+  <div class="container-fluid">
+    <div class="navbar-header rom-header">
+      <h1>
+        <a class="logo" href="/" style="background: url('assets/images/testlogo.png') no-repeat center;" >MKG</a>
+        <span class="site-title">
+            FANTHY FRUTY <p></p>FEATURES
+        </span>
+      </h1>
+    </div>
+    <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 25px;  margin-left: 30px;">
+      <li><a [routerLink]="['/vendor/storefront']">Dashboard</a></li>
+      <li><a href="#">Find Customers</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Booking</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Messages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+            <div>
+              <a href="#">Messages</a>
+            </div>
+          </li>
+          <li class="menuitem-body" style="height: 60px;">
+            <div>
+              <a href="#">Invoices</a>
+            </div>
+          </li>
+          <li class="menuitem-body" style="height: 60px;">
+            <div>
+              <a href="#">Chat</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav firstheaderright" style="float: right; margin-top: 20px;">
+      <li><a href="#"><span><i class="fa fa-question" aria-hidden="true"></i></span></a></li>
+      <li><a href="#"><span><i class="fa fa-bell-o" aria-hidden="true"></i></span></a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span><img src="assets/images/marktim.png" alt="my-image" class="circular-image" /></span>&nbsp;&nbsp;Tim Mark <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        <ul class="dropdown-menu profileitem" style="border-color: #e0e0e0; border-width: 2px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px;margin-top: -8px;">
+            <div class="btn-group myradio" style="width: 100%;">
+              <label class="btn btn-success" [(ngModel)]="memberstatus" btnRadio="online" uncheckable>Online</label>
+              <label class="btn btn-success" [(ngModel)]="memberstatus" btnRadio="invisible" uncheckable>Invisible</label>
+            </div>
+          </li>
+          <li class="profileitem-body" style="height: 130px;">
+            <div style="float: left;">
+                <img src="assets/images/marktim.png" alt="my-image" class="mitem-circular-image" />
+            </div>
+            <div style="float: right; padding-top: 16px;" class="namewithtype">
+                  <a href="#" style="color: #cebd35;">Tim Mark</a>
+                  <h6>Vendor</h6>
+                  <div class="profile_progress">
+                    <progressbar class="progress progress-striped" [value]="62" [max]="100" type="warning">Profile Status : 62%</progressbar>
+                  </div>
+            </div>
+          </li>
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+            <div style="float: left;">
+                <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-cog" aria-hidden="true"></i>
+            </div>
+            <div style="float: right; margin-top: 1px; margin-right: 40px;" class="settingtitle">
+                <a [routerLink]="['/vendor/setting']" style="margin-right: 160px;">Setting</a>
+            </div>
+          </li>
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+            <div style="float: left;">
+                <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-bullseye" aria-hidden="true"></i>
+            </div>
+            <div style="float: right; margin-top: 1px; margin-right: 40px;" class="viewfronttitle">
+                <a [routerLink]="['/']" style="margin-right: 95px;">View Frontend</a>
+            </div>
+          </li>
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+            <div style="float: left;">
+                <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-sign-out" aria-hidden="true"></i>
+            </div>
+            <div style="float: right; margin-top: 1px; margin-right: 40px;" class="signouttitle">
+                <a href="#" style="margin-right: 157px;" (click)="logout()">SignOut</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

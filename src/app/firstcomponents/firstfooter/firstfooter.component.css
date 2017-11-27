@@ -1,0 +1,76 @@
+.firstfootersec{
+  background-color: gray;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+.companyinfo_title{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.companyinfo_body{
+    color: white;
+    font-size: 18px;
+    line-height: 15px;
+    margin-top: 40px;
+}
+.quicklink_title{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.quicklink_body{
+    color: white;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 33px;
+}
+.quicklink_body a{
+    color: white;
+    text-decoration-line: none;
+}
+.contactus_title{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+}
+.contactus_body{
+    color: white;
+    font-size: 18px;
+    line-height: 15px;
+    margin-top: 40px;
+}
+.socialspan{
+    background: white;
+    border-color: #c5cac8;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.facebookbtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.googlebtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.twitterbtn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.youtube{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.lasttext{
+  text-align: center; color: white;
+}

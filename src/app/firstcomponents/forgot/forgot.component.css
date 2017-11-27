@@ -1,0 +1,9 @@
+.noticeforgot{
+    border-radius: 5px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 100%;  
+    background: #f2fafd;
+    text-align: center; 
+    margin-bottom: 50px;
+}

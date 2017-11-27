@@ -1,0 +1,48 @@
+﻿<first-navbar></first-navbar>
+<div class="container ">
+  <section class="lspanel">
+    <header id="lstitle">
+          <h1>Sign in and get to Work</h1>
+    </header>
+    <form id="block" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <div class="avatar-box">
+            <img class="avatar" [src]="LOGO" />
+        </div>
+
+        <p style="height: 60px;"></p>
+
+        <alert></alert>
+        <p></p>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <input placeholder="&#xf007;   Email or Phone" type="email" class="form-control lsinputs" name="email" [(ngModel)]="model.email" #email="ngModel" required />
+            <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <input placeholder="&#xf084;   Password" type="password" class="form-control lsinputs" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+        <div class="form-group">
+            <input style="width: 15px; height: 15px; display: -webkit-inline-box;" type="checkbox" class="form-control" name="remember" id="remember" [(ngModel)]="model.remember" #remember="ngModel" />
+            <label style="color: #717679;" for="remember">Remember Password</label>
+        </div>
+        <div class="form-group" style="text-align: center;">
+            <button [disabled]="loading" class="lsbutton">Sign in</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <p></p>
+
+            <!--button class="loginBtn loginBtn--google" (click)="loginWithGoogle()">
+              Login with Google
+            </button-->
+            
+        </div>
+        <button class="forgotbutton" (click)="gotoForgot()">Forgot Password</button>
+        <div id="newregister">
+            <h3>Not a Member yet?</h3>
+            <a [routerLink]="['/register']" class="btn btn-link">Create an Account</a>
+        </div>
+    </form>
+  </section>
+</div>
+<first-footer></first-footer>

@@ -1,0 +1,19 @@
+﻿<div class="container" style="width: 100%;">
+    <div class="col-md-8">
+        <div *ngFor="let cditem of chartData" class="col-md-6" style="height: 200px;">
+            <chartpanel [title]="cditem.title"
+                        [money]="cditem.money"
+                        [percent]="cditem.percent"
+                        [arrow]="cditem.arrow"
+                        [day]="cditem.day"
+                        [pcolor]="cditem.pcolor"
+                        [arrowflag]=cditem.arrowflag>
+            </chartpanel>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="col-md-12" style="height: 800px;">
+            <livepanel></livepanel>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+.rom-header h1 {
+    margin-left: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.75rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.rom-header h1 span {
+    color: #edda38;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    margin-top: -15px;
+}
+.rom-header h1 .logo {
+    text-indent: -119988px;
+    overflow: hidden;
+    background-size: contain;
+    width: 150px;
+    margin-right: 5px;
+    color: white;
+    text-decoration-line: none;
+}
+.firstheaderleft li a{
+    font-size: 20px;
+    color: #525050;
+    font-family: sans-serif;
+}
+.firstheaderright li a{
+    font-size: 20px;
+    color: #525050;
+    font-family: sans-serif;
+}
+
+
+.header-cta-feh {
+    position: relative;
+    top: -1px;
+    line-height: 22px;
+}
+
+.rbtn {
+    padding: 8px 38px;
+}
+.rbtn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 2px solid transparent;
+    white-space: nowrap;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.rbtn-default {
+    color: #37a000;
+    background-color: transparent;
+    border-color: #e0e0e0;
+}
+.rbtn-default:hover {
+    color: #ecda38;
+    background-color: transparent;
+    border-color: #ecda38;
+}

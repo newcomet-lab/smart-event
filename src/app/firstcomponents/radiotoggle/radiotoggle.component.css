@@ -1,0 +1,9 @@
+.myradio
+{
+    width: 100%;
+}
+.myradio .btn{
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+}

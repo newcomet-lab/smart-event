@@ -1,0 +1,108 @@
+﻿<first-navbar></first-navbar>
+<mslider></mslider>
+<div class="container landingbody ">
+	<div class="searchbox">
+		<div class="col-md-3 col-sm-3 col-xs-12 vendordropdown">
+			<select class="form-control" name="event_category" id="event_category">
+				<option value="">SELECT EVENT</option>
+				<option value="77">Aso-ebi Suppliers</option>
+				<option value="74">Beads/Accessories</option>
+				<option value="89">Bridal/Groom Wear</option>
+			</select>
+		</div>	
+		<div class="col-md-3 col-sm-3 col-xs-12 vendordropdown">
+			<select class="form-control" name="location_list" id="location_list">
+				<option value="">SELECT LOCATION</option>
+				<option value="Abia">Abia</option>
+				<option value="Abuja Federal Capital Territory">Abuja Federal Capital Territory</option>
+				<option value="Adamawa">Adamawa</option>
+				<option value="Akwa Ibom">Akwa Ibom</option>
+			</select>
+		</div>	
+		<div class="col-md-3 col-sm-3 col-xs-12 vendordropdown">
+			<input class="form-control" type="number" name="estimate_budget" id="estimate_budget" placeholder="ESTIMATE BUDGET" />
+		</div>
+		<div class="col-md-3 col-sm-2 col-xs-12">
+			<input class="form-control" type="hidden" name="search" value="" placeholder="Search">
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default searchbtn"> SEARCH </button>	
+			</span>
+		</div>
+	</div>
+	<div class="reviews_list">
+		<h1 class="reviews_title">Recently Reviewed Events/Vendors</h1>
+		<div *ngFor="let rwitem of reviewData" class="col-md-4">
+				<reviewcard [contents]="rwitem.contents"
+	                        [rating]="rwitem.rating"
+	                        [image]="rwitem.image">
+	            </reviewcard>
+		</div>
+		<div class="review_more" style="text-align: center;">
+			<button type="button" class="btn btn-default">View All</button>
+		</div>
+	</div>
+</div>
+<div class="how_it_work">
+	<h1 class="how_it_work_title">Special Features</h1>
+	<div class="container hiworkbody">
+		<div *ngFor="let hiitem of hiworkData" class="col-md-4">
+				<hiworkcard [contents]="hiitem.contents"
+	                        [title]="hiitem.title"
+	                        [image]="hiitem.image">
+	            </hiworkcard>
+		</div>
+	</div>
+</div>
+<div class="progressing">
+	<h1 class="progressing_title">How it Works</h1>
+	<div class="container progressingbody">
+		<div class="col-md-3">
+			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<h2 class="protitle">Select Event</h2>
+			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
+		</div>
+		<div class="col-md-3">
+			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<h2 class="protitle">Find Vendor Matching Budget</h2>
+			<h4 class="procontents" style="margin-top: 17px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
+		</div>
+		<div class="col-md-3">
+			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<h2 class="protitle">Hire Vendor</h2>
+			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
+		</div>
+		<div class="col-md-3">
+			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<h2 class="protitle">Give Feedback</h2>
+			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
+		</div>
+	</div>
+	<div class="container wocutstomersays">
+		<div class="col-md-6 customerstitle">
+			<h2>What Our Customer Says:</h2>
+			<h4>lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum</h4>
+		</div>
+		<div class="col-md-6">
+			<iframe style="border-style: unset;" width="100%" height="300px"
+			src="https://www.youtube.com/embed/XGSy3_Czz8k">
+			</iframe>
+		</div>
+	</div>
+</div>
+<div class="partnerlogos">
+	<div class="container partnerbody">
+		<div class="col-md-3">
+			<img class="companylogo" src="/assets/images/company1.png" alt=""/>
+		</div>
+		<div class="col-md-3">
+			<img class="companylogo" src="/assets/images/company1.png" alt=""/>
+		</div>
+		<div class="col-md-3">
+			<img class="companylogo" src="/assets/images/company1.png" alt=""/>
+		</div>
+		<div class="col-md-3">
+			<img class="companylogo" src="/assets/images/company1.png" alt=""/>
+		</div>
+	</div>
+</div>
+<first-footer></first-footer>

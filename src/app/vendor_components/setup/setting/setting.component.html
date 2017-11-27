@@ -1,0 +1,271 @@
+﻿<div class="container" style="margin-top: 70px;">
+
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	  <h4>Billing</h4>
+	  	<button class="tablinks" (click)="openTabPage($event, 'billingmethods')">Billing Methods</button>
+	  <h4>User Settings</h4>
+	  <button class="tablinks" (click)="openTabPage($event, 'planprice')" id="defaultOpen">Plans & Placing</button>
+	  <button class="tablinks" (click)="openTabPage($event, 'contactinfo')">Contact Info</button>
+	  <button class="tablinks" (click)="openTabPage($event, 'myprofile')">My Profile</button>
+	</div>
+
+	<div id="billingmethods" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h3>Billing Method</h3>
+	  <p>London is the capital city of England.</p>
+	</div>
+
+	<div id="planprice" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h2>Plans & Pricing</h2>
+	  <div class="planprice-body">
+	  	<div class="planprice-body-title">
+	  		<span class="pbt-title">Select Plans and Location</span>	
+	  		<span>
+	  			<a (click)="peditor_flag=true" class="btn btn btn-default btn-sm editbtn"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;Edit</a>
+	  		</span>
+	  	</div>
+	  	<div class="planprice-body-contents">
+	  		<div class="plan-current-status">
+	  			<label>Business Category</label><span style="margin-left: 150px;">Birthday Event</span>
+	  			<p></p>
+	  			<label>Location</label><span style="margin-left: 223px;">Canada Montreal</span>
+	  			<p></p>
+	  		</div>
+	  		<div class="plan-editors" [hidden]="!peditor_flag">
+	  			<span class="pe-title">Business Category</span><br/>
+	  			<select class="pe-selectbox">
+	  				<option>Holiday Event</option>
+	  				<option>Birthday Event</option>
+	  				<option>Western Romeu Day</option>
+	  				<option>Lacktern Day</option>
+	  			</select>
+	  			<p style="margin-top: 20px;"></p>
+	  			<span class="pe-title">Location</span><br/>
+	  			<select class="pe-selectbox">
+	  				<option>US Los Angeles</option>
+	  				<option>Canada Montreal</option>
+	  				<option>UK London</option>
+	  				<option>China Beijing</option>
+	  			</select>
+	  			<p style="margin-top: 20px;"></p>
+	  			<span>
+		  			<a  (click)="peditor_flag=true" class="btn btn btn-default btn-sm doeditbtn">Update</a>
+		  		</span>
+	  			<a class="btn canceldeit" (click)="peditor_flag=false">cancel</a>
+	  		</div>
+	  	</div>
+	  </div>
+	  <!-- pricing -->
+	  <div class="pricing-body">
+	  	<div class="pricing-body-title">
+	  		<span class="pr-title">Select Pricing</span>
+	  	</div>
+	  	<div class="pricing-body-contents">
+	  		<div class="pricing-current-status">
+	  			<label style="float: left;">Business Category</label><span style="float: right; ">Birthday Event</span>
+	  		</div>
+	  		<div class="pricing-current-status">
+	  			<label style="float: left;">Location</label><span style="float: right; ">Canada Montreal</span>
+	  		</div>
+	  		<div class="btn-group" style="margin-left: 63px;">
+		  		<div class="pricing-table">
+		  			<table>
+		  				<thead>
+		  					<tr>
+		  						<th class="pricinglevel pricing-categories">Each option includes access to each Priority quality opposite</th>
+		  						
+		  						<th class="pricinglevel pricing-basic">
+		  							<div class="ppb-title">
+			  							<h2>Basic</h2>
+			  							<h5>the essentials to find them.</h5>
+			  						</div>
+			  						<div class="ppb-body">
+			  							<h4>FREE</h4>
+		  								<label (click)="this.model.pricingval=radioModel" class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="basic">Select</label>
+		  							</div>
+		  						</th>
+		  						<th class="pricinglevel pricing-pro">
+		  							<div class="ppb-title">
+			  							<h2>Professional</h2>
+			  							<h5>Professional talent, pre-vetted and handpicked for you.</h5>
+		  							</div>
+		  							<div class="ppb-body">
+			  							<h4>$49.99/month</h4>
+			  							<label (click)="this.model.pricingval=radioModel" class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="professional">Select</label>
+			  						</div>
+		  						</th>
+		  						<th class="pricinglevel pricing-premium">
+		  							<div class="ppb-title">
+			  							<h2>Premium</h2>
+			  							<h5>End-to-end Management System.</h5>
+			  						</div>
+			  						<div class="ppb-body">
+			  							<h4>$99.99/month</h4>
+			  							<label (click)="this.model.pricingval=radioModel" class="btn btn-primary" [(ngModel)]="radioModel" btnRadio="premium">Select</label>
+			  						</div>
+		  						</th>
+		  						
+		  					</tr>
+		  				</thead>
+		  				<tbody>
+		  					<tr>
+		  						<th class="pr-each-detail">item1</th>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  					</tr>
+		  					<tr>
+		  						<th class="pr-each-detail">item1</th>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  					</tr>
+		  					<tr>
+		  						<th class="pr-each-detail">item1</th>
+		  						<td class="pr-each-status"></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  					</tr>
+		  					<tr>
+		  						<th class="pr-each-detail">item1</th>
+		  						<td class="pr-each-status"></td>
+		  						<td class="pr-each-status"></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  					</tr>
+		  					<tr>
+		  						<th class="pr-each-detail">item1</th>
+		  						<td class="pr-each-status"></td>
+		  						<td class="pr-each-status"></td>
+		  						<td class="pr-each-status"><i class="fa fa-check" aria-hidden="true"></i></td>
+		  					</tr>
+		  				</tbody>
+		  			</table>
+		  		</div>
+	  		</div>
+	  	</div>
+	  </div>
+
+	  <!-- checkout -->
+
+	  <div class="checkout-body">
+	  	<div class="checkout-body-title">
+	  		<span class="ck-title">Check Out</span>
+	  	</div>
+	  	<div class="checkout-body-contents">
+	  		<div class="diagram">
+		  		<svg height="100" width="800">
+				  <polygon points="0,0 0,100 100,100 200,50 100,0" class="progress-arrived"/>
+				  <polygon points="100,0 200,50 100,100 300,100 400,50 300,0" class="progress-arrived"/>
+				  <polygon points="300,0 400,50 300,100 500,100 600,50 500,0" class="progress-going"/>
+				  <polygon points="500,0 600,50 500,100 700,100 800,50 700,0" class="progress-going"/>
+				</svg>
+				<div class="dtitles">
+					<span class="d-title packagestep">Select Package</span>
+					<span class="d-title pricingstep">Select Pricing</span>
+					<span class="d-title checkoutstep">Check Out</span>
+					<span class="d-title confirmationstep">Confirmation</span>
+				</div>
+			</div>
+			<div class="checkout-mainbody">
+				<form name="form" (ngSubmit)="f.form.valid && doCheckout()" #f="ngForm" novalidate>
+
+					<div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !pricingval.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Pricing</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" name="pricingval" [(ngModel)]="model.pricingval" #pricingval="ngModel" required readonly />
+			            	<div *ngIf="f.submitted && !pricingval.valid" class="help-block">Pricing is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a pageScroll [pageScrollDuration]="200" href=".pricing-body" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+			        <div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !b_category.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Business Category</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" name="b_category" [(ngModel)]="model.b_category" #b_category="ngModel" required readonly />
+			            	<div *ngIf="f.submitted && !b_category.valid" class="help-block">Business Category is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a pageScroll [pageScrollDuration]="200" href=".planprice-body" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+			        <div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !b_location.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Location</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" name="b_location" [(ngModel)]="model.b_location" #b_location="ngModel" required readonly />
+			            	<div *ngIf="f.submitted && !b_location.valid" class="help-block">Location is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a pageScroll [pageScrollDuration]="200" href=".planprice-body" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+			        <div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !b_name.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Business Name</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" id="b_name" name="b_name" [(ngModel)]="model.b_name" #b_name="ngModel" required />
+			            	<div *ngIf="f.submitted && !b_name.valid" class="help-block">Business Name is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a (click)="changestatus(rdstatus[0].val , 0)" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+			        <div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !b_phone.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Business Phone Number</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" id="b_phone" name="b_phone" [(ngModel)]="model.b_phone" #b_phone="ngModel" required />
+			            	<div *ngIf="f.submitted && !b_phone.valid" class="help-block">Business Phone Number is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a (click)="changestatus(rdstatus[1].val , 1)" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+			        <div style="" class="form-group checkout-fg" [ngClass]="{ 'has-error': f.submitted && !postal_code.valid }">
+			            <div class="col-xs-3" style="margin-top: 15px;">
+			            	<label >Postal Code Number</label>
+			            </div>
+			            <div class="col-xs-5" style="margin-top: 5px;">
+			            	<input type="text" class="form-control checkout-widgets" id="postal_code" name="postal_code" [(ngModel)]="model.postal_code" #postal_code="ngModel" required />
+			            	<div *ngIf="f.submitted && !postal_code.valid" class="help-block">Postal Code is required</div>
+			            </div>
+			            <div class="col-xs-4" style="margin-top: 7px;">
+			            	<a (click)="changestatus(rdstatus[2].val , 2)" class="btn btn-default btn-circle btn-sm checkout-edit"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+			            </div>
+			        </div>
+
+			        <div class="form-group" style="text-align: left; margin-top: 50px;">
+			            <button [disabled]="loading" class="btn btn btn-default btn-sm docheckoutbtn">CheckOut</button>
+			            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+			            <p></p>
+
+			            <!--button class="loginBtn loginBtn--google" (click)="loginWithGoogle()">
+			              Login with Google
+			            </button-->
+			            
+			        </div>
+				</form>
+			</div>
+	  	</div>
+	  </div>
+
+	</div>
+
+	<div id="contactinfo" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h3>Contact Info</h3>
+	  <p>Paris is the capital of France.</p> 
+	</div>
+
+	<div id="myprofile" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h3>My Profile</h3>
+	  <p>Tokyo is the capital of Japan.</p>
+	</div>
+
+</div>

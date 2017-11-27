@@ -1,0 +1,36 @@
+.slidertitle{
+	color: white;
+	margin-left: 550px;
+}
+.carousel-caption{
+	top: 150px;
+    left: -800px;
+}
+.slidermtitle{
+	    margin-left: 690px;
+	    color: white;
+}
+.slidermmtitle{
+	    margin-left: 365px;
+	    color: white;
+}
+.slidebm{
+	color: black;
+    background-color: white;
+    border-color: #c7c3c3;
+    font-size: large;
+    height: 50px;
+    width: 200px;
+    margin-left: 320px;
+    margin-top: 10px;
+}
+.slidecu{
+	color: black;
+    background-color: #ecda38;
+    border-color: #c5b630;
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+}

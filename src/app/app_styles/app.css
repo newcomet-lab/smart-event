@@ -1,0 +1,591 @@
+body{
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+.form-group {
+    margin-bottom: 25px;
+}
+.main-header {
+    background: #292940;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 11;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#lspanel{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+#block{
+    position: relative;
+    padding: 4.375rem 6.125rem 2.25rem 6.125rem;
+    max-width: 480px;
+    margin: 0 auto;
+    overflow: visible;
+
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+    border-radius: 3px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+#lstitle{
+    margin: 15.5rem 0 7.5rem;
+}
+#lstitle h1{
+    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 3.55rem;
+    text-align: center;
+}
+.avatar-box {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #FFFFFF;
+}
+.avatar{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.lsinputs{
+
+
+    padding: 0.5rem 0.75rem;
+    font-size: 1.5rem;
+    font-family:Arial, FontAwesome;
+    color: #33334F;
+    vertical-align: middle;
+    border: 1px solid #ebeef9;
+    width: 100%;
+    height: 45px;
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+.lsbutton:hover {
+    background: #2a69ff;
+    border-bottom: 2px solid #0750ff;
+}
+
+.lsbutton {
+    width: 100%;
+    font-size: 1.125rem;
+}
+
+.lsbutton {
+    padding: 0.625rem 0.9375rem 0.5rem 0.9375rem;
+    margin: 0;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1.9rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #5386FF;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 3px;
+    display: inline-block;
+    border-bottom: 2px solid #2a69ff;
+    height: 40px;
+}
+
+.forgotbutton:hover {
+    background: #f75b11;
+    border-bottom: 2px solid #da5517;
+}
+
+.forgotbutton {
+    width: 100%;
+    font-size: 1.125rem;
+}
+
+.forgotbutton {
+    padding: 0.625rem 0.9375rem 0.5rem 0.9375rem;
+    margin: 0;
+    font-family: "proxima-nova", "Proxima Nova", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-size: 1.9rem;
+    text-align: center;
+    color: #FFFFFF;
+    background: #f75b11;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 3px;
+    display: inline-block;
+    border-bottom: 2px solid #f75b11;
+    height: 40px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+
+#newregister{
+    border-radius: 5px;
+    border: 2px solid #73AD21;
+    padding: 20px; 
+    width: 100%;
+    height: 150px;   
+    background: #fdf2f2;
+    text-align: center; 
+    margin-bottom: 50px;
+}
+
+
+
+.main-header h1 {
+    margin-left: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.75rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.main-header h1 span {
+    color: #C3C3E6;
+    font-size: 1rem;
+    font-weight: 300;
+    position: relative;
+    top: 3px;
+}
+.main-header h1 .logo {
+    text-indent: -119988px;
+    overflow: hidden;
+    background-size: contain;
+    width: 150px;
+    margin-right: 5px;
+    color: white;
+    text-decoration-line: none;
+}
+
+
+.staticnav {
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  margin: 8px 22px 8px 22px;
+  overflow: hidden;
+
+}
+
+  .staticnav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+    .staticnav ul li {
+      display: inline-block;
+      list-style-type: none;
+      
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; 
+    }
+      
+      .staticnav > ul > li > a > .caret {
+        border-top: 4px solid #aaa;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+  
+        -webkit-transition: color 0.1s linear;
+          -moz-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+          transition: color 0.1s linear; 
+      }
+
+      .staticnav > ul > li > a {
+        color: #aaa;
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+
+        .staticnav > ul > li:hover {
+          background-color: rgb( 40, 44, 47 );
+        }
+
+        .staticnav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+
+        .staticnav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+      
+      .staticnav > ul > li > div {
+        background-color: rgb( 40, 44, 47 );
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 165px;
+        visibility: hidden;
+  
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+
+        .staticnav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+
+          .staticnav > ul > li > div ul > li {
+            display: block;
+          }
+
+            .staticnav > ul > li > div ul > li > a {
+              color: #fff;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+
+              .staticnav > ul > li > div ul > li:hover > a {
+                background-color: rgba( 255, 255, 255, 0.1);
+              }
+
+
+
+.dynamic-attr{
+    right: 0;
+    left: 0;
+    z-index: 10;
+    border-radius: 0px;
+}
+.navfixed{
+    margin:0;
+    top:0;
+    position: fixed;
+}
+.staticpos{
+    
+}
+.static-attr{
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    position: fixed;
+    background-color: #1164d2;
+    margin-top: -50px;
+}
+.navbar-nav{
+    float: right;
+}
+
+.table-wrapper {
+    border: 1px solid #ebeef9;
+    border-bottom: none;
+    margin-bottom: 1.125rem;
+    overflow: scroll;
+}
+
+.table-master-header {
+    background-color: #FFFFFF;
+    padding-left: 0.75rem;
+    position: relative;
+    border-bottom: 1px solid #ebeef9;
+}
+
+.table-new {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table-new tbody {
+    background-color: white;
+    border-bottom: 1px solid #ebeef9;
+}
+
+.table-new thead {
+    background-color: #F8FAFF;
+    border-bottom: 1px solid #ebeef9;
+}
+
+.table-new tr:last-child {
+    border-bottom: none;
+}
+
+.table-new tr {
+    border-bottom: 1px solid #ebeef9;
+}
+
+.table-new th {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.625rem 0.75rem 0.5rem;
+}
+
+.table-new th, .table-new td {
+    text-align: left;
+    padding: 0.625rem 0.75rem;
+    color: #767EAD;
+    font-size: 0.875rem;
+}
+.tablesorter-header-inner {
+    display: inline-block;
+}
+.table-new th.tablesorter-headerDesc i {
+    opacity: 1;
+}
+
+.table-new th i {
+    opacity: 0;
+    width: 14px;
+    height: 13px;
+    border: 1px solid;
+    border-radius: 3px;
+    position: relative;
+    margin-left: 0.375rem;
+    color: #33334F;
+    top: -2px;
+    display: inline-block;
+    vertical-align: top;
+}
+.table-new td.black {
+    color: #646473;
+    font-size: 1.4rem; 
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.table-new td.green {
+    color: #12C457;
+    font-size: 1.4rem; 
+    line-height: 40px;
+}
+
+.table-new td.blue {
+    color: #227cda;
+    font-size: 1.4rem;
+    line-height: 40px;
+    font-weight: 700;
+
+}
+.table-new td.blue a {
+    text-decoration: none;
+}
+
+.table-new td {
+    vertical-align: middle;
+}
+
+.table-new th, .table-new td {
+    text-align: left;
+    padding: 0.625rem 0.75rem;
+    color: #767EAD;
+    font-size: 1.2rem;
+}
+
+.table-new th.tablesorter-headerAsc i:before {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.table-new th i:before {
+    left: 2px;
+}
+.table-new th.tablesorter-headerAsc i:after {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.table-new th i:after {
+    right: 2px;
+}
+.table-new th i:before, .table-new th i:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 1px;
+    background-color: #292940;
+    bottom: 5px;
+}
+.table-master-header h3 {
+    line-height: 50px;
+    font-size: 2.25rem;
+    margin: 0;
+    font-weight: 700;
+}
+.managepan{
+    margin-top: 50px;
+    height: 60px;
+}
+
+
+
+    .daterangepicker {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+        font-size: 14px;
+    }
+    .hidden {
+        display: none;
+        visibility: false;
+    }
+    @media (min-width: 450px) {
+        .daterangepicker {
+            z-index: 3000;
+            border-radius: 4px;
+            box-shadow: 0px 2px 2px 2px #888888;
+            max-width: 450px;
+            min-width: 450px;
+        }
+    }
+    @media (max-width: 450px) {
+        .daterangepicker {
+            z-index: 3000;
+            border-radius: 4px;
+            box-shadow: 0px 2px 2px 2px #888888;
+            max-width: 270px;
+        }
+        .text-center .pull-right {
+            float: none !important;
+        }
+        .ranges{
+            display: none;
+        }
+    }
+ 
+    .daterangepicker .calendar {
+        margin: 4px;
+        float: left;
+        border-radius: 4px !important;
+    }
+    .applyBtn{
+        margin: 4px;
+    }
+    .daterangepicker  .flush {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .daterangepicker  .flush-bottom{
+        padding-bottom: 0 !important;
+    }
+    .daterangepicker  .flush-left {
+        padding-left: 0 !important;
+    }
+    .daterangepicker  .flush-right {
+        padding-right: 0 !important;
+    }
+    .daterangepicker  .flush-half--left {
+        padding-left: 4px !important;
+    }
+    .daterangepicker .flush-half--right {
+        padding-right: 4px !important;
+    }
+    .daterangepicker .nudge-top {
+        top: 5px;
+    }
+    .daterangepicker th {
+        margin: 1px !important;
+        padding: 1px !important;
+        text-align: center;
+        border-radius: 4px !important;
+    }
+    .daterangepicker td {
+        font-size: 14px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        padding: 2px !important;
+        margin: 1px !important;
+        border-radius: 4px !important;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .daterangepicker .btn.btn-flat {
+        border: none;
+        background: transparent;
+        margin: 3px !important;
+        padding: 1px !important;
+    }
+    .daterangepicker .off {
+        color: #A2A2A2;
+    }
+    .daterangepicker table {
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    .daterangepicker td,
+    .daterangepicker th {
+      padding: 0;
+    }
+    .daterangepicker .clickable{
+        cursor: pointer;
+    }
+    .daterangepicker .clickable-link{
+        color: #337ab7;
+    }
+    .daterangepicker .clickable.disabled{
+        pointer-events: none;
+        color: #A2A2A2;
+    }
+    .daterangepicker label{
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .daterangepicker .btn-link {
+        padding: 1px 6px 1px 6px !important;
+    }

@@ -1,0 +1,114 @@
+.inquires{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	margin-bottom: 50px;
+}
+.inquires-headlogo{
+	text-align: center;
+}
+.inquires-headlogo i{
+	font-size: 150px;
+    color: #8a9e75;
+}
+.inquires-title{
+	text-align: center;
+    background-color: #e4e4e4;
+    padding: 5px;
+    border-radius: 4px;
+    color: #899e74;
+}
+.inquires-title h3{
+	font-size: 30px;
+	font-weight: 700;
+}
+.inquires-status .updated-date{
+	font-style: oblique;
+}
+.inquires-status .updated-totalnum h4{
+	text-align: center;
+    color: #8a9e75;
+    font-size: 30px;
+    font-weight: 600;
+}
+.inquires-status .updated-viewdetail{
+	text-align: right;
+}
+.inquires-status .updated-viewdetail a{
+	font-weight: 700;
+	text-decoration-line: none;
+	color: #8a9e75;
+}
+
+
+.reviews{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	margin-bottom: 50px;
+}
+.reviews-headlogo{
+	text-align: center;
+}
+.reviews-headlogo i{
+	font-size: 150px;
+    color: #9b759e;
+}
+.reviews-title{
+	text-align: center;
+    background-color: #e4e4e4;
+    padding: 5px;
+    border-radius: 4px;
+    color: #9b759e;
+}
+.reviews-title h3{
+	font-size: 30px;
+	font-weight: 700;
+}
+.reviews-status .updated-date{
+	font-style: oblique;
+}
+.reviews-status .updated-totalnum h4{
+	text-align: center;
+    color: #9b759e;
+    font-size: 30px;
+    font-weight: 600;
+}
+.reviews-status .updated-viewdetail{
+	text-align: right;
+}
+.reviews-status .updated-viewdetail a{
+	font-weight: 700;
+	text-decoration-line: none;
+	color: #9b759e;
+}
+
+
+.traffic-mystore{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	margin-bottom: 100px;
+}
+.traffic-title{
+    background-color: #e4e4e4;
+    padding: 5px;
+    border-radius: 4px;
+    color: #9e7575;
+}
+.traffic-title h3{
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 50px;
+}
+.traffic-status .updated-date{
+	font-style: oblique;
+}
+.traffic-status .updated-viewdetail{
+	text-align: right;
+}
+.traffic-status .updated-viewdetail a{
+	font-weight: 700;
+	text-decoration-line: none;
+	color: #9e7575;
+}

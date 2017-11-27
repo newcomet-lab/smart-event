@@ -1,0 +1,78 @@
+﻿<first-navbar></first-navbar>
+<div class="container ">
+  <section class="lspanel">
+    <header id="lstitle">
+          <h1>Sign up Now , It's free! </h1>
+    </header>
+    <form id="block" name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+        <div class="avatar-box">
+            <img class="avatar" [src]="LOGO" />
+        </div>
+
+        <p style="height: 60px;"></p>
+
+        <alert></alert>
+        <p></p>
+
+        <h3 style="text-align: center; margin-bottom: 50px;">START BY CREATING YOUR FREE ACCOUNT</h3>
+
+        <div class="usernames">
+            <div class="col-md-6" style="padding-right: 4px; padding-left: 0px;">
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !firstname.valid }">
+                    <input placeholder="&#xf007;   First Name" type="text" class="form-control lsinputs" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required />
+                    <div *ngIf="f.submitted && !firstname.valid" class="help-block">FirstName is required</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="padding-right: 0px; padding-left: 4px;">
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !lastname.valid }">
+                    <input placeholder="&#xf007;   Last Name" type="text" class="form-control lsinputs" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required />
+                    <div *ngIf="f.submitted && !lastname.valid" class="help-block">LastName is required</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+            <input placeholder="&#xf0e0;   Email Address" type="email" class="form-control lsinputs" name="email" [(ngModel)]="model.email" #email="ngModel" required />
+            <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !confirmemail.valid }">
+            <input placeholder="&#xf0e0;   Confirm Email Address" type="email" class="form-control lsinputs" name="confirmemail" [(ngModel)]="model.confirmemail" #confirmemail="ngModel" required />
+            <div *ngIf="f.submitted && !confirmemail.valid" class="help-block">Confirm Email is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !contactphone.valid }">
+            <input placeholder="&#xf095;   Contact Phone Number" type="text" class="form-control lsinputs" name="contactphone" [(ngModel)]="model.contactphone" #contactphone="ngModel" required />
+            <div *ngIf="f.submitted && !contactphone.valid" class="help-block">Contact Phone Number is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <input placeholder="&#xf084;   Password" type="password" class="form-control lsinputs" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+            <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+        </div>
+
+        <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !confirmpassword.valid }">
+            <input placeholder="&#xf084;   Confirm Password" type="password" class="form-control lsinputs" name="confirmpassword" [(ngModel)]="model.confirmpassword" #confirmpassword="ngModel" required />
+            <div *ngIf="f.submitted && !confirmpassword.valid" class="help-block">Confirm Password is required</div>
+        </div>
+
+        <div class="form-group">
+            <radiotoggle></radiotoggle>
+        </div>
+
+        <div class="form-group">
+            <input style="width: 15px; height: 15px; display: -webkit-inline-box;" type="checkbox" class="form-control" name="remember" id="remember" [(ngModel)]="model.remember" #remember="ngModel" />
+            <label style="color: #717679;" for="remember">By clicking Sign Up , you agree to EventSmart's <a href="#">Terms of Use</a></label>
+        </div>
+
+        <div class="form-group" style="text-align: center;">
+            <button [disabled]="loading" class="lsbutton">Sign Up</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        </div>
+        <div id="newregister">
+            <h3>Don't want this now?</h3>
+            <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+  </section>
+</div>
+<first-footer></first-footer>

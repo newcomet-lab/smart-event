@@ -1,0 +1,71 @@
+﻿<div class="container " style="width: 100%; margin-top: 100px;">
+    <div class="inquires col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+   		<div class="inquires-headlogo col-lg-6 col-md-6 col-sm-6 col-xs-6">
+   			<i class="fa fa-users" aria-hidden="true"></i>
+   		</div>
+
+   		<div class="inquires-body col-lg-6 col-md-6 col-sm-6 col-xs-6">
+   			<div class="inquires-title">
+   				<h3>INQUIRES</h3>
+   			</div>
+   			<div class="inquires-status">
+   				<div class="updated-date">
+   					<h5>Updated Date :   8, November 2017</h5>
+   				</div>
+   				<div class="updated-totalnum">
+   					<h4>34</h4>
+   				</div>
+   				<div class="updated-viewdetail">
+   					<a href="#">View Deatail</a>
+   				</div>
+   			</div>
+   		</div>
+    </div>
+    <div class="reviews col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+   		<div class="reviews-headlogo col-lg-6 col-md-6 col-sm-6 col-xs-6">
+   			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
+   		</div>
+   		
+   		<div class="reviews-body col-lg-6 col-md-6 col-sm-6 col-xs-6">
+   			<div class="reviews-title">
+   				<h3>REVIEWS</h3>
+   			</div>
+   			<div class="reviews-status">
+   				<div class="updated-date">
+   					<h5>Updated Date :   8, November 2017</h5>
+   				</div>
+   				<div class="updated-totalnum">
+   					<h4>63</h4>
+   				</div>
+   				<div class="updated-viewdetail">
+   					<a href="#">View Deatail</a>
+   				</div>
+   			</div>
+   		</div>
+    </div>
+</div>
+
+<div class="container " style="width: 100%;">
+	<div class="traffic-mystore">
+		<div class="traffic-title">
+			<h3>Traffic of My Stores</h3>
+		</div>
+		<div class="traffic-status">
+			<div class="updated-date">
+   				<h5>Updated Date :   8, November 2017</h5>
+   			</div>
+   			<div class="updated-chart">
+   				<canvas baseChart
+                [data]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+   			</div>
+   			<div class="updated-viewdetail">
+   				<a href="#">View Deatail</a>
+   			</div>
+		</div>
+	</div>
+</div>

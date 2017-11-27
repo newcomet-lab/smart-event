@@ -1,0 +1,178 @@
+.rom-header h1 {
+    margin-left: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 3.75rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.rom-header h1 span {
+    color: #edda38;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    margin-top: -15px;
+}
+.rom-header h1 .logo {
+    text-indent: -119988px;
+    overflow: hidden;
+    background-size: contain;
+    width: 150px;
+    margin-right: 5px;
+    color: white;
+    text-decoration-line: none;
+}
+.firstheaderleft li a{
+    font-size: 16px;
+    line-height: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.firstheaderleft li a:hover{
+    font-size: 16px;
+    line-height: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #cebd35;
+}
+
+.firstheaderright li a{
+    font-size: 16px;
+    line-height: 12px;
+    font-weight: 700;
+    color: #777;
+    text-transform: uppercase;
+}
+
+
+.firstheaderright li a:hover{
+    font-size: 16px;
+    line-height: 12px;
+    font-weight: 700;
+    color: #cebd35;
+    text-transform: uppercase;
+}
+
+.firstheaderright li a span{
+    color: #777; font-size: 30px;
+}
+
+.firstheaderright li a span:hover{
+    color: #cebd35; font-size: 30px;
+}
+
+.circular-image{
+    border-radius:  50%;
+    width: 35px;
+    height: 35px;
+}
+
+.profileitem{
+    height: 353px;
+    width: 350px !important;
+    right: 0;
+    left: auto;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.profileitem-body{
+    background-color: transparent;
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+}
+.profile_progress{
+    margin-top: 20px;
+    width: 230px;
+}
+
+.profileitem-body label{
+    width: 50%;
+}
+
+.menuitem{
+    height: 181px;
+    width: 250px;
+    right: 0;
+    left: auto;
+    border-radius: 2px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.menuitem-body{
+    background-color: transparent;
+    border-color: #e0e0e0;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 23px;
+}
+.menuitem-body a{
+    margin-left: 40px;
+    color: #777777;
+    text-decoration-line: none;
+}
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    background-color: transparent;
+}
+
+.navbar ul ul:before {
+    content:"";
+    position: absolute;
+    right: 11px;
+    top: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #e0e0e0 transparent;
+    z-index:9999;
+}
+.navbar ul ul:after {
+    content:"";
+    position: absolute;
+    right: 4px;
+    top: -22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 17px 17px 17px;
+    border-color: transparent transparent #ffffff transparent;
+    z-index:9998;
+}
+.mitem-circular-image{
+    border-radius:  50%;
+    width: 35px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.namewithtype a{
+    margin-right: 170px;
+    text-decoration: none;
+}
+.namewithtype h6{
+    margin-right: 170px;
+    font-size: 17px;
+    color: #8e8a8a;
+}
+.settingtitle a{
+    font-size: 17px;
+    color: #777;
+    text-decoration: none;
+}
+.viewfronttitle a{
+    font-size: 17px;
+    color: #777;
+    text-decoration: none;
+}
+.signouttitle a{
+    font-size: 17px;
+    color: #777;
+    text-decoration: none;
+}
