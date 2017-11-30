@@ -1,0 +1,133 @@
+﻿<h2 style="margin-top: 50px; margin-bottom: 50px;">Event Listing Control Panel</h2>
+
+<div class="container eventlist-body">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <caption class="text-center">Here are your registered/requested event</caption>
+          <caption>
+              <div class="total_records">
+                  <h4>Total Records : 2</h4>
+              </div>
+              <div class="input-group search_widget">
+                  <input type="text" class="form-control" name="q" value="">
+                  <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                  </span>
+              </div>
+          </caption>
+          <thead>
+            <tr>
+              <th style="width: 40px;"><label><input type="checkbox">#</label></th>
+              <th>Ref.ID</th>
+              <th>Photo</th>
+              <th>Event Name</th>
+              <th>Expire Date</th>
+              <th>Total View</th>
+              <th>Status</th>
+              <th style="width: 130px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>1134</td>
+              <td style="position:relative; width: 300px;">
+                  <div class="ribbon">
+                    <span class="free">Free Ads </span>
+                  </div>
+                  <img class="img-responsive" src="/assets/upload/vevent1/general.jpg">
+              </td>
+              <td class="eventname_field">
+                  <a href="#" class="servicenamer"><h4>mkgService_name</h4></a>
+                  <a href="#" class="categorier"><h5>Shoes Design</h5></a>
+                  <span style="font-weight: 700;">Posted by: </span><span style="font-style: italic;">tom manner</span>
+                  <br/>
+                  <span style="font-weight: 700;">Package Name: </span><span style="font-style: italic;">Regular Listin $120 For 12 months</span>
+              </td>
+              <td>
+                  <h6>Unknown / 1 days</h6>
+                  <progressbar class="progress" [value]="62" [max]="100" type="success"></progressbar>
+                  <div class="expiredate_status">
+                      <h6 style="float: left;">28 Nov 17</h6>
+                      <h6 style="float: right;">Unknown</h6>
+                  </div>
+              </td>
+              <td style="text-align: center;"><h5 style="font-weight: 700;">24</h5></td>
+              <td style="text-align: center;">
+                  <span class="label label-info"><i class="fa fa-hourglass-start"></i> Pending</span>
+              </td>
+              <td>
+                  <button class="t_viewbtn"><i class="fa fa-fw fa-external-link"></i>&nbsp;&nbsp;View</button>
+                  <br/>
+                  <button class="t_editbtn"><i class="fa fa-fw fa-edit"></i>&nbsp;&nbsp;Edit</button>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>1135</td>
+              <td style="position:relative; width: 300px;">
+                  <div class="ribbon">
+                    <span class="free">Free Ads </span>
+                  </div>
+                  <img class="img-responsive" src="/assets/upload/vevent1/gallery.jpg">
+              </td>
+              <td class="eventname_field">
+                  <a href="#" class="servicenamer"><h4>mkgService_name</h4></a>
+                  <a href="#" class="categorier"><h5>Shoes Design</h5></a>
+                  <span style="font-weight: 700;">Posted by: </span><span style="font-style: italic;">tom manner</span>
+                  <br/>
+                  <span style="font-weight: 700;">Package Name: </span><span style="font-style: italic;">Regular Listin $120 For 12 months</span>
+              </td>
+              <td>
+                  <h6>Unknown / 4 days</h6>
+                  <progressbar class="progress" [value]="82" [max]="100" type="success"></progressbar>
+                  <div class="expiredate_status">
+                      <h6 style="float: left;">26 Nov 17</h6>
+                      <h6 style="float: right;">Unknown</h6>
+                  </div>
+              </td>
+              <td style="text-align: center;"><h5 style="font-weight: 700;">4</h5></td>
+              <td style="text-align: center;">
+                  <span class="label label-success"><i class="fa fa-check"></i> Activate</span>
+              </td>
+              <td>
+                  <button class="t_viewbtn"><i class="fa fa-fw fa-external-link"></i>&nbsp;&nbsp;View</button>
+                  <br/>
+                  <button class="t_editbtn"><i class="fa fa-fw fa-edit"></i>&nbsp;&nbsp;Edit</button>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                <td colspan="8" class="text-center" style="background-color: #e8e8e8;">
+                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+                </td>
+              </tr>
+          </tfoot>
+          <tfoot>
+              <tr>
+                <td colspan="8">
+                    <div class="bulk_panel" style="float: left;">
+                        <select class="bulk_select">
+                            <option value="">--Bulk Action--</option>
+                            <option value="Delete">Delete</option>
+                        </select>
+                        <button class="bulk_action">Action</button>
+                    </div>
+                    <div class="pagination" style="float: right;">
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <input type="number" class="page_num" />
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>
+                </td>
+              </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>

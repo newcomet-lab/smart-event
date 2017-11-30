@@ -96,7 +96,7 @@
 
 .menuitem{
     height: 181px;
-    width: 250px;
+    width: 250px !important;
     right: 0;
     left: auto;
     border-radius: 2px;

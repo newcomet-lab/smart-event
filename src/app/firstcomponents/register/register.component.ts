@@ -11,7 +11,7 @@ import { AlertService, UserService, AuthenticationService } from '../../_service
 
 export class RegisterComponent {
 
-    private LOGO = require("assets/images/testlogo.png");
+    public LOGO = require("assets/images/testlogo.png");
     
     model: any = {};
     loading = false;

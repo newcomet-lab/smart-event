@@ -1,0 +1,128 @@
+﻿<h2 style="margin-top: 50px; margin-bottom: 50px;">Booking List Control Panel</h2>
+
+<div class="container bookinglist-body">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <caption class="text-center">Here are your Booking List</caption>
+          <caption>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                  <label><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Search Duration : </label>
+                  <select [(ngModel)]="duration_opt" class="select-widget">
+                      <option value="">-Any-</option>
+                      <option value="2">Last 2 day</option>
+                      <option value="6">Last 6 day</option>
+                      <option value="12">Last 12 day</option>
+                      <option value="custom">Custom</option>
+                  </select>
+                  <div class="custom_opt" [hidden]="duration_opt!='custom'">
+                      <label>Custom Date Range : </label>
+                      <input class="input-widget" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <label><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;keyword : </label>
+                  <input class="input-widget" type="text" />
+
+                  <label><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;Status :&nbsp;&nbsp;&nbsp;</label>
+                  <select [(ngModel)]="status_opt" class="select-widget" style="width: 250px; margin-left: 1px;">
+                      <option value="">-Any-</option>
+                      <option value="2">Confirmed</option>
+                      <option value="6">Pending</option>
+                      <option value="12">Cancelled</option>
+                  </select>
+                  <div class="filber_btns">
+                    <button class="filter_btn" style="float: left; margin-top: 20px; margin-left: 45px;"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Filter</button>
+                    <button class="reset_btn" style="float: left; margin-top: 20px; margin-left: 45px;"><i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Reset</button>
+                  </div>
+
+              </div>
+          </caption>
+          <caption>
+              <div class="total_records">
+                  <h4>Total Records : 2</h4>
+              </div>
+          </caption>
+          <thead>
+            <tr>
+              <th style="width: 40px;"><label>#</label></th>
+              <th>General Info</th>
+              <th style="width: 300px;">Schedule</th>
+              <th style="width: 200px;">Payment Status</th>
+              <th>Booking Status</th>
+              <th>Invoices</th>
+              <th style="width: 130px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                  <h4>mybook</h4>
+                  <h5 style="font-style: italic;">Booked by: tom manner</h5>
+                  <h5>Book overview</h5>
+              </td>
+              <td>
+                  <h5>Booking Date : <span style="font-style: italic;">2017-11-29 14:54:46</span></h5>
+                  <h5>Schedule date : <span style="font-style: italic;">2017-11-29</span></h5>
+                  <h5>Full Block : <span style="font-style: italic;">Yes</span></h5>
+                  <h5>Schedule Time : <span style="font-style: italic;">(08:15:00 - 02:00:00)</span></h5>
+              </td>
+              <td>
+                  <h5>Service Charge : <span style="font-style: italic;"></span></h5>
+                  <h5>Booking Fee : <span style="font-style: italic;">0</span></h5>
+                  <h5>Payment Status : <span style="font-style: italic;">Paid</span></h5>
+              </td>
+              <td>
+                  <div class="dropdown">                                    
+                      <button class="btn btn-info btn-xs" id="active_status_77" type="button" data-toggle="dropdown" aria-expanded="false">
+                          <i class="fa fa-chain-broken" aria-hidden="true"></i> {{status_title}} &nbsp; <i class="fa fa-angle-down"></i>
+                      </button>                                    
+                      <ul class="dropdown-menu">
+                          <li><a class="btn" (click)="statusUpdate(77, 'Pending');"> <i class="fa fa-hourglass-end"></i> Pending</a></li>
+                          <li><a class="btn" (click)="statusUpdate(77, 'Confirmed');"> <i class="fa fa-check"></i> Confirmed</a></li>
+                          <li><a class="btn" (click)="statusUpdate(77, 'Cancelled');"> <i class="fa fa-ban"></i> Cancelled</a></li>
+                          <li><a class="btn" (click)="statusUpdate(77, 'Completed');"> <i class="fa fa-check-square-o"></i> Completed</a></li>
+                      </ul>
+                  </div>
+              </td>
+              <td style="text-align: center;">
+                <a class="btn invoice_widget" ><i class="fa fa-fw fa-external-link"></i>View Invoice </a>
+                <br/>
+                <a class="btn invoice_widget" ><i class="fa fa-fw fa-edit"></i>Edit Invoice </a>
+              </td>
+              <td style="text-align: center;">
+                  <a class="btn action_widget" style="background-color: #eeda38;" ><i class="fa fa-fw fa-external-link"></i>View </a>
+                  <br/>
+                  <a class="btn action_widget" style="background-color: #38ccee;"><i class="fa fa-fw fa-edit"></i>Edit </a>
+                  <br/>
+                  <a class="btn action_widget" style="background-color: #ee6a38;"><i class="fa fa-fw fa-close"></i>Delete </a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                <td colspan="10" class="text-center" style="background-color: #e8e8e8;">
+                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+                </td>
+              </tr>
+          </tfoot>
+          <tfoot>
+              <tr>
+                <td colspan="10">
+                    <div class="pagination" style="float: right;">
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <input type="number" class="page_num" />
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>
+                </td>
+              </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>

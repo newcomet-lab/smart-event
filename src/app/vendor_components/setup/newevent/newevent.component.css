@@ -1,0 +1,277 @@
+
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    height: 50px;
+    padding-top: 12px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+   background-color: #fff;
+    border: 1px solid #e0e0e0!important;
+    border-left-width: 0!important;
+    color: #e5cd32;
+    padding: 10px 20px 9px;
+    text-decoration: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+div.tab button.active:before {
+    content: " ";
+    position: relative;
+    border-left: 4px solid #e5cd32;
+    left: 0;
+    right: auto;
+    top: -15px;
+    margin-right: 20px;
+    margin-left: -20px;
+    border-bottom: 30px solid #e5cd32;
+}
+
+/* Style the tab content */
+
+div.tab h4{
+    font-family: inherit;
+    font-weight: 700;
+}
+
+
+/* plan and price */
+.general_info-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.general_info-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.gif-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.general_info-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 200px;
+    margin-bottom: 100px;
+}
+
+.savenextbtn{
+    color: white;
+    background-color: #e5cd32;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.savenextbtn:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+
+.general_info-editors{
+    margin-top: 50px;
+}
+.gibc-items{
+    height: 50px;
+}
+.gibc-title{
+    margin-bottom: 10px!important;
+    color: #222;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left!important;
+}
+.gibc-widget{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-color: #bdbdbd;
+}
+.gibc-widget:hover{
+    border-color: #e5cd32;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+/*service info part*/
+.service_info-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.service_info-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sif-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.service_info-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 700px;
+    margin-bottom: 100px;
+}
+.packageinfos{
+    
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin-left: 40px;
+    border-radius: 3px;
+}
+
+/*general photo*/
+.general_photo-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.general_photo-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.gpf-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.general_photo-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+}
+.imageuploader{
+    padding-left: 200px;
+}
+
+
+/*gallery photo*/
+.gallery_photo-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.gallery_photo-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.gpt-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.gallery_photo-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+}
+.imageuploader{
+    padding-left: 200px;
+}
+
+/*video upload*/
+.video_upload-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.video_upload-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.vpt-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.video_upload-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+}
+
+/*preview*/
+.preview-body{
+    margin-top: 40px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.preview-body-title
+{
+    background-color: #f9f9f9;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.prv-title{
+    font-size: 24px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+.preview-body-contents
+{
+    background-color: white;
+    padding-top: 55px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+}

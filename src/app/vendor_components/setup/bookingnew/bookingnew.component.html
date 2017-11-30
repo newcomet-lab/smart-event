@@ -1,0 +1,92 @@
+﻿<h2 style="margin-top: 50px; margin-bottom: 50px; text-align: center;">Add New Booking</h2>
+
+<div class="container bookingnew-body">
+	<form name="form" (ngSubmit)="mf1.form.valid && doBooking()" #mf1="ngForm" novalidate>
+
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget">Listing : </label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="form-group" [ngClass]="{ 'has-error': mf1.submitted && !listing.valid }">
+				    <select class="form-control bk-widget" name="listing" [(ngModel)]="model.listing" #listing="ngModel" required>
+			  			<option value="">--Choose Listing--</option>
+				  		<option value="ct1">Holiday Event</option>
+				  		<option value="ct2">Birthday Event</option>
+				  		<option value="ct3">Western Romeu Day</option>
+				  		<option value="ct4">Lacktern Day</option>
+				  	</select>
+				  	<div *ngIf="mf1.submitted && !listing.valid" class="help-block">Listing is required</div>
+				</div>
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget">Subject : </label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="form-group" [ngClass]="{ 'has-error': mf1.submitted && !subject.valid }">
+				    <input type="text" class="form-control bk-widget" name="subject" [(ngModel)]="model.subject" #subject="ngModel" required />
+				    <div *ngIf="mf1.submitted && !subject.valid" class="help-block">Subject is required</div>
+				</div>
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget">Content : </label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="form-group" [ngClass]="{ 'has-error': mf1.submitted && !content.valid }">
+				    <textarea style="height: 150px;" type="text" class="form-control bk-widget" name="content" [(ngModel)]="model.content" #content="ngModel" required >
+				    </textarea>
+				    <div *ngIf="mf1.submitted && !content.valid" class="help-block">Content is required</div>
+				</div>
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget">Schedule Date : </label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="form-group" [ngClass]="{ 'has-error': mf1.submitted && !scheduledate.valid }">
+				    <input type="text" class="form-control bk-widget" name="scheduledate" #dp="bsDatepicker" bsDatepicker [(bsValue)]="bsValue" [(ngModel)]="model.scheduledate" #scheduledate="ngModel" required >
+				    <div *ngIf="mf1.submitted && !scheduledate.valid" class="help-block">Schedule date is required</div>
+				</div>
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget">Time : </label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<timepicker style="float: left;" name="starttime" [(ngModel)]="model.starttime" #starttime="ngModel"></timepicker>
+				<span  style="float: left; font-size: 20px; margin-top: 30px; margin-right: 10px;margin-left: 10px;"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+				<timepicker style="float: left;" name="endtime" [(ngModel)]="model.endtime" #endtime="ngModel"></timepicker>
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 100px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				<label class="mylabelwidget"></label>
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="margin-top: 50px;">
+				<label><input type="checkbox" name="send_sms" [(ngModel)]="model.send_sms" #send_sms="ngModel"> Send an SMS reminder to your Customer</label>
+				<br/>
+				<label><input type="checkbox" name="send_email" [(ngModel)]="model.send_email" #send_email="ngModel"> Send an Email reminder to your Customer</label>
+				<br/>
+				<label><input type="checkbox" name="sendtophone" [(ngModel)]="model.sendtophone" #sendtophone="ngModel"> When an online booking is made, send an SMS To +234 34-5674-8565</label>
+				<br/>	
+			</div>
+		</div>
+		<div class="each_bitems" style="margin-top: 50px;">
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 5px;">
+				
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+				<div class="form-group" style="text-align: right;">
+            		<button class="submitbtn"><i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;Submit</button>
+            	</div>
+			</div>
+		</div>
+
+	</form>
+</div>

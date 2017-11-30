@@ -15,6 +15,16 @@ import { CustomerhomeComponent } from './customer_components/setup/customer-home
 import {VendorLayoutComponent} from "./vendor_components/vendor-layout/vendor-layout.component";
 import { StorefrontComponent } from './vendor_components/setup/storefront/index';
 import { SettingComponent } from './vendor_components/setup/setting/index';
+import { NeweventComponent } from './vendor_components/setup/newevent/index';
+import { EventlistComponent } from './vendor_components/setup/eventlist/index';
+import { Listing_billComponent } from './vendor_components/setup/listing_bill/index';
+import { Bill_previewComponent } from './vendor_components/setup/bill_preview/index';
+import { BookinglistComponent } from './vendor_components/setup/bookinglist/index';
+import { CalendarviewComponent } from './vendor_components/setup/calendarview/index';
+import { BookingnewComponent } from './vendor_components/setup/bookingnew/index';
+import { InvoicelistComponent } from './vendor_components/setup/invoicelist/index';
+import { MailboxComponent } from './vendor_components/setup/mailbox/index';
+import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -37,7 +47,17 @@ const appRoutes: Routes = [
 	    canActivate: [AuthGuard],
 	    children: [
 	      { path: 'storefront', component: StorefrontComponent, canActivate: [AuthGuard] },
-	      { path: 'setting', component: SettingComponent, canActivate: [AuthGuard] }
+	      { path: 'setting', component: SettingComponent, canActivate: [AuthGuard] },
+	      { path: 'newevent', component: NeweventComponent, canActivate: [AuthGuard] },
+	      { path: 'eventlist', component: EventlistComponent, canActivate: [AuthGuard] },
+	      { path: 'listingbill', component: Listing_billComponent, canActivate: [AuthGuard] },
+	      { path: 'billpreview', component: Bill_previewComponent, canActivate: [AuthGuard] },
+	      { path: 'bookinglist', component: BookinglistComponent, canActivate: [AuthGuard] },
+	      { path: 'calendarview', component: CalendarviewComponent, canActivate: [AuthGuard] },
+	      { path: 'bookingnew', component: BookingnewComponent, canActivate: [AuthGuard] },
+	      { path: 'invoicelist', component: InvoicelistComponent, canActivate: [AuthGuard] },
+	      { path: 'mailbox', component: MailboxComponent, canActivate: [AuthGuard] },
+	      { path: 'vendor_event_detail', component: Vendor_event_detailComponent, canActivate: [AuthGuard] }
 	    ]
 	},
 

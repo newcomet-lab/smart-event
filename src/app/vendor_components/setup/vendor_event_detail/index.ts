@@ -1,0 +1,1 @@
+﻿export * from './vendor_event_detail.component';

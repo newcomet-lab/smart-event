@@ -11,19 +11,57 @@
     <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 25px;  margin-left: 30px;">
       <li><a [routerLink]="['/vendor/storefront']">Dashboard</a></li>
       <li><a href="#">Find Customers</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Booking</a></li>
+      <li class="dropdown">
+        <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Events <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+            <div>
+              <a [routerLink]="['/vendor/eventlist']">All Events</a>
+            </div>
+          </li>
+          <li class="menuitem-body" style="height: 60px;">
+            <div>
+              <a [routerLink]="['/vendor/newevent']">New Event</a>
+            </div>
+          </li>
+          <li class="menuitem-body" style="height: 60px;">
+            <div>
+              <a [routerLink]="['/vendor/listingbill']">Listing Bill</a>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="dropdown">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Booking <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
+            <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+              <div>
+                <a [routerLink]="['/vendor/bookinglist']">Booking List</a>
+              </div>
+            </li>
+            <li class="menuitem-body" style="height: 60px;">
+              <div>
+                <a [routerLink]="['/vendor/bookingnew']">New Booking</a>
+              </div>
+            </li>
+            <li class="menuitem-body" style="height: 60px;">
+              <div>
+                <a [routerLink]="['/vendor/calendarview']">Calendar View</a>
+              </div>
+            </li>
+          </ul>
+      </li>
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Messages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
           <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
             <div>
-              <a href="#">Messages</a>
+              <a href="#">Mailbox</a>
             </div>
           </li>
           <li class="menuitem-body" style="height: 60px;">
             <div>
-              <a href="#">Invoices</a>
+              <a [routerLink]="['/vendor/invoicelist']">Invoices</a>
             </div>
           </li>
           <li class="menuitem-body" style="height: 60px;">

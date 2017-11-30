@@ -12,6 +12,9 @@ import { UserService } from '../../../_services/index';
 export class SettingComponent implements OnInit {
     currentUser: User;
     users: User[] = [];
+    loading = false;
+    vatloading = false;
+    bankloading = false;
 
     rdstatus: any[];
 
@@ -27,6 +30,10 @@ export class SettingComponent implements OnInit {
     postal_code: string;
 
     model: any= {};
+
+    vatmodel: any= {};
+
+    bankmodel: any= {};
     
     constructor(private userService: UserService) {
         
@@ -43,7 +50,19 @@ export class SettingComponent implements OnInit {
         this.radioModel = "professional";
         this.model.pricingval = "professional";
 
+        this.vatmodel.applyvat = "yes";
+
         document.getElementById("defaultOpen").click();
+    }
+
+    doCheckout()
+    {
+
+    }
+
+    doSaveVatinfo()
+    {
+
     }
 
     openTabPage(evt, cityName)

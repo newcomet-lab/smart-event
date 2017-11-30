@@ -39,12 +39,22 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { RatingModule } from 'ngx-bootstrap/rating';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 
 import { NgProgressModule } from 'ngx-progressbar';
 import {ProgressBarModule} from "ng2-progress-bar";
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 
 import { ChartsModule } from 'ng2-charts';
+
+import { CKEditorModule } from 'ng2-ckeditor';
+
+import { AgmCoreModule } from '@agm/core';
+
+import { ImageUploadModule } from "angular2-image-upload";
+
+import { FullCalendarModule } from 'ng-fullcalendar';
 
 import {CustomerLayoutComponent} from './customer_components/customer-layout/customer-layout.component';
 import { CustomerhomeComponent } from './customer_components/setup/customer-home/index';
@@ -54,10 +64,28 @@ import { StaticComponent } from './customer_components/widget/staticmenu/index';
 import { ChartpanelComponent } from './customer_components/widget/chartpanel/index';
 import { LivepanelComponent } from './customer_components/widget/livepanel/index';
 
+
+
 import {VendorLayoutComponent} from './vendor_components/vendor-layout/vendor-layout.component';
 import { VendorheaderComponent } from './vendor_components/vendorheader/index';
 import { StorefrontComponent } from './vendor_components/setup/storefront/index';
 import { SettingComponent } from './vendor_components/setup/setting/index';
+
+import { NeweventComponent } from './vendor_components/setup/newevent/index';
+import { EventlistComponent } from './vendor_components/setup/eventlist/index';
+
+import { Listing_billComponent } from './vendor_components/setup/listing_bill/index';
+import { Bill_previewComponent } from './vendor_components/setup/bill_preview/index';
+
+import { BookinglistComponent } from './vendor_components/setup/bookinglist/index';
+import { CalendarviewComponent } from './vendor_components/setup/calendarview/index';
+import { BookingnewComponent } from './vendor_components/setup/bookingnew/index';
+
+import { InvoicelistComponent } from './vendor_components/setup/invoicelist/index';
+import { MailboxComponent } from './vendor_components/setup/mailbox/index';
+
+import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
+import { MyckeditorComponent } from './vendor_components/widget/myckeditor/index';
 
 import { environment } from '../environments/environment';
 
@@ -80,7 +108,16 @@ import { environment } from '../environments/environment';
         NgProgressModule,
         ProgressBarModule,
         ProgressbarModule.forRoot(),
-        ChartsModule
+        ChartsModule,
+        CKEditorModule,
+        AgmCoreModule.forRoot({
+              apiKey: 'AIzaSyB3DnR_cRYlKjuQZES_pIenqdnxfz76ibs',
+              libraries: ["places"]
+        }),
+        ImageUploadModule.forRoot(),
+        FullCalendarModule,
+        BsDatepickerModule.forRoot(),
+        TimepickerModule.forRoot()
     ],
     declarations: [
         AppComponent,
@@ -109,7 +146,18 @@ import { environment } from '../environments/environment';
         VendorLayoutComponent,
         VendorheaderComponent,
         StorefrontComponent,
-        SettingComponent
+        SettingComponent,
+        NeweventComponent,
+        EventlistComponent,
+        Listing_billComponent,
+        Bill_previewComponent,
+        BookinglistComponent,
+        CalendarviewComponent,
+        BookingnewComponent,
+        InvoicelistComponent,
+        MailboxComponent,
+        Vendor_event_detailComponent,
+        MyckeditorComponent
     ],
     providers: [
         AuthGuard,

@@ -5,8 +5,9 @@
 	  	<button class="tablinks" (click)="openTabPage($event, 'billingmethods')">Billing Methods</button>
 	  <h4>User Settings</h4>
 	  <button class="tablinks" (click)="openTabPage($event, 'planprice')" id="defaultOpen">Plans & Placing</button>
-	  <button class="tablinks" (click)="openTabPage($event, 'contactinfo')">Contact Info</button>
 	  <button class="tablinks" (click)="openTabPage($event, 'myprofile')">My Profile</button>
+	  <h4>Others</h4>
+	  	<button class="tablinks" (click)="openTabPage($event, 'invoicesetting')">Invoice Settings</button>
 	</div>
 
 	<div id="billingmethods" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -258,14 +259,114 @@
 
 	</div>
 
-	<div id="contactinfo" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
-	  <h3>Contact Info</h3>
-	  <p>Paris is the capital of France.</p> 
-	</div>
-
 	<div id="myprofile" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
 	  <h3>My Profile</h3>
 	  <p>Tokyo is the capital of Japan.</p>
+	</div>
+
+	<div id="invoicesetting" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h2>Invoice Settings</h2>
+	  <div class="vatoption-body">
+	  	<div class="vatoption-body-title">
+	  		<span class="vt-title">Set Your VAT Option</span>	
+	  	</div>
+	  	<form name="vatform" (ngSubmit)="vatform.valid && doSaveVatinfo()" #vatform="ngForm" novalidate>
+	  	<div class="vatoption-body-contents">
+	  		
+	  		<div class="is_items">
+	  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+		  			<label>Apply VAT</label>
+		  		</div>
+		  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		  			<div class="btn-group">
+					  <label class="btn btn-success" name="applyvat" [(ngModel)]="vatmodel.applyvat" #applyvat="ngModel" btnRadio="yes" uncheckable>Yes</label>
+					  <label class="btn btn-success" name="applyvat" [(ngModel)]="vatmodel.applyvat" #applyvat="ngModel" btnRadio="no" uncheckable>No</label>
+					</div>
+		  		</div>
+	  		</div>
+	  		<div class="is_items" style="margin-top: 70px;">
+	  			<div style="" class="form-group" [ngClass]="{ 'has-error': vatform.submitted && !vat_rate.valid }">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			<label>VAT Rate</label>
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			  				<input placeholder="%" type="Number" class="form-control iv-widgets" name="vat_rate" [(ngModel)]="vatmodel.vat_rate" #vat_rate="ngModel" required />
+			  				<div *ngIf="vatform.submitted && !vat_rate.valid" class="help-block">Vat Rate is required</div>
+			  		</div>
+		  		</div>
+	  		</div>
+	  		<div class="is_items" style="margin-top: 30px;">
+	  			<div class="form-group">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="margin-top: 30px;">
+			  			<button [disabled]="vatloading" class="btn btn btn-default btn-sm vatsave">Save Setting</button>
+			            <img *ngIf="vatloading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+			  		</div>
+			  	</div>
+	  		</div>
+	  		
+	  	</div>
+	  	</form>
+	  </div>
+
+	  <div class="bankdetail-body">
+	  	<div class="bankdetail-body-title">
+	  		<span class="bdt-title">Set Your Bank Details</span>	
+	  	</div>
+	  	<form name="bankform" (ngSubmit)="bankform.valid && doSaveVatinfo()" #bankform="ngForm" novalidate>
+	  	<div class="bankdetail-body-contents">
+	  		
+	  		<div class="bd_items" style="margin-top: 70px;">
+	  			<div style="" class="form-group" [ngClass]="{ 'has-error': bankform.submitted && !bankname.valid }">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			<label>Bank Name</label>
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			  				<input type="text" class="form-control bd-widgets" name="bankname" [(ngModel)]="bankmodel.bankname" #bankname="ngModel" required />
+			  				<div *ngIf="bankform.submitted && !bankname.valid" class="help-block">BankName is required</div>
+			  		</div>
+		  		</div>
+	  		</div>
+	  		<div class="bd_items" style="margin-top: 140px;">
+	  			<div style="" class="form-group" [ngClass]="{ 'has-error': bankform.submitted && !bankaccountnum.valid }">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			<label>Account Number</label>
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			  				<input type="text" class="form-control bd-widgets" name="bankaccountnum" [(ngModel)]="bankmodel.bankaccountnum" #bankaccountnum="ngModel" required />
+			  				<div *ngIf="bankform.submitted && !bankaccountnum.valid" class="help-block">Bank Account Number is required</div>
+			  		</div>
+		  		</div>
+	  		</div>
+	  		<div class="bd_items" style="margin-top: 210px;">
+	  			<div style="" class="form-group" [ngClass]="{ 'has-error': bankform.submitted && !bankaccountname.valid }">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			<label>Bank Account Name</label>
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			  				<input type="text" class="form-control bd-widgets" name="bankaccountname" [(ngModel)]="bankmodel.bankaccountname" #bankaccountname="ngModel" required />
+			  				<div *ngIf="bankform.submitted && !bankaccountname.valid" class="help-block">Bank Account Name is required</div>
+			  		</div>
+		  		</div>
+	  		</div>
+	  		<div class="is_items" style="margin-top: 280px;">
+	  			<div class="form-group">
+		  			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 5px;">
+			  			
+			  		</div>
+			  		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+			  			<button [disabled]="bankloading" class="btn btn btn-default btn-sm banksave">Save Setting</button>
+			            <img *ngIf="bankloading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+			  		</div>
+			  	</div>
+	  		</div>
+	  		
+	  	</div>
+	  	</form>
+	  </div>
+
 	</div>
 
 </div>

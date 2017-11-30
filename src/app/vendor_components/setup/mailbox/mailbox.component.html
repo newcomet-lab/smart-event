@@ -1,0 +1,18 @@
+﻿<div class="container" style="margin-top: 70px;">
+
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	  <h4>Folders</h4>
+	  	<button id="defaultOpen" class="tablinks" (click)="openTabPage($event, 'inboxpanel')"><i class="fa fa-inbox"></i>&nbsp;&nbsp;Inbox<span class="label label-primary pull-right">1</span></button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'sentpanel')"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Sent</button>
+	</div>
+
+	<div id="inboxpanel" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h3>Inbox</h3>
+	  <p>London is the capital city of England.</p>
+	</div>
+	<div id="sentpanel" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h3>Sent</h3>
+	  <p>London is the capital city of England.</p>
+	</div>
+
+</div>

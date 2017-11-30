@@ -1,0 +1,116 @@
+﻿<h2 style="margin-top: 50px; margin-bottom: 50px;">Listing Bill Control Panel</h2>
+
+<div class="container listingbill-body">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <caption class="text-center">Here are your Listing Bill Overview</caption>
+          <caption>
+              <div class="total_records">
+                  <h4>Total Records : 2</h4>
+              </div>
+              <div class="input-group search_widget">
+                  <input type="text" class="form-control" name="q" value="">
+                  <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                  </span>
+              </div>
+          </caption>
+          <thead>
+            <tr>
+              <th style="width: 40px;"><label>#</label></th>
+              <th>Created</th>
+              <th>Listing ID</th>
+              <th>Service Name</th>
+              <th>User Name</th>
+              <th>Package</th>
+              <th>Price</th>
+              <th>Status</th>
+              <th>Paid Date</th>
+              <th style="width: 130px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1134</td>
+              <td>28 Nov 17</td>
+              <td>
+                  466
+              </td>
+              <td class="serivcename_field">
+                  mkgService_name
+              </td>
+              <td>
+                  tom jenky
+              </td>
+              <td>
+                Regular Listing $24,000 For 12 Months
+              </td>
+              <td>
+                $24,000
+              </td>
+              <td>
+                  <span class="label label-info"><i class="fa fa-spinner" aria-hidden="true"></i> Unpaid</span>
+              </td>
+              <td>
+                03:52 pm 28/11/17
+              </td>
+              <td>
+                  <a [routerLink]="['/vendor/billpreview']" class="t_viewbtn"><i class="fa fa-eye"></i>&nbsp;&nbsp;Preview</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1135</td>
+              <td>29 Nov 17</td>
+              <td>
+                  465
+              </td>
+              <td class="serivcename_field">
+                  mkgService_name
+              </td>
+              <td>
+                  margarita waney
+              </td>
+              <td>
+                Regular Listing $200 For 1 Months
+              </td>
+              <td>
+                $200
+              </td>
+              <td>
+                  <span class="label label-success"><i class="fa fa-money" aria-hidden="true"></i> paid</span>
+              </td>
+              <td>
+                03:59 pm 29/11/17
+              </td>
+              <td>
+                  <a [routerLink]="['/vendor/billpreview']" class="t_viewbtn"><i class="fa fa-eye"></i>&nbsp;&nbsp;Preview</a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                <td colspan="10" class="text-center" style="background-color: #e8e8e8;">
+                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+                </td>
+              </tr>
+          </tfoot>
+          <tfoot>
+              <tr>
+                <td colspan="10">
+                    <div class="pagination" style="float: right;">
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <input type="number" class="page_num" />
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>
+                </td>
+              </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>

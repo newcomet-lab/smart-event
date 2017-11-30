@@ -11,7 +11,7 @@ import { AlertService, AuthenticationService } from '../../_services/index';
 
 export class ForgotComponent implements OnInit {
 
-    private LOGO = require("assets/images/testlogo.png");
+    public LOGO = require("assets/images/testlogo.png");
 
     model: any = {};
     loading = false;

@@ -1,0 +1,151 @@
+﻿<div class="container" style="text-align: center; padding: 20px;">
+  <h1 class="welcomtxt"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Welcome To Our Event Store&nbsp;&nbsp;<i class="fa fa-handshake-o" aria-hidden="true"></i></h1>
+</div>
+<div class="container " style="width: 100%;">
+	 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+      <div class="vd_ourcontact">
+          <img class="vd_ourcontact_img" src="/assets/upload/vevent1/logo.png" />
+          <div class="vd_ourcontact_detail">
+              <h4><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;+86-12-5678324</h4>
+              <h4><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;<span style="font-weight: 700;">Company Address</span></h4>
+              <h5 style="margin-left: 30px">Dallas, TX, United States</h5>
+          </div>
+      </div>
+
+      <div class="vd_contact_vendor">
+          <div class="vd_contact_vendor_head">
+              <h3>Contact Vendor</h3>
+              <a class="btn" (click)="flag_contact_vendor = false"><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+          </div>
+          <div class="vd_contact_vendor_detail" [hidden]="flag_contact_vendor">
+              <form name="form" style="padding: 10px; margin-top: 20px;" (ngSubmit)="cvf.form.valid && sendContact()" #cvf="ngForm" novalidate>
+
+                 <div class="form-group" [ngClass]="{ 'has-error': cvf.submitted && !yourname.valid }">
+                      <input placeholder="Your Name" type="text" class="form-control cvf-widget" name="yourname" [(ngModel)]="model.yourname" #yourname="ngModel" required />
+                      <div *ngIf="cvf.submitted && !yourname.valid" class="help-block">Name is required</div>
+                 </div>
+                 <div class="form-group" [ngClass]="{ 'has-error': cvf.submitted && !youremail.valid }">
+                      <input placeholder="Your Email" type="text" class="form-control cvf-widget" name="youremail" [(ngModel)]="model.youremail" #youremail="ngModel" required />
+                      <div *ngIf="cvf.submitted && !youremail.valid" class="help-block">Email is required</div>
+                 </div>
+                 <div class="form-group" [ngClass]="{ 'has-error': cvf.submitted && !yourmessage.valid }">
+                      <textarea placeholder="Your Message..." type="text" class="form-control cvf-widget" name="yourmessage" [(ngModel)]="model.yourmessage" #yourmessage="ngModel" style="height: 130px;" required >
+                      </textarea>
+                      <div *ngIf="cvf.submitted && !yourmessage.valid" class="help-block">Message is required</div>
+                 </div>
+                  <div class="form-group" style="text-align: right;">
+                    <button class="sendcontact"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Send</button>
+                    <button class="closecontact" (click)="flag_contact_vendor = true"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Close</button>
+                  </div>
+
+              </form>
+          </div>
+      </div>
+
+      <div class="mkgnav">
+          <nav class="nav-sidebar ">
+
+              <ul class="tab">
+                  <li><a pageScroll [pageScrollDuration]="200" href=".whoweare" class="tablinks btn">Who We Are</a></li>
+                  <li><a pageScroll [pageScrollDuration]="200" href=".mycalendar" class="tablinks btn">Calendar</a></li>
+                  <li><a pageScroll [pageScrollDuration]="200" href=".ourservices" class="tablinks btn">Service List</a></li>
+                  <li><a pageScroll [pageScrollDuration]="200" href=".photogallery" class="tablinks btn">Photo Gallery</a></li>
+                  <li><a pageScroll [pageScrollDuration]="200" href=".videogallery" class="tablinks btn">Video Gallery</a></li>
+              </ul>
+
+          </nav>
+      </div>
+
+      <div class="googlemapping">
+          <div class="googletitle">
+              <h3>Location Maps</h3>
+          </div>
+          <div class="googlemapbody">
+              <agm-map [latitude]="35.6892" [longitude]="51.3890" >
+                <agm-marker [latitude]="35.6892" [longitude]="51.3890"></agm-marker>
+              </agm-map>
+          </div>
+      </div>
+
+   </div>
+   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+      <div class="topadvert">
+          <img class="td_img" src="/assets/upload/vevent1/general.jpg" />
+          <div class="td_detail">
+              <a href="#" class="td_butons btn" ><i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;&nbsp;Book Us</a>
+              <a href="#" class="td_butons btn"><i class="fa fa-star" aria-hidden="true"></i>&nbsp;&nbsp;Review</a>
+              <a href="#" class="td_butons quotebtn" (click)="flag_contact_vendor = false" style="text-decoration: none; padding-top: "><i class="fa fa-volume-off" aria-hidden="true"></i>&nbsp;&nbsp;Get A Quote</a>
+              <a href="#" class="td_butons btn"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;Chat</a>
+          </div>
+      </div>
+
+      <div class="whoweare">
+          <div class="whoweare-title">
+              <h3>WHO WE ARE</h3>
+          </div>
+          <div class="whoweare-body">
+              <h4>watanabe mkg overview</h4>
+          </div>
+      </div>
+
+      <div class="mycalendar">
+          <div class="mycalendar-title">
+              <h3>CALENDAR</h3>
+          </div>
+          <div class="mycalendar-body">
+              <div *ngIf="calendarOptions">
+                  <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)" (eventResize)="updateEvent($event.detail)" (clickButton)="clickButton($event.detail)"></ng-fullcalendar>
+              </div>
+          </div>
+      </div>
+
+      <div class="ourservices">
+          <div class="ourservices-title">
+              <h3>OUR SERVICES</h3>
+          </div>
+          <div class="ourservices-body">
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <h4 class="service-title">mkg wedding</h4>
+             </div>
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <span class="outer">
+                      <span class="inner">Regular Price $200</span>
+                  </span>
+                  <h4 style="font-size: 20px; color: #17ca66;">Now : $100</h4> 
+             </div>
+             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style=" margin-top: 10px; text-align: right;">
+                  <button class="bookingbtn"><i class="fa fa-address-book" aria-hidden="true"></i>&nbsp;&nbsp;Booking Fee $150</button>
+             </div>
+          </div>
+      </div>
+
+      <div class="photogallery">
+          <div class="photogallery-title">
+              <h3>PHOTO GALLERY</h3>
+          </div>
+          <div class="photogallery-body container">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <img src="/assets/upload/vevent1/gallery.jpg" />
+            </div>
+              
+          </div>
+      </div>
+
+      <div class="videogallery">
+          <div class="videogallery-title">
+              <h3>VIDEO GALLERY</h3>
+          </div>
+          <div class="videogallery-body container">
+
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <iframe width="100%" height="300px" 
+                src="https://www.youtube.com/embed/XGSy3_Czz8k">
+                </iframe>
+            </div>
+              
+          </div>
+      </div>
+
+   </div>
+</div>
