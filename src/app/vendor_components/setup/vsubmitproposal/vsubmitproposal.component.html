@@ -1,0 +1,72 @@
+﻿<div class="container headertitle">
+	<h2>Submit a Proposal</h2>
+</div>
+<div class="container jobpreview">
+	<h3 style="font-weight: 700;">Job Details</h3>
+	<p style="height: 30px;"></p>
+	<hr style="border-color: #d2d2d2;">
+	<p style="height: 30px;"></p>
+	<h4 style="font-weight: 700;">Happy My Girl friend Birthday!</h4>
+	<p style="height: 15px;"></p>
+	<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+	<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+	
+	<a class="btn togglemore" (click)="gotoViewjobpost()">View job Post</a>
+</div>
+
+<div class="container connectstatus">
+	<h3 style="font-weight: 700;">Connects</h3>
+	<p style="height: 30px;"></p>
+	<hr style="border-color: #d2d2d2;">
+	<p style="height: 30px;"></p>
+	<h5 style="font-weight: 700;">This proposal requires 2 connects <span style="color: #e5cd32; font-size: 20px;" tooltip="This the number of connects that will be deducted from your balance when you submit proposal"><i class="fa fa-exclamation-circle" aria-hidden="true"></i></span></h5>
+	<h5>When you submit a proposal, you'll have 20 connects remaining. Your Connects reset on December 15.</h5>
+
+</div>
+
+<div class="container termsofproject">
+	<h3 style="font-weight: 700;">Terms</h3>
+	<h4 style="color: #7d7d7d; float: right;">Client Budget : $400 USD</h4>
+	<p style="height: 30px;"></p>
+	<hr style="border-color: #d2d2d2;">
+	<p style="height: 30px;"></p>
+	<h4 style="font-weight: 700;">How do you want to be paid?</h4>
+	<div class="control-group">
+		<label class="control control--radio">By Milestone
+			<input type="radio" name="radio" checked="checked" [(ngModel)]="paidway" value="bymilestone"/>
+			<div class="control__indicator"></div>
+		</label>
+		<h4 style="margin-left: 30px; font-size: 15px;">Divide the project into smaller segments, called milestones. You'll be paid for milestones as they are completed and approved.</h4>
+		<label class="control control--radio">By Project
+			<input type="radio" name="radio" [(ngModel)]="paidway" value="byproject"/>
+			<div class="control__indicator"></div>
+		</label>
+		<h4 style="margin-left: 30px; font-size: 15px;">Get your entire payment at the end, when all work has been delivered.</h4>
+	</div>
+	<hr style="border-color: #d2d2d2;">
+	<p style="height: 30px;"></p>
+	<div class="milestone_body">
+		<div class="eachmilestone" *ngFor="let ms of milestonearr">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+				<span style="font-weight: 700; font-size: 18px;">{{ms.id}}</span>&nbsp;&nbsp;<input [(ngModel)]="ms.description_val" class="milestone_input_widget" type="text" placeholder="Milestone Description" />
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<input [(ngModel)]="ms.duedate_val" placeholder="Due Date(option)" type="text"
+	           class="form-control milestone_input_widget"
+	           #dp="bsDatepicker"
+	           bsDatepicker [(bsValue)]="ms.duedate_val">
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+				<span style="color: #e5cd32; font-size: 30px;">$</span>&nbsp;&nbsp;<input [(ngModel)]="ms.amount_val" style="width: 70%;" class="milestone_input_widget" type="number" placeholder="Amount" /><span style="color: #e5cd32; font-size: 30px; cursor: pointer;" (click)="removeMilestone(ms)"><i class="fa fa-times" aria-hidden="true"></i></span>
+			</div>
+		</div>
+		<a class="btn addmilestone" (click)="addMilestone()">+ Add milestone </a>
+		<!--{{ milestonearr | json}}-->
+	</div>
+	<hr style="border-color: #d2d2d2;">
+</div>

@@ -24,6 +24,10 @@ import { CalendarviewComponent } from './vendor_components/setup/calendarview/in
 import { BookingnewComponent } from './vendor_components/setup/bookingnew/index';
 import { InvoicelistComponent } from './vendor_components/setup/invoicelist/index';
 import { MailboxComponent } from './vendor_components/setup/mailbox/index';
+import { ChatboxComponent } from './vendor_components/setup/chatbox/index';
+import { FindcustomersComponent } from './vendor_components/setup/findcustomers/index';
+import { CustomersjobComponent } from './vendor_components/setup/customersjob/index';
+import { VsubmitproposalComponent } from './vendor_components/setup/vsubmitproposal/index';
 import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
 
 const appRoutes: Routes = [
@@ -57,6 +61,10 @@ const appRoutes: Routes = [
 	      { path: 'bookingnew', component: BookingnewComponent, canActivate: [AuthGuard] },
 	      { path: 'invoicelist', component: InvoicelistComponent, canActivate: [AuthGuard] },
 	      { path: 'mailbox', component: MailboxComponent, canActivate: [AuthGuard] },
+	      { path: 'chatbox', component: ChatboxComponent, canActivate: [AuthGuard] },
+	      { path: 'findcustomers', component: FindcustomersComponent, canActivate: [AuthGuard] },
+	      { path: 'customersjob', component: CustomersjobComponent, canActivate: [AuthGuard] },
+	      { path: 'vsubmitproposal', component: VsubmitproposalComponent, canActivate: [AuthGuard] },
 	      { path: 'vendor_event_detail', component: Vendor_event_detailComponent, canActivate: [AuthGuard] }
 	    ]
 	},

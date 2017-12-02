@@ -1,0 +1,190 @@
+﻿<div class="container customerlist">
+	<div class="searchsetting">
+		<div class="ss_firstsec">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+				<input type="text" class=" mainsearch_widget" />
+				<button class="searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<button class="filters_widget" (click)="flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+				<div class="btn-group" dropdown style="float: right;">
+				  <button dropdownToggle type="button" class="btn dropdown-toggle savedsearch">
+				    <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;Saved Search <span class="caret"></span>
+				  </button>
+				  <ul *dropdownMenu class="dropdown-menu" role="menu">
+				    <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+				    <li class="divider dropdown-divider"></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
+				    </li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+		<div class="ss_secondsec">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 40px;">
+				<h5 style="font-size: 15px; font-family: sans-serif; font-weight: 600;"><i style="color: #e6cd32; font-size: 20px;" class="fa fa-rss" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;132,370 jobs found</h5>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 40px;">
+				<label style="float: left; margin-left: 360px; margin-top: 18px;">sort : </label>
+				<select class="sort_widget">
+					<option>Newest</option>
+					<option>Oldest</option>
+					<option>Client Spending</option>
+					<option>Client Rating</option>
+				</select>
+			</div>
+		</div>
+	</div>
+
+	<div class="additional_setting" [hidden]="!flag_add">
+		<hr style="border-color: #dedede;">
+		<div>
+			<label>Customer Location</label>
+			<angular2-multiselect [data]="location_dropdownList" [(ngModel)]="location_selectedItems" [settings]="location_dropdownSettings"
+								(onSelect)="onlItemSelect($event)" 
+							    (onDeSelect)="OnlItemDeSelect($event)"
+							    (onSelectAll)="onlSelectAll($event)"
+							    (onDeSelectAll)="onlDeSelectAll($event)">
+			  <c-item>
+			          <ng-template let-item="item">
+			            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+			            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+			          </ng-template>
+			  </c-item>    
+			</angular2-multiselect>
+		</div>
+		<div style="margin-top: 30px;">
+			<label>Event Category</label>
+			<angular2-multiselect [data]="eventcategory_dropdownList" [(ngModel)]="eventcategory_selectedItems" [settings]="eventcategory_dropdownSettings"
+								(onSelect)="oneItemSelect($event)" 
+							    (onDeSelect)="OneItemDeSelect($event)"
+							    (onSelectAll)="oneSelectAll($event)"
+							    (onDeSelectAll)="oneDeSelectAll($event)">
+			  <c-item>
+			          <ng-template let-item="item">
+			            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+			            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+			          </ng-template>
+			  </c-item>    
+			</angular2-multiselect>
+		</div>
+		<div style="margin-top: 30px;">
+			<label>Select Budget</label>
+			<angular2-multiselect [data]="budget_dropdownList" [(ngModel)]="budget_selectedItems" [settings]="budget_dropdownSettings"
+								(onSelect)="onbItemSelect($event)" 
+							    (onDeSelect)="OnbItemDeSelect($event)"
+							    (onSelectAll)="onbSelectAll($event)"
+							    (onDeSelectAll)="onbDeSelectAll($event)">
+			  <c-item>
+			          <ng-template let-item="item">
+			            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+			            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+			          </ng-template>
+			  </c-item>    
+			</angular2-multiselect>
+			<div [hidden]="!customebudget">
+				<input placeholder="Min Budget" type="number" class="budgetinput_widget" />
+				<input placeholder="Max Budget" type="number" class="budgetinput_widget" />
+			</div>
+		</div>
+
+		<div style="margin-top: 100px; margin-bottom: 40px;">
+			<button class="save_close_btn" (click)="flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+		</div>
+
+	</div>
+	<div class="joblist">
+		<div class="eachjob_body" (click)="gotoJobDetails()">
+			<p style="height: 20px; margin: 0;"></p>
+			<a class="jobtitle" (click)="gotoJobDetails()">I need to find service company that can support my festval in Lagos</a>
+			<h5 class="jobrequire">Require - Basic($) - Est. Time: 05/08/17 - Posted 7 min ago</h5>
+			<div style="width: 80%;">
+					<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+					<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+			</div>
+			<h5 class="numofpropose">Proposals: <span style="color: black;">Less than 5</span></h5>
+			<h5 class="customeroverview">Customer: <span style="font-size: 20px; color: #00c4ff;"><i class="fa fa-check-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;<strong>Payment Verified</strong><span><small-wrating [rate]="5"></small-wrating></span><span style="color: black;">$6k+</span> spent&nbsp;&nbsp;<span style="font-size: 20px; color: black;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> France</h5>
+			<p style="height: 20px; margin: 0;"></p>
+		</div>
+		<div class="eachjob_body" (click)="gotoJobDetails()">
+			<p style="height: 20px; margin: 0;"></p>
+			<a class="jobtitle" (click)="gotoJobDetails()">I need to find service company that can support my festval in Lagos</a>
+			<h5 class="jobrequire">Require - Basic($) - Est. Time: 05/08/17 - Posted 7 min ago</h5>
+			<div style="width: 80%;">
+					<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+					<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+			</div>
+			<h5 class="numofpropose">Proposals: <span style="color: black;">Less than 5</span></h5>
+			<h5 class="customeroverview">Customer: <span style="font-size: 20px; color: #00c4ff;"><i class="fa fa-check-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;<strong>Payment Verified</strong><span><small-wrating [rate]="5"></small-wrating></span><span style="color: black;">$6k+</span> spent&nbsp;&nbsp;<span style="font-size: 20px; color: black;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> France</h5>
+			<p style="height: 20px; margin: 0;"></p>
+		</div>
+		<div class="eachjob_body" (click)="gotoJobDetails()">
+			<p style="height: 20px; margin: 0;"></p>
+			<a class="jobtitle" (click)="gotoJobDetails()">I need to find service company that can support my festval in Lagos</a>
+			<h5 class="jobrequire">Require - Basic($) - Est. Time: 05/08/17 - Posted 7 min ago</h5>
+			<div style="width: 80%;">
+					<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+					<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+			</div>
+			<h5 class="numofpropose">Proposals: <span style="color: black;">Less than 5</span></h5>
+			<h5 class="customeroverview">Customer: <span style="font-size: 20px; color: #00c4ff;"><i class="fa fa-check-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;<strong>Payment Verified</strong><span><small-wrating [rate]="5"></small-wrating></span><span style="color: black;">$6k+</span> spent&nbsp;&nbsp;<span style="font-size: 20px; color: black;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> France</h5>
+			<p style="height: 20px; margin: 0;"></p>
+		</div>
+		<div class="eachjob_body" (click)="gotoJobDetails()">
+			<p style="height: 20px; margin: 0;"></p>
+			<a class="jobtitle" (click)="gotoJobDetails()">I need to find service company that can support my festval in Lagos</a>
+			<h5 class="jobrequire">Require - Basic($) - Est. Time: 05/08/17 - Posted 7 min ago</h5>
+			<div style="width: 80%;">
+					<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+					<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+			</div>
+			<h5 class="numofpropose">Proposals: <span style="color: black;">Less than 5</span></h5>
+			<h5 class="customeroverview">Customer: <span style="font-size: 20px; color: #00c4ff;"><i class="fa fa-check-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;<strong>Payment Verified</strong><span><small-wrating [rate]="5"></small-wrating></span><span style="color: black;">$6k+</span> spent&nbsp;&nbsp;<span style="font-size: 20px; color: black;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> France</h5>
+			<p style="height: 20px; margin: 0;"></p>
+		</div>
+		<div class="eachjob_body" (click)="gotoJobDetails()">
+			<p style="height: 20px; margin: 0;"></p>
+			<a class="jobtitle" (click)="gotoJobDetails()">I need to find service company that can support my festval in Lagos</a>
+			<h5 class="jobrequire">Require - Basic($) - Est. Time: 05/08/17 - Posted 7 min ago</h5>
+			<div style="width: 80%;">
+					<h5 class="little_joboverview" [hidden]="isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so...<a class="btn togglemore" (click)="isOpenfull = true">more</a></h5>
+					<h5 class="full_joboverview" [hidden]="!isOpenfull">We will have some Festival with my family or my friends after few weeks later, but i don't have so much money now, so i hope to find some good sevice company that can support it with low budget and high quality,
+									our target date maybe 05/08/17 - 22/09/17 , and budget is limited with $1.5k , Feel free to discuss about it,
+									I don't have so much time to discuss with you, so if you interest about this, Hope to disucss via voice chatting, 
+									so one of the most important requirements is also the speaking english very well, so if you can't , plz dont' apply to this , i don't waste my time no more, Thanks. <a class="btn togglemore" (click)="isOpenfull = false">less</a></h5>
+			</div>
+			<h5 class="numofpropose">Proposals: <span style="color: black;">Less than 5</span></h5>
+			<h5 class="customeroverview">Customer: <span style="font-size: 20px; color: #00c4ff;"><i class="fa fa-check-circle" aria-hidden="true"></i></span>&nbsp;&nbsp;<strong>Payment Verified</strong><span><small-wrating [rate]="5"></small-wrating></span><span style="color: black;">$6k+</span> spent&nbsp;&nbsp;<span style="font-size: 20px; color: black;"><i class="fa fa-map-marker" aria-hidden="true"></i></span> France</h5>
+			<p style="height: 20px; margin: 0;"></p>
+		</div>
+	</div>
+
+	<div class="job_pagination" style="text-align: right;">
+		<pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+	</div>
+
+</div>

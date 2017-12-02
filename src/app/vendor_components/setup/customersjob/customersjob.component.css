@@ -1,0 +1,66 @@
+.headersection{
+	margin-top: 50px;
+}
+.aboutcustomers{
+}
+
+.doproposal{
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.submit_proposal{
+    color: white;
+    background-color: #e5cd32;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.submit_proposal:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.detailview{
+	background-color: white;
+	border: solid;
+	border-color: #dcdcdc;
+	border-width: 2px;
+	padding: 50px;
+}
+.categoryitem{
+	background-color: #c7c7c7;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.customer_feedback{
+	background-color: white;
+	border: solid;
+	border-color: #dcdcdc;
+	border-width: 2px;
+	padding: 50px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.each_feedback{
+	margin-top: 30px;
+	border-bottom: solid;
+	border-color: #dcdcdc;
+	border-width: 1px;
+	padding-bottom: 30px;
+}
+
+.feedback_pagination{
+	background-color: whitesmoke;
+	padding: 20px;
+	margin-top: 30px;
+	text-align: right;
+}

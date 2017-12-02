@@ -10,7 +10,7 @@
     </div>
     <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 25px;  margin-left: 30px;">
       <li><a [routerLink]="['/vendor/storefront']">Dashboard</a></li>
-      <li><a href="#">Find Customers</a></li>
+      <li><a [routerLink]="['/vendor/findcustomers']">Find Customers</a></li>
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Events <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
@@ -56,7 +56,7 @@
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
           <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
             <div>
-              <a href="#">Mailbox</a>
+              <a [routerLink]="['/vendor/mailbox']">Mailbox</a>
             </div>
           </li>
           <li class="menuitem-body" style="height: 60px;">
@@ -66,7 +66,7 @@
           </li>
           <li class="menuitem-body" style="height: 60px;">
             <div>
-              <a href="#">Chat</a>
+              <a [routerLink]="['/vendor/chatbox']">Chat</a>
             </div>
           </li>
         </ul>

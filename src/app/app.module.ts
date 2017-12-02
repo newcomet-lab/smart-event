@@ -41,6 +41,9 @@ import { RatingModule } from 'ngx-bootstrap/rating';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 import { NgProgressModule } from 'ngx-progressbar';
 import {ProgressBarModule} from "ng2-progress-bar";
@@ -55,6 +58,8 @@ import { AgmCoreModule } from '@agm/core';
 import { ImageUploadModule } from "angular2-image-upload";
 
 import { FullCalendarModule } from 'ng-fullcalendar';
+
+import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 
 import {CustomerLayoutComponent} from './customer_components/customer-layout/customer-layout.component';
 import { CustomerhomeComponent } from './customer_components/setup/customer-home/index';
@@ -83,9 +88,16 @@ import { BookingnewComponent } from './vendor_components/setup/bookingnew/index'
 
 import { InvoicelistComponent } from './vendor_components/setup/invoicelist/index';
 import { MailboxComponent } from './vendor_components/setup/mailbox/index';
+import { ChatboxComponent } from './vendor_components/setup/chatbox/index';
+
+import { FindcustomersComponent } from './vendor_components/setup/findcustomers/index';
+import { CustomersjobComponent } from './vendor_components/setup/customersjob/index';
+import { VsubmitproposalComponent } from './vendor_components/setup/vsubmitproposal/index';
 
 import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
 import { MyckeditorComponent } from './vendor_components/widget/myckeditor/index';
+import { Small_wratingComponent } from './vendor_components/widget/small_wrating/index';
+import { Medium_wratingComponent } from './vendor_components/widget/medium_wrating/index';
 
 import { environment } from '../environments/environment';
 
@@ -117,7 +129,11 @@ import { environment } from '../environments/environment';
         ImageUploadModule.forRoot(),
         FullCalendarModule,
         BsDatepickerModule.forRoot(),
-        TimepickerModule.forRoot()
+        TimepickerModule.forRoot(),
+        BsDropdownModule.forRoot(),
+        AngularMultiSelectModule,
+        PaginationModule.forRoot(),
+        TooltipModule.forRoot()
     ],
     declarations: [
         AppComponent,
@@ -156,8 +172,14 @@ import { environment } from '../environments/environment';
         BookingnewComponent,
         InvoicelistComponent,
         MailboxComponent,
+        ChatboxComponent,
+        FindcustomersComponent,
+        CustomersjobComponent,
+        VsubmitproposalComponent,
         Vendor_event_detailComponent,
-        MyckeditorComponent
+        MyckeditorComponent,
+        Small_wratingComponent,
+        Medium_wratingComponent
     ],
     providers: [
         AuthGuard,
