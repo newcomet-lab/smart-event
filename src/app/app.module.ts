@@ -61,15 +61,24 @@ import { FullCalendarModule } from 'ng-fullcalendar';
 
 import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2-multiselect-dropdown';
 
+import { DxVectorMapModule } from 'devextreme-angular';
+
+/*Customer part*/
+
+import { CustomerheaderComponent } from './customer_components/customerheader/index';
 import {CustomerLayoutComponent} from './customer_components/customer-layout/customer-layout.component';
-import { CustomerhomeComponent } from './customer_components/setup/customer-home/index';
-import {AccountSetupComponent} from './customer_components/setup/account-setup/account-setup.component';
-import {LocationSetupComponent} from './customer_components/setup/location-setup/location-setup.component';
-import { StaticComponent } from './customer_components/widget/staticmenu/index';
-import { ChartpanelComponent } from './customer_components/widget/chartpanel/index';
-import { LivepanelComponent } from './customer_components/widget/livepanel/index';
+import { MyjobsComponent } from './customer_components/setup/myjobs/index';
+import { AlljobpostingComponent } from './customer_components/setup/alljobposting/index';
+import { AllcontractsComponent } from './customer_components/setup/allcontracts/index';
+import { PostjobComponent } from './customer_components/setup/postjob/index';
 
+import { JobscreenComponent } from './customer_components/setup/jobscreen/index';
 
+import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
+import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
+import { CchatboxComponent } from './customer_components/setup/cchatbox/index';
+
+/*Vendor part*/
 
 import {VendorLayoutComponent} from './vendor_components/vendor-layout/vendor-layout.component';
 import { VendorheaderComponent } from './vendor_components/vendorheader/index';
@@ -93,6 +102,8 @@ import { ChatboxComponent } from './vendor_components/setup/chatbox/index';
 import { FindcustomersComponent } from './vendor_components/setup/findcustomers/index';
 import { CustomersjobComponent } from './vendor_components/setup/customersjob/index';
 import { VsubmitproposalComponent } from './vendor_components/setup/vsubmitproposal/index';
+
+import { MyprofileComponent } from './vendor_components/setup/myprofile/index';
 
 import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
 import { MyckeditorComponent } from './vendor_components/widget/myckeditor/index';
@@ -133,7 +144,8 @@ import { environment } from '../environments/environment';
         BsDropdownModule.forRoot(),
         AngularMultiSelectModule,
         PaginationModule.forRoot(),
-        TooltipModule.forRoot()
+        TooltipModule.forRoot(),
+        DxVectorMapModule
     ],
     declarations: [
         AppComponent,
@@ -151,13 +163,17 @@ import { environment } from '../environments/environment';
         HiworkcardComponent,
         RadiotoggleComponent,
 
-        CustomerhomeComponent,
-        StaticComponent,
-        ChartpanelComponent,
-        LivepanelComponent,
+        CustomerheaderComponent,
         CustomerLayoutComponent,
-        AccountSetupComponent,
-        LocationSetupComponent,
+        MyjobsComponent,
+        AlljobpostingComponent,
+        AllcontractsComponent,
+        PostjobComponent,
+        JobscreenComponent,
+        CinvoicelistComponent,
+        CmailboxComponent,
+        CchatboxComponent,
+
 
         VendorLayoutComponent,
         VendorheaderComponent,
@@ -177,6 +193,7 @@ import { environment } from '../environments/environment';
         CustomersjobComponent,
         VsubmitproposalComponent,
         Vendor_event_detailComponent,
+        MyprofileComponent,
         MyckeditorComponent,
         Small_wratingComponent,
         Medium_wratingComponent

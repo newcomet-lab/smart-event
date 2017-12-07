@@ -1,0 +1,168 @@
+
+h2 {
+  text-align: center;
+}
+
+thead tr{
+    background-color: #7ac1d6bf;
+    box-shadow: 0 1px 1px rgb(156, 208, 225);
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+
+thead th{
+    font-size: 18px;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    height: 50px;
+    padding-top: 12px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+   background-color: #fff;
+    border: 1px solid #e0e0e0!important;
+    border-left-width: 0!important;
+    color: #e5cd32;
+    padding: 10px 20px 9px;
+    text-decoration: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+div.tab button.active:before {
+    content: " ";
+    position: relative;
+    border-left: 4px solid #e5cd32;
+    left: 0;
+    right: auto;
+    top: -15px;
+    margin-right: 20px;
+    margin-left: -20px;
+    border-bottom: 30px solid #e5cd32;
+}
+
+/* Style the tab content */
+
+div.tab h4{
+    font-family: inherit;
+    font-weight: 700;
+}
+
+
+.inbox-body{
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+    margin-bottom: 100px;
+}
+
+.sent-body{
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+    margin-bottom: 100px;
+}
+
+
+.m_refreshbtn{
+    color: white;
+    background-color: #e5cd32;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    float: right;
+    margin-right: 10px;
+    margin-top: 25px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.m_refreshbtn:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.entry_num{
+    float: left;
+    height: 40px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.entry_num:hover{
+    border-color: #e5cd32;
+    box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+.search_widget{
+    width: 250px;
+    float: right;
+}
+.total_records{
+    width: 200px;
+    float: left;
+    background-color: #e4e4e4;
+    border-radius: 4px;
+    box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+    margin-left: 10px;
+    height: 50px;
+    text-align: center;
+    padding-top: 6px;
+}
+.total_records h4{
+    font-style: italic;
+    color: black;
+    font-size: 17px;
+}
+.pagiantion_btn{
+    float: left;
+    border-radius: 100px;
+    font-size: 20px;
+    margin-left: 13px;
+    background-color: #9cd0e1;
+    color: black;
+    box-shadow: 0 1px 6px rgba(121, 119, 30, 0.35);
+
+}
+.pagiantion_btn:hover{
+    font-size: 22px;
+    box-shadow: 0 1px 16px rgba(121, 119, 30, 0.35);
+}
+.page_num{
+    float: left;
+    margin-left: 13px;
+    height: 35px;
+    width: 50px;
+    margin-top: 4px;
+}
+.page_num:hover{
+    border: none;
+    box-shadow: 0 1px 16px rgba(121, 119, 30, 0.35);
+}

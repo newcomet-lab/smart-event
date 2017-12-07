@@ -42,6 +42,7 @@
 	border-color: #dcdcdc;
 	border-width: 2px;
 	margin-top: 50px;
+	margin-bottom: 50px;
 	padding: 50px;
 }
 
@@ -141,4 +142,80 @@
 	font-size: 15px;
 	font-weight: 700;
 	margin-top: 15px;
+}
+
+.byproject_body,
+.milestone_body{
+	height: 300px;
+}
+
+.bid_inputs{
+	width: 200px;
+	height: 40px;
+    font-size: 15px;
+}
+.bid_inputs:hover{
+	border-width: 1px;
+	border-color: #e5cd32;
+	box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+.howlong_select{
+	height: 40px;
+	width: 250px;
+    font-size: 15px;
+    padding-left: 20px;
+}
+.howlong_select:hover{
+	border-color: #e5cd32;
+	box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+.additionalinfo{
+	background-color: white;
+	border: solid;
+	border-color: #dcdcdc;
+	border-width: 2px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	padding: 50px;
+}
+
+.bidtext{
+	height: 300px;
+	width: 100%;
+    font-size: 13px;
+    padding-left: 10px;
+}
+.bidtext:hover{
+	border-color: #e5cd32;
+	box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+.answerplace{
+	height: 100px;
+	width: 100%;
+    font-size: 13px;
+    padding-left: 10px;
+}
+.answerplace:hover{
+	border-color: #e5cd32;
+	box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+.submitproposal{
+    color: white;
+    background-color: #e5cd32;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    margin-top: 10px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.submitproposal:hover{
+    background-color: #ceb830;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
 }

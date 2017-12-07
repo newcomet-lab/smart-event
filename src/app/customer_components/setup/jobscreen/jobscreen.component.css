@@ -1,0 +1,177 @@
+.viewjobpost_tab{
+    text-align: left;
+    padding-left: 95px;
+    margin-top: -65px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.invitevendors_tab{
+    text-align: left;
+    padding-left: 440px;
+    margin-top: -30px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.reviewpropose_tab{
+    text-align: left;
+    padding-left: 735px;
+    margin-top: -29px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.hire_tab{
+    text-align: left;
+    padding-left: 1120px;
+    margin-top: -29px;
+    font-weight: 700;
+    cursor: pointer;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    box-shadow: 0 1px 16px rgba(57,73,76,.35);
+    background-color: white;
+}
+
+.tablinks{
+    fill:white;
+    stroke:#cacaca;
+    stroke-width:1;
+    cursor: pointer;
+}
+/* Change background color of buttons on hover */
+.tablinks:hover {
+    fill:#fbf3b1;
+    stroke:#cacaca;
+    stroke-width:1;
+    cursor: pointer;
+}
+
+/* Create an active/current tablink class */
+.tablinks.active {
+    fill:#eeda38;
+    stroke:#cacaca;
+    stroke-width:1;
+    cursor: pointer;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+
+.postings{
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+.postings_mainbody{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+
+}
+.postings_header{
+	background-color: whitesmoke;
+    padding: 10px;
+    height: 80px;
+}
+.postnewjob{
+    color: white;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: #dabc06;
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding-top: 9px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.postnewjob:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.postings_content{
+	background-color: white;
+    padding-bottom: 30px;
+}
+.dpadding{
+	padding: 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.theader{
+	border-bottom:solid 1px;
+	border-top:solid 1px;
+	padding-top: 20px;
+	border-color: #d8d8d8;
+}
+th{
+	font-size: 15px;
+    padding: 20px;
+}
+td {
+    padding: 20px;
+    
+}
+
+.jtitle{
+	font-size: 19px;
+	color: #dabc07;
+	font-weight: 700;
+}
+
+.configbtn{
+	font-size: 18px;
+    border-radius: 50px;
+    color: #dabc06;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.configbtn:hover{
+	box-shadow: 0 1px 16px rgba(57,73,76,.35);
+}
+
+:host >>> .tooltip-inner {
+        background-color: white;
+        color: black;
+        border: solid;
+        border-color: #e5cd32;
+        font-size: 15px;
+      }
+:host >>> .tooltip.top .tooltip-arrow:before,
+:host >>> .tooltip.top .tooltip-arrow {
+        border-top-color: #e5cd32;
+}
+
+
+.contracts{
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.contracts_mainbody{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+
+}
+.contracts_header{
+	background-color: whitesmoke;
+    padding: 10px;
+    height: 80px;
+}
+.contracts_content{
+	background-color: white;
+    padding-bottom: 30px;
+}
+
+.nonecontracts{
+	padding: 20px;
+}

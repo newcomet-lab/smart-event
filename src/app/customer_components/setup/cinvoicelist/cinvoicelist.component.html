@@ -1,0 +1,131 @@
+﻿<h2 style="margin-top: 50px; margin-bottom: 50px;">Invoices Control Panel</h2>
+
+<div class="container invoicelist-body">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <caption class="text-center">Here are your Invoices List</caption>
+          <caption>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                  <label><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;Search Duration : </label>
+                  <select [(ngModel)]="duration_opt" class="select-widget">
+                      <option value="">-Any-</option>
+                      <option value="2">Last 2 day</option>
+                      <option value="6">Last 6 day</option>
+                      <option value="12">Last 12 day</option>
+                      <option value="custom">Custom</option>
+                  </select>
+                  <div class="custom_opt" [hidden]="duration_opt!='custom'">
+                      <label>Custom Date Range : </label>
+                      <input class="input-widget" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                  <label><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;keyword : </label>
+                  <input class="input-widget" type="text" />
+
+                  <label><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;&nbsp;Status :&nbsp;&nbsp;&nbsp;</label>
+                  <select [(ngModel)]="status_opt" class="select-widget" style="width: 250px; margin-left: 1px;">
+                      <option value="">-Any-</option>
+                      <option value="2">Confirmed</option>
+                      <option value="6">Pending</option>
+                      <option value="12">Cancelled</option>
+                  </select>
+                  <div class="filber_btns">
+                    <button class="filter_btn" style="float: left; margin-top: 20px; margin-left: 45px;"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;&nbsp;Filter</button>
+                    <button class="reset_btn" style="float: left; margin-top: 20px; margin-left: 45px;"><i class="fa fa-close" aria-hidden="true"></i>&nbsp;&nbsp;Reset</button>
+                  </div>
+
+              </div>
+          </caption>
+          <caption>
+              <div class="total_records">
+                  <h4>Total Records : 2</h4>
+              </div>
+          </caption>
+          <thead>
+            <tr>
+              <th style="width: 40px;"><input type="checkbox" /><label>#</label></th>
+              <th>ID</th>
+              <th >Date</th>
+              <th>Created By</th>
+              <th>Invoice To</th>
+              <th>Due Date</th>
+              <th>Paid Date</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th style="width: 130px;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>
+                  <h5>Invoice - 145</h5>
+              </td>
+              <td>
+                  <h5>29 Nov 17</h5>
+              </td>
+              <td>
+                  <h5>tom manner</h5>
+              </td>
+              <td>
+                  <h5>tom manner</h5>
+              </td>
+              <td>
+                  <h5>06 Dec 17</h5>
+              </td>
+              <td>
+                  <h5>Unknown</h5>
+              </td>
+              <td>
+                  <h5>$0</h5>
+              </td>
+              <td>
+                  <span class="label label-warning"><i class="fa fa-hourglass-start"></i> Unpaid</span>
+              </td>
+              <td style="text-align: center;">
+                  <a class="btn action_widget" style="background-color: #eeda38;" ><i class="fa fa-fw fa-external-link"></i>View </a>
+                  <br/>
+                  <a class="btn action_widget" style="background-color: #38ccee;"><i class="fa fa-fw fa-edit"></i>Update </a>
+                  <br/>
+                  <a class="btn action_widget" style="background-color: #ee6a38;"><i class="fa fa-fw fa-close"></i>Delete </a>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                <td colspan="10" class="text-center" style="background-color: #e8e8e8;">
+                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+                </td>
+              </tr>
+          </tfoot>
+          <tfoot>
+              <tr>
+                <td colspan="10">
+                    <div class="bulk_panel" style="float: left;">
+                        <select class="bulk_select">
+                            <option value="">--Bulk Action--</option>
+                            <option value="Delete">Mark Paid</option>
+                            <option value="Delete">Mark Unpaid</option>
+                            <option value="Delete">Mark Canceled</option>
+                            <option value="Delete">Delete</option>
+                        </select>
+                        <button class="bulk_action">Action</button>
+                    </div>
+                    <div class="pagination" style="float: right;">
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <input type="number" class="page_num" />
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                    </div>
+                </td>
+              </tr>
+          </tfoot>
+        </table>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>

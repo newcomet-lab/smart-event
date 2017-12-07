@@ -15,6 +15,7 @@ export class VsubmitproposalComponent implements OnInit {
 
     milestonearr: any[];
     m_descval:any[];
+    questionare: any[];
 
     isOpenfull: boolean;
     paidway: String;
@@ -29,6 +30,9 @@ export class VsubmitproposalComponent implements OnInit {
         this.paidway = "bymilestone";
 
         this.milestonearr = [{id : 1 , description_val : "" , duedate_val : "" , amount_val : ""}];
+
+        this.questionare = [{title : "Have you ever support this kinds of service before?" , answerval : ""},
+                            {title : "What is your special additional Tip?" , answerval : ""}];
         
     }
 

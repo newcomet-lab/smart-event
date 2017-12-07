@@ -259,11 +259,6 @@
 
 	</div>
 
-	<div id="myprofile" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
-	  <h3>My Profile</h3>
-	  <p>Tokyo is the capital of Japan.</p>
-	</div>
-
 	<div id="invoicesetting" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
 	  <h2>Invoice Settings</h2>
 	  <div class="vatoption-body">
@@ -366,6 +361,101 @@
 	  	</div>
 	  	</form>
 	  </div>
+
+	</div>
+	<div id="myprofile" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  	<h3 style="font-size: 30px;">Create your Profile for Consideration</h3>
+	  	<form name="profileform" (ngSubmit)="profileform.valid && submitProfile()" #profileform="ngForm" novalidate>
+	  	<div class="aboutyou_body">
+	  		<div class="aboutyou_body-title">
+	  			<span class="abb-title">Tell us more about you</span>	
+	  		</div>
+	  		<div class="aboutyou_body_contents">
+	  			<div class="upload_face">
+	  				<label class="hetitle">Please upload a professional portrait that clearly shows your face</label><span class="optional">(optional)</span>
+	  				<p></p>
+	  				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding: 5px;">
+	  					<i class="fa fa-user-circle abb_userlogo" aria-hidden="true"></i>
+	  				</div>
+	  				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+	  					<h4>Vendors with a friendly, professional-looking portrait are hired 5 times more often than those without a photo.</h4>
+	  					<a class="uploadface"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp;&nbsp;Add a photo now</a>
+	  				</div>
+	  			</div>
+	  			<hr>
+	  			<div class="poverviewpart">
+
+	  				<label class="hetitle">Add a professional title that describes the work you do</label>
+	  				<h4 class="gray_comment">Try to choose a title that will help you stand out.</h4>
+	  				<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_title.valid }">
+				        <input style="width: 500px; margin-top: 30px;" placeholder="EXAMPLE: Senior Event Vendor" type="text" class="form-control profile_widget" name="profile_title" [(ngModel)]="profilemodel.profile_title" #profile_title="ngModel" required />
+				        <div *ngIf="profileform.submitted && !profile_title.valid" class="help-block">Professional title is required</div>
+				    </div>
+
+				    <label class="hetitle">Write a professional overview</label>
+	  				<h4 class="gray_comment">Highlight your top skills, experience, and interests. This is one of the first things customers will see on your profile.</h4>
+	  				<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_overview.valid }">
+				        <textarea style="width: 750px; height: 300px; margin-top: 30px;" placeholder="Use this space to show customers you have the skills and experience they're looking for." type="text" class="form-control profile_widget" name="profile_overview" [(ngModel)]="profilemodel.profile_overview" #profile_overview="ngModel" required >
+				        </textarea>
+				        <div *ngIf="profileform.submitted && !profile_overview.valid" class="help-block">Professional Overview is required</div>
+				    </div>
+
+				    <label class="hetitle">What is your English proficiency?</label>
+	  				<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_overview.valid }">
+				        <select style="width: 500px;" class="form-control profile_widget" name="profile_english" [(ngModel)]="profilemodel.profile_english" #profile_english="ngModel" required >
+				        	<option value="">Select your proficiency</option>
+				        	<option value="1">Basic - I am only able to communicate in this language through wirtten communication</option>
+				        	<option value="2">Conversational - I know this language well enough to verbally discuss project details with a client.</option>
+				        	<option value="3">Fluent - I have complete command of this language with perfect grammar</option>
+				        	<option value="4">Native or Billingual - I have complete command of this language, including breadth of vocabulary, idioms, and colloquializms</option>
+				        </select>
+				        <div *ngIf="profileform.submitted && !profile_english.valid" class="help-block">Your English level is required</div>
+				    </div>
+
+	  			</div>
+
+	  		</div>
+	  		
+	  	</div>
+
+
+	  	<div class="yourfullothers">
+	  		<div class="yourfullothers-title">
+	  			<span class="yfo-title">Add your availability and location</span>	
+	  		</div>
+	  		<div class="yourfullothers_contents">
+	  			<label class="hetitle">What is your business time every day?</label>
+	  			<h4 class="gray_comment">Don't worry, you can always update this later.</h4>
+	  			<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_availabletime.valid }">
+				    <select style="width: 250px; margin-top: 30px;" class="form-control profile_widget" name="profile_availabletime" [(ngModel)]="profilemodel.profile_availabletime" #profile_availabletime="ngModel" required >
+				        	<option value="">Please select...</option>
+				        	<option value="1">Anytime what you need</option>
+				        	<option value="2">Fulltime every day</option>
+				        	<option value="3">Parttime every day</option>
+				        	<option value="4">Even Weekend available</option>
+				        </select>
+				        <div *ngIf="profileform.submitted && !profile_availabletime.valid" class="help-block">Your Available time is required</div>
+				</div>
+				<label class="hetitle">Address  (Street and block etc..)</label>
+				<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_restaddress.valid }">
+				        <input style="width: 800px; margin-top: 20px;" type="text" class="form-control profile_widget" name="profile_restaddress" [(ngModel)]="profilemodel.profile_restaddress" #profile_restaddress="ngModel" required />
+				        <div *ngIf="profileform.submitted && !profile_restaddress.valid" class="help-block">Address is required</div>
+				</div>
+				<label class="hetitle">Postal Code</label>
+				<div class="form-group" [ngClass]="{ 'has-error': profileform.submitted && !profile_postalcode.valid }">
+				        <input style="width: 300px; margin-top: 20px;" type="text" class="form-control profile_widget" name="profile_postalcode" [(ngModel)]="profilemodel.profile_postalcode" #profile_postalcode="ngModel" required />
+				        <div *ngIf="profileform.submitted && !profile_postalcode.valid" class="help-block">Postal Code is required</div>
+				</div>
+				<div class="form-group" style="text-align: left; margin-top: 50px;">
+			            <button [disabled]="loading" class="btn btn btn-default btn-sm dosubmityourinfo">Submit your Info</button>
+			            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+			            <p></p>
+			            
+			    </div>
+	  		</div>
+	  	</div>
+
+	  	</form>
 
 	</div>
 

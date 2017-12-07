@@ -1,0 +1,32 @@
+﻿<div class="container" style="text-align: center; padding-top: 30px; height: 180px;">
+	<svg class="tab" height="100" width="1300">
+	  <polygon id="vjp" points="0,0 0,100 325,100 355,50 325,0" class="tablinks" (click)="openTabPage($event, 'viewjobpost_content')"></polygon>
+	  <polygon id="iv" points="325,0 355,50 325,100 650,100 680,50 650,0" class="tablinks" (click)="openTabPage($event, 'invitevendors_content')" />
+	  <polygon id="rp" points="650,0 680,50 650,100 975,100 1005,50 975,0" class="tablinks" (click)="openTabPage($event, 'reviewproposal_content')" />
+	  <polygon id="hr" points="975,0 1005,50 975,100 1300,100 1300,0" class="tablinks" (click)="openTabPage($event, 'hire_content')" />
+	</svg>
+	<h4 class="viewjobpost_tab" (click)="openTabPagebytext('vjp', 'viewjobpost_content')">VIEW JOB POST</h4>
+	<h4 class="invitevendors_tab" (click)="openTabPagebytext('iv', 'invitevendors_content')">INVITE VENDORS</h4>
+	<h4 class="reviewpropose_tab" (click)="openTabPagebytext('rp', 'reviewproposal_content')">REVIEW PROPOSALS(0)</h4>
+	<h4 class="hire_tab" (click)="openTabPagebytext('hr', 'hire_content')">HIRE(0)</h4>
+</div>
+
+<div id="viewjobpost_content" class="container tabcontent">
+	  <h3>view job post</h3>
+	  <p>London is the capital city of England.</p>
+</div>
+
+<div id="invitevendors_content" class="container tabcontent">
+	  <h3>invite vendors</h3>
+	  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="reviewproposal_content" class="container tabcontent">
+	  <h3>review proposal</h3>
+	  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="hire_content" class="container tabcontent">
+	  <h3>hire </h3>
+	  <p>Tokyo is the capital of Japan.</p>
+</div>

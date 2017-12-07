@@ -8,9 +8,14 @@ import { RegisterComponent } from './firstcomponents/register/index';
 import { AuthGuard } from './_guards/index';
 
 import {CustomerLayoutComponent} from "./customer_components/customer-layout/customer-layout.component";
-import {AccountSetupComponent} from "./customer_components/setup/account-setup/account-setup.component"
-import {LocationSetupComponent} from "./customer_components/setup/location-setup/location-setup.component"
-import { CustomerhomeComponent } from './customer_components/setup/customer-home/index';
+import { MyjobsComponent } from './customer_components/setup/myjobs/index';
+import { AlljobpostingComponent } from './customer_components/setup/alljobposting/index';
+import { AllcontractsComponent } from './customer_components/setup/allcontracts/index';
+import { PostjobComponent } from './customer_components/setup/postjob/index';
+import { JobscreenComponent } from './customer_components/setup/jobscreen/index';
+import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
+import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
+import { CchatboxComponent } from './customer_components/setup/cchatbox/index';
 
 import {VendorLayoutComponent} from "./vendor_components/vendor-layout/vendor-layout.component";
 import { StorefrontComponent } from './vendor_components/setup/storefront/index';
@@ -29,6 +34,7 @@ import { FindcustomersComponent } from './vendor_components/setup/findcustomers/
 import { CustomersjobComponent } from './vendor_components/setup/customersjob/index';
 import { VsubmitproposalComponent } from './vendor_components/setup/vsubmitproposal/index';
 import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
+import { MyprofileComponent } from './vendor_components/setup/myprofile/index';
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -40,10 +46,16 @@ const appRoutes: Routes = [
 	    component: CustomerLayoutComponent,
 	    canActivate: [AuthGuard],
 	    children: [
-	      { path: 'home', component: CustomerhomeComponent, canActivate: [AuthGuard] },
-	      {path: 'account', component: AccountSetupComponent, canActivate: [AuthGuard] },
-	      {path: 'location', component: LocationSetupComponent, canActivate: [AuthGuard] }
-	    ]
+	    	{ path: 'myjobs', component: MyjobsComponent, canActivate: [AuthGuard] },
+	    	{ path: 'alljobposting', component: AlljobpostingComponent, canActivate: [AuthGuard] },
+	    	{ path: 'allcontracts', component: AllcontractsComponent, canActivate: [AuthGuard] },
+	    	{ path: 'postjob', component: PostjobComponent, canActivate: [AuthGuard] },
+
+	    	{ path: 'jobscreen', component: JobscreenComponent, canActivate: [AuthGuard] },
+	    	{ path: 'invoicelist', component: CinvoicelistComponent, canActivate: [AuthGuard] },
+	    	{ path: 'mailbox', component: CmailboxComponent, canActivate: [AuthGuard] },
+	    	{ path: 'chatbox', component: CchatboxComponent, canActivate: [AuthGuard] }
+	    	]
 	},
 	{
 	    path: 'vendor',
@@ -65,6 +77,7 @@ const appRoutes: Routes = [
 	      { path: 'findcustomers', component: FindcustomersComponent, canActivate: [AuthGuard] },
 	      { path: 'customersjob', component: CustomersjobComponent, canActivate: [AuthGuard] },
 	      { path: 'vsubmitproposal', component: VsubmitproposalComponent, canActivate: [AuthGuard] },
+	      { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
 	      { path: 'vendor_event_detail', component: Vendor_event_detailComponent, canActivate: [AuthGuard] }
 	    ]
 	},

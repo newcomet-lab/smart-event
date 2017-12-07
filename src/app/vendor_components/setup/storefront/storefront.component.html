@@ -1,60 +1,69 @@
-﻿<div class="container " style="width: 100%; margin-top: 100px;">
-    <div class="inquires col-lg-6 col-md-6 col-sm-6 col-xs-6" >
-   		<div class="inquires-headlogo col-lg-6 col-md-6 col-sm-6 col-xs-6">
-   			<i class="fa fa-users" aria-hidden="true"></i>
-   		</div>
-
-   		<div class="inquires-body col-lg-6 col-md-6 col-sm-6 col-xs-6">
-   			<div class="inquires-title">
-   				<h3>INQUIRES</h3>
-   			</div>
-   			<div class="inquires-status">
-   				<div class="updated-date">
-   					<h5>Updated Date :   8, November 2017</h5>
-   				</div>
-   				<div class="updated-totalnum">
-   					<h4>34</h4>
-   				</div>
-   				<div class="updated-viewdetail">
-   					<a href="#">View Deatail</a>
-   				</div>
-   			</div>
-   		</div>
+﻿<div class="container totalstatus">
+    <div class="totalcustomers col-lg-3 col-md-3 col-sm-3 col-xs-3">
+       <div class="main_board">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <h3>160</h3>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <i class="fa fa-users" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center; padding: 5px;">
+              <h4>TOTAL CUSTOMERS</h4>
+          </div>
+       </div>
     </div>
-    <div class="reviews col-lg-6 col-md-6 col-sm-6 col-xs-6" >
-   		<div class="reviews-headlogo col-lg-6 col-md-6 col-sm-6 col-xs-6">
-   			<i class="fa fa-thumbs-up" aria-hidden="true"></i>
-   		</div>
-   		
-   		<div class="reviews-body col-lg-6 col-md-6 col-sm-6 col-xs-6">
-   			<div class="reviews-title">
-   				<h3>REVIEWS</h3>
-   			</div>
-   			<div class="reviews-status">
-   				<div class="updated-date">
-   					<h5>Updated Date :   8, November 2017</h5>
-   				</div>
-   				<div class="updated-totalnum">
-   					<h4>63</h4>
-   				</div>
-   				<div class="updated-viewdetail">
-   					<a href="#">View Deatail</a>
-   				</div>
-   			</div>
-   		</div>
+    <div class="inquires col-lg-3 col-md-3 col-sm-3 col-xs-3">
+       <div class="main_board">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <h3>76</h3>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center; padding: 5px;">
+              <h4>INQUIRES</h4>
+          </div>
+       </div>
+    </div>
+    <div class="conversion col-lg-3 col-md-3 col-sm-3 col-xs-3">
+       <div class="main_board">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <h3>800</h3>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <i class="fa fa-exchange" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center; padding: 5px;">
+              <h4>CONVERSION</h4>
+          </div>
+       </div>
+    </div>
+    <div class="newmessage col-lg-3 col-md-3 col-sm-3 col-xs-3">
+       <div class="main_board">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <h3>40</h3>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: center; padding: 5px;">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center; padding: 5px;">
+              <h4>NEW MESSAGE</h4>
+          </div>
+       </div>
     </div>
 </div>
 
 <div class="container " style="width: 100%;">
 	<div class="traffic-mystore">
 		<div class="traffic-title">
-			<h3>Traffic of My Stores</h3>
+			<h3 style="float: left;">Traffic of My Stores</h3>
+      <div class="rangediv">
+        <span class="fa fa-calendar"></span>
+        <input placeholder="Choose Date Range" class="trafficrange_widget" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="trafficrange">
+      </div>
 		</div>
 		<div class="traffic-status">
-			<div class="updated-date">
-   				<h5>Updated Date :   8, November 2017</h5>
-   			</div>
-   			<div class="updated-chart">
+   			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 updated-chart">
    				<canvas baseChart
                 [data]="lineChartData"
                 [labels]="lineChartLabels"
@@ -62,9 +71,85 @@
                 (chartHover)="chartHovered($event)"
                 (chartClick)="chartClicked($event)"></canvas>
    			</div>
-   			<div class="updated-viewdetail">
-   				<a href="#">View Deatail</a>
-   			</div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 cam_performance">
+            <h3>Top Campaign Performance</h3>
+            <hr style="border-color: #e6e6e6; border-width: 2px; ">
+            <h4>Facebook Campaign</h4>
+            <progressbar class="facebookcam" [value]="62" [max]="100"></progressbar>
+            <p ></p>
+            <h4>Twitter Campaign</h4>
+            <progressbar class="twittercam" [value]="12" [max]="100"></progressbar>
+            <p ></p>
+            <h4>Conventional Media</h4>
+            <progressbar class="conventionalcam" [value]="82" [max]="100"></progressbar>
+            <p ></p>
+            <h4>Bill boards</h4>
+            <progressbar class="billboardcam" [value]="32" [max]="100"></progressbar>
+            <p ></p>
+        </div>
 		</div>
 	</div>
+</div>
+
+
+<div class="container">
+    <div class="recent_activity">
+        <div class="ra_title">
+            <h3>Recent Activities</h3>
+        </div>
+        <div class="ra_status">
+            <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="bar_chartHovered($event)"
+            (chartClick)="bar_chartClicked($event)"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="visitor_location">
+        <div class="vl_title">
+            <h3>Visitor Location</h3>
+        </div>
+        <div class="vl_status">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <h3>125.7k Views from 60 countries</h3>
+                <nav>
+                    <ul>
+                        <li><span style="float: left;">Russia</span><span style="float: right;">22%</span></li>
+                        <li><span style="float: left;">Canada</span><span style="float: right;">12%</span></li>
+                        <li><span style="float: left;">China</span><span style="float: right;">2%</span></li>
+                        <li><span style="float: left;">United State</span><span style="float: right;">3%</span></li>
+                        <li><span style="float: left;">Brazil</span><span style="float: right;">4%</span></li>
+                        <li><span style="float: left;">Australia</span><span style="float: right;">6%</span></li> 
+                        <li><span style="float: left;">India</span><span style="float: right;">2%</span></li> 
+                        <li><span style="float: left;">Argentina</span><span style="float: right;">2%</span></li>
+                        <li><span style="float: left;">Kazahstan</span><span style="float: right;">12%</span></li>
+                        <li><span style="float: left;">Algeria</span><span style="float: right;">2%</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <dx-vector-map 
+                        id="vector-map" 
+                        [bounds]="[-180, 85, 180, -60]" 
+                        (onClick)="clickmap($event)">
+                        <dxo-tooltip 
+                            [enabled]="true" 
+                            [customizeTooltip]="customizeTooltip">
+                            <dxo-font color="#565656"></dxo-font>
+                            <dxo-border [visible]="false"></dxo-border>
+                        </dxo-tooltip>
+                        <dxi-layer 
+                            [dataSource]="worldMap" 
+                            [customize]="customizeLayers">
+                        </dxi-layer>
+                    </dx-vector-map>
+            </div>
+        </div>
+    </div>
 </div>

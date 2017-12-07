@@ -1,0 +1,167 @@
+﻿<div class="container" style="margin-top: 70px;">
+
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	  <h4>Folders</h4>
+	  	<button id="defaultOpen" class="tablinks" (click)="openTabPage($event, 'inboxpanel')"><i class="fa fa-inbox"></i>&nbsp;&nbsp;Inbox<span class="label label-primary pull-right">1</span></button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'sentpanel')"><i class="fa fa-envelope-o"></i>&nbsp;&nbsp;Sent</button>
+	</div>
+
+	<div id="inboxpanel" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h2>Inbox</h2>
+	  <div class="inbox-body">
+	  		<div class="row">
+			    <div class="col-xs-12">
+			      <div class="table-responsive">
+			        <table class="table table-bordered table-hover">
+			          <caption class="text-center">Here are your received messages</caption>
+			          <caption>
+			          		<label style="float: left; margin-top: 30px; margin-left: 20px;">Show </label>
+			          		<select class="entry_num">
+			                    <option value="5">5</option>
+			                    <option value="10">10</option>
+			                    <option value="15">15</option>
+			                    <option value="20">20</option>
+			                </select>
+			                <label style="float: left; margin-top: 30px;">entries</label>
+			          		<button class="m_refreshbtn"><i class="fa fa-refresh"></i>&nbsp;&nbsp;refresh</button>
+			          </caption>
+			          <caption>
+			              <div class="total_records">
+			                  <h4>Total Records : 2</h4>
+			              </div>
+			              <div class="input-group search_widget">
+			              	  <label>Search : </label>
+			                  <input type="text" class="form-control" name="q" value="" style="width: 230px;">
+			              </div>
+			          </caption>
+			          <thead>
+			            <tr>
+			              <th style="width: 40px;"><label>Num</label></th>
+			              <th>Sender</th>
+			              <th>Type</th>
+			              <th>Mail Subject</th>
+			              <th>Created</th>
+			            </tr>
+			          </thead>
+			          <tbody>
+			            <tr>
+			              <td>1</td>
+			              <td>benraust23@gmail.com</td>
+			              <td>
+			                  onBookingConfirmationToCustomer
+			              </td>
+			              <td>
+			                  Congratulation! booking...
+			              </td>
+			              <td>
+			                  29 Nov 17
+			              </td>
+			            </tr>
+			          </tbody>
+			          <tfoot>
+			              <tr>
+			                <td colspan="8" class="text-center" style="background-color: #e8e8e8;">
+			                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+			                </td>
+			              </tr>
+			          </tfoot>
+			          <tfoot>
+			              <tr>
+			                <td colspan="8">
+			                    <div class="pagination" style="float: right;">
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			                        <input type="number" class="page_num" />
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+			                    </div>
+			                </td>
+			              </tr>
+			          </tfoot>
+			        </table>
+			      </div><!--end of .table-responsive-->
+			    </div>
+			</div>
+	  </div>
+	</div>
+
+	<div id="sentpanel" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h2>Sent</h2>
+	  <div class="sent-body">
+	  		<div class="row">
+			    <div class="col-xs-12">
+			      <div class="table-responsive">
+			        <table class="table table-bordered table-hover">
+			          <caption class="text-center">Here are your sent messages</caption>
+			          <caption>
+			          		<label style="float: left; margin-top: 30px; margin-left: 20px;">Show </label>
+			          		<select class="entry_num">
+			                    <option value="5">5</option>
+			                    <option value="10">10</option>
+			                    <option value="15">15</option>
+			                    <option value="20">20</option>
+			                </select>
+			                <label style="float: left; margin-top: 30px;">entries</label>
+			          		<button class="m_refreshbtn"><i class="fa fa-refresh"></i>&nbsp;&nbsp;refresh</button>
+			          </caption>
+			          <caption>
+			              <div class="total_records">
+			                  <h4>Total Records : 2</h4>
+			              </div>
+			              <div class="input-group search_widget">
+			              	  <label>Search : </label>
+			                  <input type="text" class="form-control" name="q" value="" style="width: 230px;">
+			              </div>
+			          </caption>
+			          <thead>
+			            <tr>
+			              <th style="width: 40px;"><label>Num</label></th>
+			              <th>Sender</th>
+			              <th>Type</th>
+			              <th>Mail Subject</th>
+			              <th>Created</th>
+			            </tr>
+			          </thead>
+			          <tbody>
+			            <tr>
+			              <td>1</td>
+			              <td>benraust23@gmail.com</td>
+			              <td>
+			                  onBookingConfirmationToCustomer
+			              </td>
+			              <td>
+			                  Congratulation! booking...
+			              </td>
+			              <td>
+			                  29 Nov 17
+			              </td>
+			            </tr>
+			          </tbody>
+			          <tfoot>
+			              <tr>
+			                <td colspan="8" class="text-center" style="background-color: #e8e8e8;">
+			                    Powered By <a href="#" target="_blank" style="text-decoration:none;">Eventsmart</a> and <a href="#" target="_blank" style="text-decoration:none;">MKG Corporation</a>.
+			                </td>
+			              </tr>
+			          </tfoot>
+			          <tfoot>
+			              <tr>
+			                <td colspan="8">
+			                    <div class="pagination" style="float: right;">
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+			                        <input type="number" class="page_num" />
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+			                        <a class="btn pagiantion_btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+			                    </div>
+			                </td>
+			              </tr>
+			          </tfoot>
+			        </table>
+			      </div><!--end of .table-responsive-->
+			    </div>
+			</div>
+	  </div>
+	</div>
+
+</div>

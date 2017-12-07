@@ -30,6 +30,7 @@ export class SettingComponent implements OnInit {
     postal_code: string;
 
     model: any= {};
+    profilemodel: any= {};
 
     vatmodel: any= {};
 
@@ -51,6 +52,9 @@ export class SettingComponent implements OnInit {
         this.model.pricingval = "professional";
 
         this.vatmodel.applyvat = "yes";
+
+        this.profilemodel.profile_english = "";
+        this.profilemodel.profile_availabletime = "";
 
         document.getElementById("defaultOpen").click();
     }

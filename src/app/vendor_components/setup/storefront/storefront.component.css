@@ -1,86 +1,39 @@
+.totalstatus{
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding: 0px;
+}
+.totalcustomers{
+	color: #749e9a;
+}
 .inquires{
-	background-color: white;
-	padding: 20px;
-	box-shadow: 0 1px 6px rgba(57,73,76,.35);
-	margin-bottom: 50px;
+	color: #7657a7bd;
 }
-.inquires-headlogo{
-	text-align: center;
+.conversion{
+	color: #bea682;
 }
-.inquires-headlogo i{
-	font-size: 150px;
-    color: #8a9e75;
-}
-.inquires-title{
-	text-align: center;
-    background-color: #e4e4e4;
-    padding: 5px;
-    border-radius: 4px;
-    color: #899e74;
-}
-.inquires-title h3{
-	font-size: 30px;
-	font-weight: 700;
-}
-.inquires-status .updated-date{
-	font-style: oblique;
-}
-.inquires-status .updated-totalnum h4{
-	text-align: center;
-    color: #8a9e75;
-    font-size: 30px;
-    font-weight: 600;
-}
-.inquires-status .updated-viewdetail{
-	text-align: right;
-}
-.inquires-status .updated-viewdetail a{
-	font-weight: 700;
-	text-decoration-line: none;
-	color: #8a9e75;
+.newmessage{
+	color: #82be89;
 }
 
-
-.reviews{
+.main_board{
 	background-color: white;
-	padding: 20px;
+	padding: 5px;
 	box-shadow: 0 1px 6px rgba(57,73,76,.35);
 	margin-bottom: 50px;
+	height: 180px;
 }
-.reviews-headlogo{
-	text-align: center;
-}
-.reviews-headlogo i{
-	font-size: 150px;
-    color: #9b759e;
-}
-.reviews-title{
-	text-align: center;
-    background-color: #e4e4e4;
-    padding: 5px;
-    border-radius: 4px;
-    color: #9b759e;
-}
-.reviews-title h3{
-	font-size: 30px;
+.main_board h3{
+	font-size: 50px;
 	font-weight: 700;
 }
-.reviews-status .updated-date{
-	font-style: oblique;
+.main_board h4{
+	font-size: 27px;
+	font-weight: 600;
+	margin-top: 25px;
 }
-.reviews-status .updated-totalnum h4{
-	text-align: center;
-    color: #9b759e;
-    font-size: 30px;
-    font-weight: 600;
-}
-.reviews-status .updated-viewdetail{
-	text-align: right;
-}
-.reviews-status .updated-viewdetail a{
-	font-weight: 700;
-	text-decoration-line: none;
-	color: #9b759e;
+.main_board i{
+	font-size: 85px;
 }
 
 
@@ -95,20 +48,133 @@
     padding: 5px;
     border-radius: 4px;
     color: #9e7575;
+    height: 80px;
 }
 .traffic-title h3{
 	font-size: 30px;
 	font-weight: 700;
 	margin-left: 50px;
 }
-.traffic-status .updated-date{
-	font-style: oblique;
+.traffic-status{
+	height: 400px;
 }
-.traffic-status .updated-viewdetail{
-	text-align: right;
+.trafficrange_widget{
+	width: 300px;
+	height: 40px;
+    font-size: 15px;
+    float: right;
+    margin-top: 15px;
+    padding-left: 20px;
+    font-weight: 700;
 }
-.traffic-status .updated-viewdetail a{
+.trafficrange_widget:hover{
+	border-width: 1px;
+	border-color: #e5cd32;
+	box-shadow: 0 1px 9px rgba(121, 119, 30, 0.35);
+}
+
+
+.rangediv {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.rangediv input:hover{
+    box-shadow: 0 0 3px #fff704, 0 1px 16px #ebef16 inset;
+}
+.rangediv input {
+  width: 250px;
+  height: 42px;
+
+  background: #fcfcfc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.rangediv input { text-indent: 32px;}
+.rangediv .fa-calendar { 
+    position: absolute;
+    top: 25px;
+    left: 1000px;
+    font-size: 20px;
+    color: #efda38;
+}
+
+.cam_performance{
+	padding: 10px;
+}
+.cam_performance h3{
+	font-size: 25px;
+	color: #9a9a9a;
+}
+
+
+
+.recent_activity{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	margin-bottom: 100px;
+}
+.ra_title{
+    background-color: #e4e4e4;
+    padding: 5px;
+    border-radius: 4px;
+    color: #9e7575;
+    height: 80px;
+}
+.ra_title h3{
+	font-size: 30px;
 	font-weight: 700;
-	text-decoration-line: none;
-	color: #9e7575;
+	margin-left: 50px;
+}
+.ra_status{
+}
+
+
+.visitor_location{
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	margin-bottom: 100px;
+}
+.vl_title{
+    background-color: #e4e4e4;
+    padding: 5px;
+    border-radius: 4px;
+    color: #9e7575;
+    height: 80px;
+}
+.vl_title h3{
+	font-size: 30px;
+	font-weight: 700;
+	margin-left: 50px;
+}
+.vl_status{
+	height: 500px;
+}
+.vl_status h3{
+	font-size: 24px;
+	margin-top: 30px;
+	color: #9d7475;
+}
+
+/deep/ #vector-map {
+    height: 440px;
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+.vl_status nav ul{height:400px; width:100%; margin-top: 20px; list-style-type: none;}
+.vl_status nav ul{overflow:hidden; overflow-y:scroll;}
+.vl_status nav ul li
+{
+	font-size: 20px;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    padding: 6px;
+    height: 50px;
 }

@@ -1,0 +1,90 @@
+.heading{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.findcategory{
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-color: #bdbdbd;
+    margin-top: 50px;
+}
+.findcategory:hover{
+    border-color: #e5cd32;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.postnewjob{
+    color: white;
+    background-color: #e5cd32;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding-top: 9px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.postnewjob:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+
+.postings{
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+.postings_mainbody{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+
+}
+.postings_header{
+	background-color: whitesmoke;
+    padding: 10px;
+    height: 80px;
+}
+
+.postings_content{
+	background-color: white;
+    padding-bottom: 30px;
+}
+.dpadding{
+	padding: 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+.theader{
+	border-bottom:solid 1px;
+	border-top:solid 1px;
+	padding-top: 20px;
+	border-color: #d8d8d8;
+}
+th{
+	font-size: 15px;
+    padding: 20px;
+}
+td {
+    padding: 20px;
+    
+}
+
+.jtitle{
+	font-size: 23px;
+	color: #dabc07;
+}
+
+.configbtn{
+	font-size: 18px;
+    border-radius: 50px;
+    color: #dabc06;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.configbtn:hover{
+	box-shadow: 0 1px 16px rgba(57,73,76,.35);
+}

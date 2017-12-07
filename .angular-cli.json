@@ -20,7 +20,9 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "./app/app_styles/app.css"
+        "./app/app_styles/app.css",
+        "../node_modules/devextreme/dist/css/dx.common.css", 
+        "../node_modules/devextreme/dist/css/dx.light.css"
       ],
       "scripts": [
         "../node_modules/tinymce/tinymce.js",

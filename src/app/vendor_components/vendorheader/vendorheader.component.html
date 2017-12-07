@@ -2,10 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header rom-header">
       <h1>
-        <a class="logo" href="/" style="background: url('assets/images/testlogo.png') no-repeat center;" >MKG</a>
-        <span class="site-title">
-            FANTHY FRUTY <p></p>FEATURES
-        </span>
+        <a class="logo" href="/" style="background: url('assets/images/logo.png') no-repeat center;" >MKG</a>
       </h1>
     </div>
     <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 25px;  margin-left: 30px;">
@@ -88,7 +85,7 @@
                 <img src="assets/images/marktim.png" alt="my-image" class="mitem-circular-image" />
             </div>
             <div style="float: right; padding-top: 16px;" class="namewithtype">
-                  <a href="#" style="color: #cebd35;">Tim Mark</a>
+                  <a [routerLink]="['/vendor/myprofile']" style="color: #cebd35;">Tim Mark</a>
                   <h6>Vendor</h6>
                   <div class="profile_progress">
                     <progressbar class="progress progress-striped" [value]="62" [max]="100" type="warning">Profile Status : 62%</progressbar>

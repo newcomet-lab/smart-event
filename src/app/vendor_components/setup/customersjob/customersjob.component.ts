@@ -3,6 +3,8 @@
 import { User } from '../../../_models/index';
 import { UserService } from '../../../_services/index';
 
+import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
     moduleId: module.id.toString(),
     templateUrl: 'customersjob.component.html',
@@ -16,7 +18,8 @@ export class CustomersjobComponent implements OnInit {
     totalItems = 64;
     currentPage = 4;
     
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService ,private route: ActivatedRoute,
+        private router: Router) {
         
     }
 
@@ -26,9 +29,12 @@ export class CustomersjobComponent implements OnInit {
     }
 
     ngOnInit() {
+        
+    }
 
-        
-        
+    dosubmit_propose()
+    {
+        this.router.navigate(['/vendor/vsubmitproposal']);
     }
 
 }

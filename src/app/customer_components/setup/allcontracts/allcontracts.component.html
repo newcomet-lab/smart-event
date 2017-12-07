@@ -1,0 +1,93 @@
+﻿<div class="container" style="margin-top: 50px;">
+	<h2>All Contracts</h2>
+</div>
+<div class="container contracts">
+	<div class="contracts_mainbody">
+		<div class="contracts_header">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 15px;">
+				<input type="text" class=" mainsearch_widget" />
+				<button class="searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 15px;">
+				<button class="filters_widget" (click)="flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+			</div>
+		</div>
+		<div class="additional_setting" [hidden]="!flag_add">
+			<div>
+				<label>Contract Status</label>
+				<angular2-multiselect [data]="contract_dropdownList" [(ngModel)]="contract_selectedItems" [settings]="contract_dropdownSettings"
+									(onSelect)="oncItemSelect($event)" 
+								    (onDeSelect)="OncItemDeSelect($event)"
+								    (onSelectAll)="oncSelectAll($event)"
+								    (onDeSelectAll)="oncDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+			<div style="margin-top: 30px;">
+				<label>Milestone Status</label>
+				<angular2-multiselect [data]="milestone_dropdownList" [(ngModel)]="milestone_selectedItems" [settings]="milestone_dropdownSettings"
+									(onSelect)="onmItemSelect($event)" 
+								    (onDeSelect)="OnmItemDeSelect($event)"
+								    (onSelectAll)="onmSelectAll($event)"
+								    (onDeSelectAll)="onmDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+			<div style="margin-top: 30px;">
+				<label>Escrow Refund Status</label>
+				<angular2-multiselect [data]="refund_dropdownList" [(ngModel)]="refund_selectedItems" [settings]="refund_dropdownSettings"
+									(onSelect)="oneItemSelect($event)" 
+								    (onDeSelect)="OneItemDeSelect($event)"
+								    (onSelectAll)="oneSelectAll($event)"
+								    (onDeSelectAll)="oneDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+			<div class="control-group" style="margin-top: 30px;">
+				<label class="control control--radio">Contract start date
+					<input type="radio" name="radio" checked="checked" [(ngModel)]="cdr_type" value="cstartdate"/>
+					<div class="control__indicator"></div>
+				</label>
+				<label class="control control--radio">Contract end date
+					<input type="radio" name="radio" [(ngModel)]="cdr_type" value="cenddate"/>
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+			<div>
+				<input placeholder="Choose Date Range" class="form-control cdrwidget" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="c_daterange">
+			</div>
+			<button class="save_close_btn" (click)="flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+		</div>
+		<div class="contracts_sorttype">
+			<label>Sort by</label>
+			<select class="sortselect">
+				<option value="1">Start date</option>
+				<option value="2">End date</option>
+				<option value="3">Contract name</option>
+				<option value="4">Vendor name</option>
+			</select>
+			<div class="btn-group sb_tabs">
+				<label class="btn btn-success" name="sb_tab" [(ngModel)]="sb_tab" btnRadio="up" uncheckable><i class="fa fa-long-arrow-up" aria-hidden="true"></i></label>
+				<label class="btn btn-success" name="sb_tab" [(ngModel)]="sb_tab" btnRadio="down" uncheckable><i class="fa fa-long-arrow-down" aria-hidden="true"></i></label>
+			</div>
+		</div>
+		<div class="resultsbody">
+			<h4>We looked, but couldn't find a contract that matches your search criteria. Please try again.</h4>
+		</div>
+	</div>
+</div>
