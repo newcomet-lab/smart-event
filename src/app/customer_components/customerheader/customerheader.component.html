@@ -9,22 +9,22 @@
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Jobs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="height: 241px; border-color: #e0e0e0; border-width: 2px;">
-          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/customer/myjobs']">
             <div>
               <a [routerLink]="['/customer/myjobs']">My Jobs</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/alljobposting']">
             <div>
               <a [routerLink]="['/customer/alljobposting']">All Job Posting</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/allcontracts']">
             <div>
               <a [routerLink]="['/customer/allcontracts']">All Contracts</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/postjob']">
             <div>
               <a [routerLink]="['/customer/postjob']">Post a Job</a>
             </div>
@@ -34,14 +34,24 @@
       <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Vendors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
           <ul class="dropdown-menu menuitem" style="height: 121px; border-color: #e0e0e0; border-width: 2px;">
-            <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+            <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/customer/myvendors']">
               <div>
-                <a href="#">My Vendors</a>
+                <a [routerLink]="['/customer/myvendors']">My Vendors</a>
               </div>
             </li>
-            <li class="menuitem-body" style="height: 60px;">
+            <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/findvendors']">
               <div>
-                <a href="#">Find Vendors</a>
+                <a [routerLink]="['/customer/findvendors']">Find Vendors</a>
+              </div>
+            </li>
+          </ul>
+      </li>
+      <li class="dropdown">
+          <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Reports<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <ul class="dropdown-menu menuitem" style="height: 61px; border-color: #e0e0e0; border-width: 2px;">
+            <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/customer/transactionhistory']">
+              <div>
+                <a [routerLink]="['/customer/transactionhistory']">Transaction</a>
               </div>
             </li>
           </ul>
@@ -49,17 +59,17 @@
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Messages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
-          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/customer/mailbox']">
             <div>
               <a [routerLink]="['/customer/mailbox']">Mailbox</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/invoicelist']">
             <div>
               <a [routerLink]="['/customer/invoicelist']">Invoices</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/chatbox']">
             <div>
               <a [routerLink]="['/customer/chatbox']">Chat</a>
             </div>
@@ -90,15 +100,15 @@
                   </div>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" [routerLink]="['/customer/setting']">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-cog" aria-hidden="true"></i>
             </div>
             <div style="float: right; margin-top: 1px; margin-right: 40px;" class="settingtitle">
-                <a href="#" style="margin-right: 160px;">Setting</a>
+                <a [routerLink]="['/customer/setting']" style="margin-right: 160px;">Setting</a>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" [routerLink]="['/']">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-bullseye" aria-hidden="true"></i>
             </div>
@@ -106,7 +116,7 @@
                 <a [routerLink]="['/']" style="margin-right: 95px;">View Frontend</a>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" (click)="logout()">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-sign-out" aria-hidden="true"></i>
             </div>

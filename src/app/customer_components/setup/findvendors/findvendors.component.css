@@ -1,0 +1,259 @@
+
+
+/*invite vendors*/
+#invitevendors_content{
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+
+}
+.invitevendors_subtab {
+    overflow: hidden;
+    height: 60px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #a7a7a7;
+    padding-top: 10px;
+}
+
+.invitevendors_tablinks{
+    padding: 0px;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
+/* Change background color of buttons on hover */
+.invitevendors_tablinks:hover {
+    color: #eeda38;
+}
+
+/* Create an active/current tablink class */
+.invitevendors_tablinks.active {
+    color: #eeda38;
+    border-bottom: solid;
+    border-color: #efda38;
+    border-width: 4px;
+
+}
+
+/* Style the tab content */
+.invitevendors_tabcontents {
+
+}
+
+.optionalhead{
+    background-color: whitesmoke;
+    height: 100px;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: solid 1px #adadad;
+}
+.optionalbody{
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 600px;
+    background-color: whitesmoke;
+    border-bottom: solid 1px #adadad;
+}
+.iv_search_mainsearch_widget{
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-color: #bdbdbd;
+    margin-top: 10px;
+    border-width: 1px;
+    float: left;
+}
+.iv_search_mainsearch_widget:hover{
+    border-color: #e5cd32;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.iv_search_searchbtn{
+    color: white;
+    background-color: #e5cd32;
+    width: 5%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    margin-top: 10px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.iv_search_searchbtn:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.iv_search_filters_widget{
+    color: #e5cd32;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    margin-top: 30px;
+    float: left;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.iv_search_filters_widget:hover{
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.ivscontrol-group {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.ivscontrol {
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.ivscontrol input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.ivscontrol__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+
+.ivscontrol--radio .ivscontrol__indicator {
+    border-radius: 50%;
+}
+
+/* Hover and focus states */
+.ivscontrol:hover input ~ .ivscontrol__indicator,
+.ivscontrol input:focus ~ .ivscontrol__indicator {
+    background: #b9b9b9;
+}
+
+/* Checked state */
+.ivscontrol input:checked ~ .ivscontrol__indicator {
+    background: #e6cd32;
+}
+
+/* Hover state whilst checked */
+.ivscontrol:hover input:not([disabled]):checked ~ .ivscontrol__indicator,
+.ivscontrol input:checked:focus ~ .ivscontrol__indicator {
+    background: #e6cd32;
+}
+
+/* Check mark */
+.ivscontrol__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.ivscontrol input:checked ~ .ivscontrol__indicator:after {
+    display: block;
+}
+
+/* Radio button inner circle */
+.ivscontrol--radio .ivscontrol__indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.save_close_btn{
+    color: #e5cd32;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    float: left;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.save_close_btn:hover{
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.cirular_img{
+    border-radius: 100px;
+}
+.logodiv:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fba612;
+    width: 18px;
+    height: 18px;
+    right: 15px;
+    top: 59px;
+}
+
+.invitetojob_btn{
+    color: white;
+    background-color: #eeda38;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.invitetojob_btn:hover{
+    color: white;
+    background-color: #c7b72e;
+}
+
+.savevendor_btn{
+    color: #eeda38;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.savevendor_btn:hover{
+    box-shadow: 0 1px 16px rgba(57,73,76,.35);
+}
+
+.each_ivs_vendors{
+    height: 140px;
+    margin-top: 30px;
+    border-bottom: solid 1px #d4d4d4;
+}
+
+.hirevendor_a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #e5cd32;
+    text-decoration: none;
+}

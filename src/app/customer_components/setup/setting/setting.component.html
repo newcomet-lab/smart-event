@@ -1,0 +1,484 @@
+﻿<div class="container mysetting_body">
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+	  <button class="tablinks" (click)="openTabPage($event, 'myinfo')" id="defaultOpen"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;My Info</button>
+	  <button class="tablinks" (click)="openTabPage($event, 'billingmethod')"><i class="fa fa-credit-card-alt" aria-hidden="true"></i>&nbsp;&nbsp;Billing Methods</button>
+	  <button class="tablinks" (click)="openTabPage($event, 'passwordsecurity')"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;&nbsp;Password & Security</button>
+	</div>
+	<div id="myinfo" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9 myinfo">
+
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 primaryinfo">
+	  		<form name="form" (ngSubmit)="primaryf.form.valid && save_primaryinfo()" #primaryf="ngForm" novalidate>
+
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		  			<img class="img-responsive circular_logo" src="/assets/images/customer1.jpg" />
+		  		</div>
+		  		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-top: -20px;">
+		  			<div class="name_company" [hidden]="flag_priamryinfo">
+		  				<h2>Margarita Saney</h2>
+		  				<h3>Margarita Saney</h3>
+		  			</div>
+		  			<div class="edit_name_company" [hidden]="!flag_priamryinfo">
+		  				<div style="" class="form-group" [ngClass]="{ 'has-error': primaryf.submitted && !firstname.valid }">
+		  					<label style="font-size: 16px;">First Name</label>
+		  					<input type="text" class="form-control primary_input" name="firstname" [(ngModel)]="primary_model.firstname" #firstname="ngModel" required />
+			            	<div *ngIf="primaryf.submitted && !firstname.valid" class="help-block">FirstName is required</div>
+		  				</div>
+		  				<div style="" class="form-group" [ngClass]="{ 'has-error': primaryf.submitted && !secondname.valid }">
+		  					<label style="font-size: 16px;">Second Name</label>
+		  					<input type="text" class="form-control primary_input" name="secondname" [(ngModel)]="primary_model.secondname" #secondname="ngModel" required />
+			            	<div *ngIf="primaryf.submitted && !secondname.valid" class="help-block">SecondName is required</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="padding-top: 15px; text-align: center;">
+		  			<div [hidden]="flag_priamryinfo">
+		  				<a class="editbtn" (click)="flag_priamryinfo=true">Edit</a>
+		  			</div>
+		  			<div [hidden]="!flag_priamryinfo">
+		  				<div class="form-group">
+		  					<button class="btn savebtn">Save</button>
+		  				</div>
+		  				<a class="cancelbtn" (click)="flag_priamryinfo=false">cancel</a>
+		  			</div>
+		  		</div>
+
+		  	</form>
+	  	</div>
+
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 emailinfo">
+	  		<form name="form" (ngSubmit)="emailf.form.valid && save_emailinfo()" #emailf="ngForm" novalidate>
+
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  				<h4>Email : </h4>
+	  			</div>
+	  			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	  				<div [hidden]="flag_emailinfo">
+	  					<h4>canvera223@gmail.com</h4>
+	  				</div>
+	  				<div [hidden]="!flag_emailinfo">
+	  					<div style="" class="form-group" [ngClass]="{ 'has-error': emailf.submitted && !youremail.valid }">
+		  					<input type="email" class="form-control email_input" placeholder="enter new email address" name="youremail" [(ngModel)]="email_model.youremail" #youremail="ngModel" required />
+			            	<div *ngIf="emailf.submitted && !youremail.valid" class="help-block">Email is required</div>
+		  				</div>
+	  				</div>
+	  			</div>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">
+	  				<div [hidden]="flag_emailinfo">
+		  				<a class="editbtn" (click)="flag_emailinfo=true">Edit</a>
+		  			</div>
+		  			<div [hidden]="!flag_emailinfo">
+		  				<div class="form-group">
+		  					<button class="btn savebtn">Save</button>
+		  				</div>
+		  				<a class="cancelbtn" (click)="flag_emailinfo=false">cancel</a>
+		  			</div>
+	  			</div>
+
+	  		</form>
+	  	</div>
+
+	  	<h3>Company Details</h3>
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 companydetail">
+	  		<form name="form" (ngSubmit)="companyf.form.valid && save_companyinfo()" #companyf="ngForm" novalidate>
+
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  				<i class="fa fa-building" aria-hidden="true" style="font-size: 40px;"></i>
+	  			</div>
+	  			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	  				<div [hidden]="flag_companyinfo">
+	  					<h4>Margarita Saney</h4>
+	  				</div>
+	  				<div [hidden]="!flag_companyinfo">
+
+	  					<div class="form-group" [ngClass]="{ 'has-error': companyf.submitted && !companyname.valid }">
+	  						<label>Company Name
+			  					<input type="text" class="form-control company_input" name="companyname" [(ngModel)]="company_model.companyname" #companyname="ngModel" required />
+				            	<div *ngIf="companyf.submitted && !companyname.valid" class="help-block">CompanyName is required</div>
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': companyf.submitted && !website.valid }">
+	  						<label>Website
+			  					<input type="text" class="form-control company_input" name="website" [(ngModel)]="company_model.website" #website="ngModel" required />
+				            	<div *ngIf="companyf.submitted && !website.valid" class="help-block">Website is required</div>
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': companyf.submitted && !tagline.valid }">
+	  						<label>Tagline
+			  					<input type="text" class="form-control company_input" name="tagline" [(ngModel)]="company_model.tagline" #tagline="ngModel" />
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': companyf.submitted && !description.valid }">
+	  						<label>Description
+			  					<textarea type="text" class="form-control company_textarea" name="description" [(ngModel)]="company_model.description" #description="ngModel">
+			  					</textarea>
+			            	</label>
+		  				</div>
+
+	  				</div>
+	  			</div>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">
+	  				<div [hidden]="flag_companyinfo">
+		  				<a class="editbtn" (click)="flag_companyinfo=true">Edit</a>
+		  			</div>
+		  			<div [hidden]="!flag_companyinfo">
+		  				<div class="form-group">
+		  					<button class="btn savebtn">Save</button>
+		  				</div>
+		  				<a class="cancelbtn" (click)="flag_companyinfo=false">cancel</a>
+		  			</div>
+	  			</div>
+
+	  		</form>
+	  	</div>
+
+	  	<h3>Company Contact</h3>
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ownername">
+	  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  			<h4>Owner</h4>
+	  		</div>
+	  		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	  			<h4>Margarita Saney</h4>
+	  		</div>
+	  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  		</div>
+	  	</div>
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address">
+	  		<form name="form" (ngSubmit)="addressf.form.valid && save_addressinfo()" #addressf="ngForm" novalidate>
+		  		
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		  			<h4>Address</h4>
+		  		</div>
+		  		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">	
+		  			<div [hidden]="flag_addressinfo">
+		  				<h4>25 Knowsley Road</h4>
+		  				<h4>Wilpshire BB19PX</h4>
+		  				<h4>United Kingdom</h4>
+		  			</div>
+		  			<div [hidden]="!flag_addressinfo">
+		  				<div class="form-group" [ngClass]="{ 'has-error': addressf.submitted && !country.valid }">
+	  						<label>Country
+			  					<select type="text" class="form-control address_input" name="country" [(ngModel)]="address_model.country" #country="ngModel" required >
+			  						<option value="">Select country</option>
+			  						<option value="uk">United Kingdom</option>
+			  						<option value="ir">Ireland</option>
+			  						<option value="us">United State</option>
+			  						<option value="ni">Nigeria</option>
+			  					</select>
+				            	<div *ngIf="addressf.submitted && !country.valid" class="help-block">Country is required</div>
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': addressf.submitted && !address1.valid }">
+	  						<label>Address
+			  					<input type="text" class="form-control address_input" name="address1" [(ngModel)]="address_model.address1" #address1="ngModel" required />
+				            	<div *ngIf="addressf.submitted && !address1.valid" class="help-block">Address1 is required</div>
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': addressf.submitted && !address2.valid }">
+			  					<input type="text" class="form-control address_input" name="address2" [(ngModel)]="address_model.address2" #address2="ngModel" />
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': addressf.submitted && !city.valid }">
+	  						<label>City
+			  					<input type="text" class="form-control address_input" name="city" [(ngModel)]="address_model.city" #city="ngModel" required />
+				            	<div *ngIf="addressf.submitted && !city.valid" class="help-block">City is required</div>
+			            	</label>
+		  				</div>
+		  				<div class="form-group" [ngClass]="{ 'has-error': addressf.submitted && !zipcode.valid }">
+	  						<label>Zip Code
+			  					<input type="text" class="form-control address_input" name="zipcode" [(ngModel)]="address_model.zipcode" #zipcode="ngModel" required />
+				            	<div *ngIf="addressf.submitted && !zipcode.valid" class="help-block">ZipCode is required</div>
+			            	</label>
+		  				</div>
+
+		  			</div>
+		  		</div>
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"  style="text-align: center;">
+		  				<div [hidden]="flag_addressinfo">
+			  				<a class="editbtn" (click)="flag_addressinfo=true">Edit</a>
+			  			</div>
+			  			<div [hidden]="!flag_addressinfo">
+			  				<div class="form-group">
+			  					<button class="btn savebtn">Save</button>
+			  				</div>
+			  				<a class="cancelbtn" (click)="flag_addressinfo=false">cancel</a>
+			  			</div>
+		  		</div>
+
+		  	</form>
+	  	</div>
+
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 timezone">
+	  		<form name="form" (ngSubmit)="timezonef.form.valid && save_timezoneinfo()" #timezonef="ngForm" novalidate>
+		  		
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		  			<h4>Timezone</h4>
+		  		</div>
+		  		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+		  			<div [hidden]="flag_timezoneinfo">
+		  				<h4>UTC (no DST) Tangiers, Casablanca</h4>
+		  			</div>
+		  			<div [hidden]="!flag_timezoneinfo">
+		  				<div class="form-group" [ngClass]="{ 'has-error': timezonef.submitted && !timezone.valid }">
+			  				<select type="text" class="form-control timezone_input" name="timezone" [(ngModel)]="timezone_model.timezone" #timezone="ngModel" required>
+			  					<option value="">select timezone</option>
+			  					<option value="uk">+6 Unite kingdome</option>
+			  					<option value="eg">-5 Egypt</option>
+			  					<option value="hg">-9 Hungary</option>
+			  				</select>
+				            <div *ngIf="timezonef.submitted && !timezone.valid" class="help-block">Timezone is required</div>
+		  				</div>
+		  			</div>
+		  		</div>
+		  		<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">
+		  			<div [hidden]="flag_timezoneinfo">
+				  		<a class="editbtn" (click)="flag_timezoneinfo=true">Edit</a>
+				  	</div>
+				  	<div [hidden]="!flag_timezoneinfo">
+				  		<div class="form-group">
+				  			<button class="btn savebtn">Save</button>
+				  		</div>
+				  		<a class="cancelbtn" (click)="flag_timezoneinfo=false">cancel</a>
+				  	</div>
+		  		</div>
+
+		  	</form>
+	  	</div>
+
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 phone">
+	  		<form name="form" (ngSubmit)="phonef.form.valid && save_phoneinfo()" #phonef="ngForm" novalidate>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  				<h4>Phone</h4>
+	  			</div>
+	  			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	  				<div [hidden]="flag_phoneinfo">
+	  					<h4>44 (7968) 471476</h4>
+	  				</div>
+	  				<div [hidden]="!flag_phoneinfo">
+	  					<h4>+44</h4>
+	  					<div class="form-group" [ngClass]="{ 'has-error': phonef.submitted && !phonenumber.valid }">
+			  				<input type="number" class="form-control phone_input" name="phonenumber" [(ngModel)]="phone_model.phonenumber" #phonenumber="ngModel" required />
+				            <div *ngIf="phonef.submitted && !phonenumber.valid" class="help-block">Phone Number is required</div>
+		  				</div>
+	  				</div>
+	  			</div>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">
+	  				<div [hidden]="flag_phoneinfo">
+				  		<a class="editbtn" (click)="flag_phoneinfo=true">Edit</a>
+				  	</div>
+				  	<div [hidden]="!flag_phoneinfo">
+				  		<div class="form-group">
+				  			<button class="btn savebtn">Save</button>
+				  		</div>
+				  		<a class="cancelbtn" (click)="flag_phoneinfo=false">cancel</a>
+				  	</div>
+	  			</div>
+	  		</form>
+	  	</div>
+
+	  	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 vat">
+	  		<form name="form" (ngSubmit)="vatf.form.valid && save_vatinfo()" #vatf="ngForm" novalidate>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	  				<h4>VAT ID</h4>
+	  			</div>
+	  			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	  				<div [hidden]="flag_vatinfo">
+	  					<h4>--------</h4>
+	  				</div>
+	  				<div [hidden]="!flag_vatinfo">
+	  					<div class="form-group" [ngClass]="{ 'has-error': vatf.submitted && !vatid.valid }">
+			  				<input type="number" class="form-control phone_input" name="vatid" [(ngModel)]="phone_model.vatid" #vatid="ngModel" required />
+				            <div *ngIf="vatf.submitted && !vatid.valid" class="help-block">VAT ID is required</div>
+		  				</div>
+	  				</div>
+	  			</div>
+	  			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align: center;">
+	  				<div [hidden]="flag_vatinfo">
+				  		<a class="editbtn" (click)="flag_vatinfo=true">Edit</a>
+				  	</div>
+				  	<div [hidden]="!flag_vatinfo">
+				  		<div class="form-group">
+				  			<button class="btn savebtn">Save</button>
+				  		</div>
+				  		<a class="cancelbtn" (click)="flag_vatinfo=false">cancel</a>
+				  	</div>
+	  			</div>
+	  		</form>
+	  	</div>
+
+	</div>
+	<div id="billingmethod" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h2>Billing & Payment Processing</h2>
+	  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 balance">
+	  	 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	  	 	<h3>Balance Due</h3>
+	  	 	<p style="height: 10px;"></p>
+	  	 	<h4>Your balance due is $0.00</h4>
+	  	 </div>
+	  	 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	  	 	<button class="btn paynow">Pay Now</button>
+	  	 </div>
+	  </div>
+
+	  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 billingmethod">
+	  	 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	  	 	<h3>Billing Methods</h3>
+	  	 	<p style="height: 10px;"></p>
+	  	 	<h4>Set up your billing methods so you'll be able to hire right away when you're ready</h4>
+	  	 </div>
+	  	 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+	  	 	<button class="btn addbillmethod" (click)="openModal('bill_modal')">+ Add Billing Method</button>
+	  	 </div>
+	  </div>
+
+	  <modal id="bill_modal">
+	    <div class="modal">
+	        <div class="container modal-body">
+	        	<div class="modalheader">
+		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		            	<h2>Add Billing Methods</h2>
+		            </div>
+		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		            	<a class="closebtn" (click)="closeModal('bill_modal');"><i class="fa fa-times" aria-hidden="true"></i></a>
+		            </div>
+	            </div>
+	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 billcomment">
+	            	<h4><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;With Eventsmartly Payment Protection, only pay for work delivered</h4>
+	            </div>
+	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 billbody">
+	            	<div class="control-group">
+						<label class="control control--radio" style="color: #c18933;font-size: 20px;"><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp;&nbsp;Credit or Debit Card
+							<input type="radio" name="radio" checked="checked" [(ngModel)]="paymentway" value="card"/>
+							<div class="control__indicator"></div>
+						</label>
+						<label class="control control--radio" style="color: #3364c1;font-size: 20px;"><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Paypal
+							<input type="radio" name="radio" [(ngModel)]="paymentway" value="paypal"/>
+							<div class="control__indicator"></div>
+						</label>
+					</div>
+	            </div>
+	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 cardbody" [hidden]="paymentway=='paypal'">
+	            	<div style="height: 50px;">
+	            		<span class="cardlist"><i style="color: #8a41d8;" class="fa fa-cc-visa" aria-hidden="true"></i>&nbsp;&nbsp;<i style="color: #d48b1a;" class="fa fa-cc-discover" aria-hidden="true"></i>&nbsp;&nbsp;<i style="color: #3486ce;" class="fa fa-cc-amex" aria-hidden="true"></i>&nbsp;&nbsp;<i style="color: #dcb72a;" class="fa fa-cc-mastercard" aria-hidden="true"></i></span>
+	            	</div>
+	            	<form name="form" (ngSubmit)="cardpayform.form.valid && doSaveCardPaymentinfo()" #cardpayform="ngForm" novalidate>
+		            	<div class="form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !cardnum.valid }">
+					  		<label style="width: 100%;">Card Number
+						  		<div class="cardnum">
+						  			<span class="fa fa-credit-card"></span>
+						  			<input placeholder="Securely Stored" type="Number" class="form-control" name="cardnum" [(ngModel)]="cardmodel.cardnum" #cardnum="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !cardnum.valid" class="help-block">Card Number is required</div>
+						  		</div>
+					  		</label>
+				  		</div>
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !cfirstname.valid }">
+					  		<label style="width: 100%;">FirstName
+						  		<div class="cfirstname">
+						  			<input type="text" class="form-control c_input" name="cfirstname" [(ngModel)]="cardmodel.cfirstname" #cfirstname="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !cfirstname.valid" class="help-block">FirstName is required</div>
+						  		</div>
+					  		</label>
+				  		</div>
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !clastname.valid }">
+					  		<label style="width: 100%;">LastName
+						  		<div class="clastname">
+						  			<input type="text" class="form-control c_input" name="clastname" [(ngModel)]="cardmodel.clastname" #clastname="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !clastname.valid" class="help-block">LastName is required</div>
+						  		</div>
+					  		</label>
+				  		</div>
+
+				  		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !ex_mo.valid }">
+					  		<label style="width: 100%;">Expires on
+						  		<div class="ex_mo">
+						  			<input placeholder="MM" type="number" class="form-control c_input" name="ex_mo" [(ngModel)]="cardmodel.ex_mo" #ex_mo="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !ex_mo.valid" class="help-block">Month is required</div>
+						  		</div>
+					  		</label>
+				  		</div>
+
+				  		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !ex_yr.valid }">
+						  		<div class="ex_yr">
+						  			<input placeholder="YY" type="number" class="form-control c_input" style="margin-top: 20px;" name="ex_yr" [(ngModel)]="cardmodel.ex_yr" #ex_yr="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !ex_yr.valid" class="help-block">Year is required</div>
+						  		</div>
+				  		</div>
+
+				  		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 form-group" [ngClass]="{ 'has-error': cardpayform.submitted && !scurecode.valid }">
+					  		<label style="width: 100%;">Security code / CVV
+						  		<div class="scurecode">
+						  			<input type="text" class="form-control c_input" name="scurecode" [(ngModel)]="cardmodel.scurecode" #scurecode="ngModel" required />
+						  			<div *ngIf="cardpayform.submitted && !scurecode.valid" class="help-block">SecurityCode is required</div>
+						  		</div>
+					  		</label>
+				  		</div>
+
+				  		<div class="form-group">
+				  			<button class="btn cardsavebtn">Continue</button>
+				  		</div>
+	            	</form>
+	            </div>
+	            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ppbody" [hidden]="paymentway=='card'">
+	            	<h4>You'll be redirected to Paypal to link a verified account.</h4>
+	            	<button class="btn ppbutton">pay with <i style="font-size: 30px;" class="fa fa-paypal" aria-hidden="true"></i></button>
+	            </div>
+
+	        </div>
+	    </div>
+	    <div class="modal-background"></div>
+	</modal>
+
+	</div>
+	<div id="passwordsecurity" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9 passwordsecurity">
+	  <h2>Password & Security</h2>
+	  <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 passwordbody">
+	  	 <h3 style="margin: 30px;">Password</h3>
+	  	 <hr style="border-color: #ccc;">
+	  	 <div>
+
+
+		  	 	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="padding-left: 28px;">
+		  	 		<div [hidden]="flag_passwordinfo">
+			  	 		<h4 style="font-size:17px; font-weight: 600;"><i style="font-size: 25px; color: #e5cd32;" class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;Password has been set</h4>
+			  	 		<h4 style="font-size:17px; color:#a7a7a7; margin-left: 30px;">Choose a strong, unique password that's at least 10 characters long.</h4>
+			  	 	</div>
+			  	 	<div [hidden]="!flag_passwordinfo">
+			  	 		<form name="form" (ngSubmit)="passwordform.form.valid && doChangePassword()" #passwordform="ngForm" novalidate>
+			  	 			<div style="" class="form-group" [ngClass]="{ 'has-error': passwordform.submitted && !oldpassword.valid }">
+					  			
+						  		<label style="width: 100%;">Old Password
+							  		<input type="password" class="form-control ps_input" name="oldpassword" [(ngModel)]="password_model.oldpassword" #oldpassword="ngModel" required />
+							  		<div *ngIf="passwordform.submitted && !oldpassword.valid" class="help-block">Old Password is required</div>
+						  		</label>
+					  		</div>
+					  		<div style="" class="form-group" [ngClass]="{ 'has-error': passwordform.submitted && !newpassword.valid }">
+					  			
+						  		<label style="width: 100%;">New Password
+							  		<input type="password" class="form-control ps_input" name="newpassword" [(ngModel)]="password_model.newpassword" #newpassword="ngModel" required />
+							  		<div *ngIf="passwordform.submitted && !newpassword.valid" class="help-block">New Password is required</div>
+						  		</label>
+					  		</div>
+					  		<div style="" class="form-group" [ngClass]="{ 'has-error': passwordform.submitted && !renewpassword.valid }">
+					  			
+						  		<label style="width: 100%;">Confirm Password
+							  		<input type="password" class="form-control ps_input" name="renewpassword" [(ngModel)]="password_model.renewpassword" #renewpassword="ngModel" required />
+							  		<div *ngIf="passwordform.submitted && !renewpassword.valid" class="help-block">Confirm Password is required</div>
+						  		</label>
+					  		</div>
+						  	<div class="form-group" style="margin-top: 40px;">
+						  		<button class="btn pwchangebtn">Change</button>
+						  	</div>
+					  	</form>
+			  	 	</div>
+		  	 	</div>
+		  	 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		  	 		<div [hidden]="flag_passwordinfo" style="text-align: center;">
+		  	 			<button class="btn psedit" (click)="flag_passwordinfo=true">Edit</button>
+		  	 		</div>
+		  	 		<div [hidden]="!flag_passwordinfo" style="text-align: center;">
+					  	<a class="cancelbtn" (click)="flag_passwordinfo=false">Cancel</a>
+		  	 		</div>
+		  	 	</div>
+
+	  	 </div>
+	  </div>
+	</div>
+</div>

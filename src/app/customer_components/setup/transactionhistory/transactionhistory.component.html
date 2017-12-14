@@ -1,0 +1,80 @@
+﻿<div class="container th_title">
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<h2>Transaction History</h2>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
+		<h3 style="float: right;">Balance: <span style="color: #7d7d7d;">$470.00</span></h3>
+		<h4 style="float: right; color: #7d7d7d;">Fixe Price Deposits (not included in balance): <span style="color: #e5cd32;">$470.00</span></h4>
+	</div>
+</div>
+
+<div class="container th_options">
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<div class="datebox">
+			<span class="fa fa-calendar"></span>
+			<input #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+		</div>
+	</div>
+	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		<button class="btn downinvoice">Download Invoices(as CSV)</button>
+	</div>
+</div>
+
+<div class="container secondoption">
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<ng-select [allowClear]="true"
+	              [items]="transactionarr"
+	              (data)="trefreshValue($event)"
+	              placeholder="No Transaction selected">
+	   </ng-select>
+	 </div>
+	 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<ng-select [allowClear]="true"
+	              [items]="vendorsarr"
+	              (data)="vrefreshValue($event)"
+	              placeholder="No Vendor selected">
+	   </ng-select>
+	 </div>
+	 <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+		<button class="btn mygo">Go</button>
+	 </div>
+</div>
+
+<div class="container transactionlist">
+
+	<table style="width:100%; font-size:15px;">
+	  <tr>
+	    <th style="width: 10%">Date</th>
+	    <th style="width: 10%">Type</th> 
+	    <th style="width: 50%">Description</th>
+	    <th style="width: 10%">Vendor</th>
+	    <th style="width: 10%">Amount/Balance</th>
+	    <th style="width: 10%">Ref ID</th>
+	  </tr>
+	  <tr class="eachhistory">
+	    <td>Nov 19, 2017</td>
+	    <td>Fixed Price</td> 
+	    <td>Invoice for Need Pro Angularjs4 With AngularFire expert who can do Node Restful api integration: Milestone 1 - Need Pro Angularjs4 With AngularFire expert who can do Node Restful api integration</td>
+	    <td>
+	    	Margarita Aseniero
+	    </td>
+	    <td>
+	    	($10.00) $0.00
+	    </td>
+	    <td> 155168211 </td>
+	  </tr>
+	  <tr class="eachhistory">
+	    <td>Nov 19, 2017</td>
+	    <td>Fixed Price</td> 
+	    <td>Invoice for Need Pro Angularjs4 With AngularFire expert who can do Node Restful api integration: Milestone 1 - Need Pro Angularjs4 With AngularFire expert who can do Node Restful api integration</td>
+	    <td>
+	    	Margarita Aseniero
+	    </td>
+	    <td>
+	    	($10.00) $0.00
+	    </td>
+	    <td> 155168211 </td>
+	  </tr>
+	</table>
+
+</div>

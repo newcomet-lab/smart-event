@@ -7,33 +7,58 @@ import { RegisterComponent } from './firstcomponents/register/index';
 
 import { AuthGuard } from './_guards/index';
 
+/*customer part*/
+
 import {CustomerLayoutComponent} from "./customer_components/customer-layout/customer-layout.component";
+
 import { MyjobsComponent } from './customer_components/setup/myjobs/index';
 import { AlljobpostingComponent } from './customer_components/setup/alljobposting/index';
 import { AllcontractsComponent } from './customer_components/setup/allcontracts/index';
 import { PostjobComponent } from './customer_components/setup/postjob/index';
+
 import { JobscreenComponent } from './customer_components/setup/jobscreen/index';
+
+import { FindvendorsComponent } from './customer_components/setup/findvendors/index';
+import { MyvendorsComponent } from './customer_components/setup/myvendors/index';
+
+import { CustomerSettingComponent } from './customer_components/setup/setting/index';
+
+import { CustomertransactionhistoryComponent } from './customer_components/setup/transactionhistory/index';
+
+import { MakepaymentComponent } from './customer_components/setup/makepayment/index';
+import { EndcontractComponent } from './customer_components/setup/endcontract/index';
+
 import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
 import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
 import { CchatboxComponent } from './customer_components/setup/cchatbox/index';
 
+/*vendor part*/
+
 import {VendorLayoutComponent} from "./vendor_components/vendor-layout/vendor-layout.component";
+
 import { StorefrontComponent } from './vendor_components/setup/storefront/index';
+
 import { SettingComponent } from './vendor_components/setup/setting/index';
+
 import { NeweventComponent } from './vendor_components/setup/newevent/index';
 import { EventlistComponent } from './vendor_components/setup/eventlist/index';
+
 import { Listing_billComponent } from './vendor_components/setup/listing_bill/index';
 import { Bill_previewComponent } from './vendor_components/setup/bill_preview/index';
+
 import { BookinglistComponent } from './vendor_components/setup/bookinglist/index';
 import { CalendarviewComponent } from './vendor_components/setup/calendarview/index';
 import { BookingnewComponent } from './vendor_components/setup/bookingnew/index';
+
 import { InvoicelistComponent } from './vendor_components/setup/invoicelist/index';
 import { MailboxComponent } from './vendor_components/setup/mailbox/index';
 import { ChatboxComponent } from './vendor_components/setup/chatbox/index';
+
 import { FindcustomersComponent } from './vendor_components/setup/findcustomers/index';
 import { CustomersjobComponent } from './vendor_components/setup/customersjob/index';
 import { VsubmitproposalComponent } from './vendor_components/setup/vsubmitproposal/index';
 import { Vendor_event_detailComponent } from './vendor_components/setup/vendor_event_detail/index';
+
 import { MyprofileComponent } from './vendor_components/setup/myprofile/index';
 
 const appRoutes: Routes = [
@@ -52,6 +77,16 @@ const appRoutes: Routes = [
 	    	{ path: 'postjob', component: PostjobComponent, canActivate: [AuthGuard] },
 
 	    	{ path: 'jobscreen', component: JobscreenComponent, canActivate: [AuthGuard] },
+	    	{ path: 'findvendors', component: FindvendorsComponent, canActivate: [AuthGuard] },
+	    	{ path: 'myvendors', component: MyvendorsComponent, canActivate: [AuthGuard] },
+
+	    	{ path: 'setting', component: CustomerSettingComponent, canActivate: [AuthGuard] },
+	    	
+	    	{ path: 'makepayment', component: MakepaymentComponent, canActivate: [AuthGuard] },
+	    	{ path: 'endcontract', component: EndcontractComponent, canActivate: [AuthGuard] },
+
+	    	{ path: 'transactionhistory', component: CustomertransactionhistoryComponent, canActivate: [AuthGuard] },
+
 	    	{ path: 'invoicelist', component: CinvoicelistComponent, canActivate: [AuthGuard] },
 	    	{ path: 'mailbox', component: CmailboxComponent, canActivate: [AuthGuard] },
 	    	{ path: 'chatbox', component: CchatboxComponent, canActivate: [AuthGuard] }
@@ -63,20 +98,27 @@ const appRoutes: Routes = [
 	    canActivate: [AuthGuard],
 	    children: [
 	      { path: 'storefront', component: StorefrontComponent, canActivate: [AuthGuard] },
+
 	      { path: 'setting', component: SettingComponent, canActivate: [AuthGuard] },
+
 	      { path: 'newevent', component: NeweventComponent, canActivate: [AuthGuard] },
 	      { path: 'eventlist', component: EventlistComponent, canActivate: [AuthGuard] },
+
 	      { path: 'listingbill', component: Listing_billComponent, canActivate: [AuthGuard] },
 	      { path: 'billpreview', component: Bill_previewComponent, canActivate: [AuthGuard] },
+
 	      { path: 'bookinglist', component: BookinglistComponent, canActivate: [AuthGuard] },
 	      { path: 'calendarview', component: CalendarviewComponent, canActivate: [AuthGuard] },
 	      { path: 'bookingnew', component: BookingnewComponent, canActivate: [AuthGuard] },
+
 	      { path: 'invoicelist', component: InvoicelistComponent, canActivate: [AuthGuard] },
 	      { path: 'mailbox', component: MailboxComponent, canActivate: [AuthGuard] },
 	      { path: 'chatbox', component: ChatboxComponent, canActivate: [AuthGuard] },
+
 	      { path: 'findcustomers', component: FindcustomersComponent, canActivate: [AuthGuard] },
 	      { path: 'customersjob', component: CustomersjobComponent, canActivate: [AuthGuard] },
 	      { path: 'vsubmitproposal', component: VsubmitproposalComponent, canActivate: [AuthGuard] },
+
 	      { path: 'myprofile', component: MyprofileComponent, canActivate: [AuthGuard] },
 	      { path: 'vendor_event_detail', component: Vendor_event_detailComponent, canActivate: [AuthGuard] }
 	    ]

@@ -1,0 +1,830 @@
+﻿<div id="invitevendors_content" class="container tabcontent"  style="margin-bottom: 100px;">
+	<div class="invitevendors_subtab">
+	  <div id="invite_defaultclicked" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 invitevendors_tablinks" (click)="openTabPage_invitevendors($event, 'invitevendors_searchbody')">
+	  	 <h4 style="font-weight: 700;">SEARCH</h4>
+	  </div>
+	  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 invitevendors_tablinks" (click)="openTabPage_invitevendors($event, 'invitevendors_invitedbody')">
+	  	 <h4 style="font-weight: 700;">INVITED VENDORS</h4>
+	  </div>
+	  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 invitevendors_tablinks" (click)="openTabPage_invitevendors($event, 'invitevendors_pasthiresbody')">
+	  	 <h4 style="font-weight: 700;">PAST HIRES</h4>
+	  </div>
+	  <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 invitevendors_tablinks" (click)="openTabPage_invitevendors($event, 'invitevendors_savedbody')">
+	  	 <h4 style="font-weight: 700;">SAVED VENDORS</h4>
+	  </div>
+	</div>
+	<div id="invitevendors_searchbody" class="invitevendors_tabcontents">
+		<div class="optionalhead">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-top: 20px; padding-left: 40px;">
+				<input type="text" class="iv_search_mainsearch_widget" />
+				<button class="iv_search_searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<button class="iv_search_filters_widget" (click)="iv_search_flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+			</div>
+		</div>
+		<div class="optionalbody" [hidden]="!iv_search_flag_add">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Earned Amount</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any amount earned
+							<input type="radio" name="radio" checked="checked" [(ngModel)]="iv_search_model.earnedamount" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1+ earned
+							<input type="radio" name="radio" [(ngModel)]="iv_search_model.earnedamount" value="1+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$100+ earned
+							<input type="radio" name="radio" [(ngModel)]="iv_search_model.earnedamount" value="100+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1k+ earned
+							<input type="radio" name="radio" [(ngModel)]="iv_search_model.earnedamount" value="1k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$10k+ earned
+							<input type="radio" name="radio" [(ngModel)]="iv_search_model.earnedamount" value="10k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">No earnings yet
+							<input type="radio" name="radio" [(ngModel)]="iv_search_model.earnedamount" value="none"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Job Success</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any job success
+							<input type="radio" name="radio2" checked="checked" [(ngModel)]="iv_search_model.jobsuccess" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">80% & up
+							<input type="radio" name="radio2" [(ngModel)]="iv_search_model.jobsuccess" value="80"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">90% & up
+							<input type="radio" name="radio2" [(ngModel)]="iv_search_model.jobsuccess" value="90"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">English level</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any level
+							<input type="radio" name="radio3" checked="checked" [(ngModel)]="iv_search_model.englvl" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Basic
+							<input type="radio" name="radio3" [(ngModel)]="iv_search_model.englvl" value="basic"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Conversational
+							<input type="radio" name="radio3" [(ngModel)]="iv_search_model.englvl" value="conversational"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Fluent
+							<input type="radio" name="radio3" [(ngModel)]="iv_search_model.englvl" value="fluent"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Native or bilingual
+							<input type="radio" name="radio3" [(ngModel)]="iv_search_model.englvl" value="native"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Last Activity</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any time
+							<input type="radio" name="radio4" checked="checked" [(ngModel)]="iv_search_model.lastactive" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 weeks
+							<input type="radio" name="radio4" [(ngModel)]="iv_search_model.lastactive" value="2week"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 1 month
+							<input type="radio" name="radio4" [(ngModel)]="iv_search_model.lastactive" value="1month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 months
+							<input type="radio" name="radio4" [(ngModel)]="iv_search_model.lastactive" value="2month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category</label>
+				<angular2-multiselect [data]="ev_category_dropdownList" [(ngModel)]="iv_search_model.ev_category" [settings]="ev_category_dropdownSettings"
+									(onSelect)="onecItemSelect($event)" 
+								    (onDeSelect)="OnecItemDeSelect($event)"
+								    (onSelectAll)="onecSelectAll($event)"
+								    (onDeSelectAll)="onecDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category Details</label>
+				<angular2-multiselect [data]="ev_category_detail_dropdownList" [(ngModel)]="iv_search_model.ev_category_detail_selectedItems" [settings]="ev_category_detail_dropdownSettings"
+									(onSelect)="onecdItemSelect($event)" 
+								    (onDeSelect)="OnecdItemDeSelect($event)"
+								    (onSelectAll)="onecdSelectAll($event)"
+								    (onDeSelectAll)="onecdDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Location</label>
+				<input name="service_location" [(ngModel)]="iv_search_model.service_location" #service_location="ngModel" type="text" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control gibc-widget" #search required />
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<button class="save_close_btn" (click)="iv_search_flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+			</div>
+
+		</div>
+
+		<div class="iv_vendorlist">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+					<button class="invitetojob_btn">Invite To Job</button>
+					<p></p>
+					<button class="savevendor_btn"><i style="font-weight: 700;" class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;&nbsp;Save</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+					<button class="invitetojob_btn">Invite To Job</button>
+					<p></p>
+					<button class="savevendor_btn"><i style="font-weight: 700;" class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;&nbsp;Save</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<div id="invitevendors_invitedbody" class="invitevendors_tabcontents">
+		<div class="optionalhead">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-top: 20px; padding-left: 40px;">
+				<input type="text" class="iv_search_mainsearch_widget" />
+				<button class="iv_search_searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<button class="iv_search_filters_widget" (click)="ived_search_flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+			</div>
+		</div>
+		<div class="optionalbody" [hidden]="!ived_search_flag_add">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Earned Amount</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any amount earned
+							<input type="radio" name="ived_radio" checked="checked" [(ngModel)]="ived_search_model.earnedamount" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1+ earned
+							<input type="radio" name="ived_radio" [(ngModel)]="ived_search_model.earnedamount" value="1+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$100+ earned
+							<input type="radio" name="ived_radio" [(ngModel)]="ived_search_model.earnedamount" value="100+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1k+ earned
+							<input type="radio" name="ived_radio" [(ngModel)]="ived_search_model.earnedamount" value="1k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$10k+ earned
+							<input type="radio" name="ived_radio" [(ngModel)]="ived_search_model.earnedamount" value="10k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">No earnings yet
+							<input type="radio" name="ived_radio" [(ngModel)]="ived_search_model.earnedamount" value="none"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Job Success</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any job success
+							<input type="radio" name="ived_radio2" checked="checked" [(ngModel)]="ived_search_model.jobsuccess" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">80% & up
+							<input type="radio" name="ived_radio2" [(ngModel)]="ived_search_model.jobsuccess" value="80"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">90% & up
+							<input type="radio" name="ived_radio2" [(ngModel)]="ived_search_model.jobsuccess" value="90"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">English level</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any level
+							<input type="radio" name="ived_radio3" checked="checked" [(ngModel)]="ived_search_model.englvl" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Basic
+							<input type="radio" name="ived_radio3" [(ngModel)]="ived_search_model.englvl" value="basic"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Conversational
+							<input type="radio" name="ived_radio3" [(ngModel)]="ived_search_model.englvl" value="conversational"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Fluent
+							<input type="radio" name="ived_radio3" [(ngModel)]="ived_search_model.englvl" value="fluent"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Native or bilingual
+							<input type="radio" name="ived_radio3" [(ngModel)]="ived_search_model.englvl" value="native"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Last Activity</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any time
+							<input type="radio" name="ived_radio4" checked="checked" [(ngModel)]="ived_search_model.lastactive" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 weeks
+							<input type="radio" name="ived_radio4" [(ngModel)]="ived_search_model.lastactive" value="2week"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 1 month
+							<input type="radio" name="ived_radio4" [(ngModel)]="ived_search_model.lastactive" value="1month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 months
+							<input type="radio" name="ived_radio4" [(ngModel)]="ived_search_model.lastactive" value="2month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category</label>
+				<angular2-multiselect [data]="ev_category_dropdownList" [(ngModel)]="ived_search_model.ev_category" [settings]="ev_category_dropdownSettings"
+									(onSelect)="onecItemSelect($event)" 
+								    (onDeSelect)="OnecItemDeSelect($event)"
+								    (onSelectAll)="onecSelectAll($event)"
+								    (onDeSelectAll)="onecDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category Details</label>
+				<angular2-multiselect [data]="ev_category_detail_dropdownList" [(ngModel)]="ived_search_model.ev_category_detail_selectedItems" [settings]="ev_category_detail_dropdownSettings"
+									(onSelect)="onecdItemSelect($event)" 
+								    (onDeSelect)="OnecdItemDeSelect($event)"
+								    (onSelectAll)="onecdSelectAll($event)"
+								    (onDeSelectAll)="onecdDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Location</label>
+				<input name="service_location" [(ngModel)]="ived_search_model.service_location" #service_location="ngModel" type="text" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control gibc-widget" #search1 required />
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<button class="save_close_btn" (click)="ived_search_flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+			</div>
+
+		</div>
+
+		<div class="iv_vendorlist">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<button class="savevendor_btn"><i style="font-weight: 700;" class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;&nbsp;Save</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<button class="savevendor_btn"><i style="font-weight: 700;" class="fa fa-heart-o" aria-hidden="true"></i>&nbsp;&nbsp;Save</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="invitevendors_pasthiresbody" class="invitevendors_tabcontents">
+		<div class="optionalhead">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-top: 20px; padding-left: 40px;">
+				<input type="text" class="iv_search_mainsearch_widget" />
+				<button class="iv_search_searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<button class="iv_search_filters_widget" (click)="ivph_search_flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+			</div>
+		</div>
+		<div class="optionalbody" [hidden]="!ivph_search_flag_add">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Earned Amount</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any amount earned
+							<input type="radio" name="ivph_radio" checked="checked" [(ngModel)]="ivph_search_model.earnedamount" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1+ earned
+							<input type="radio" name="ivph_radio" [(ngModel)]="ivph_search_model.earnedamount" value="1+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$100+ earned
+							<input type="radio" name="ivph_radio" [(ngModel)]="ivph_search_model.earnedamount" value="100+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1k+ earned
+							<input type="radio" name="ivph_radio" [(ngModel)]="ivph_search_model.earnedamount" value="1k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$10k+ earned
+							<input type="radio" name="ivph_radio" [(ngModel)]="ivph_search_model.earnedamount" value="10k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">No earnings yet
+							<input type="radio" name="ivph_radio" [(ngModel)]="ivph_search_model.earnedamount" value="none"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Job Success</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any job success
+							<input type="radio" name="ivph_radio2" checked="checked" [(ngModel)]="ivph_search_model.jobsuccess" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">80% & up
+							<input type="radio" name="ivph_radio2" [(ngModel)]="ivph_search_model.jobsuccess" value="80"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">90% & up
+							<input type="radio" name="ivph_radio2" [(ngModel)]="ivph_search_model.jobsuccess" value="90"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">English level</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any level
+							<input type="radio" name="ivph_radio3" checked="checked" [(ngModel)]="ivph_search_model.englvl" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Basic
+							<input type="radio" name="ivph_radio3" [(ngModel)]="ivph_search_model.englvl" value="basic"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Conversational
+							<input type="radio" name="ivph_radio3" [(ngModel)]="ivph_search_model.englvl" value="conversational"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Fluent
+							<input type="radio" name="ivph_radio3" [(ngModel)]="ivph_search_model.englvl" value="fluent"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Native or bilingual
+							<input type="radio" name="ivph_radio3" [(ngModel)]="ivph_search_model.englvl" value="native"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Last Activity</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any time
+							<input type="radio" name="ivph_radio4" checked="checked" [(ngModel)]="ivph_search_model.lastactive" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 weeks
+							<input type="radio" name="ivph_radio4" [(ngModel)]="ivph_search_model.lastactive" value="2week"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 1 month
+							<input type="radio" name="ivph_radio4" [(ngModel)]="ivph_search_model.lastactive" value="1month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 months
+							<input type="radio" name="ivph_radio4" [(ngModel)]="ivph_search_model.lastactive" value="2month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category</label>
+				<angular2-multiselect [data]="ev_category_dropdownList" [(ngModel)]="ivph_search_model.ev_category" [settings]="ev_category_dropdownSettings"
+									(onSelect)="onecItemSelect($event)" 
+								    (onDeSelect)="OnecItemDeSelect($event)"
+								    (onSelectAll)="onecSelectAll($event)"
+								    (onDeSelectAll)="onecDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category Details</label>
+				<angular2-multiselect [data]="ev_category_detail_dropdownList" [(ngModel)]="ivph_search_model.ev_category_detail_selectedItems" [settings]="ev_category_detail_dropdownSettings"
+									(onSelect)="onecdItemSelect($event)" 
+								    (onDeSelect)="OnecdItemDeSelect($event)"
+								    (onSelectAll)="onecdSelectAll($event)"
+								    (onDeSelectAll)="onecdDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Location</label>
+				<input name="service_location" [(ngModel)]="ivph_search_model.service_location" #service_location="ngModel" type="text" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control gibc-widget" #search2 required />
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<button class="save_close_btn" (click)="ivph_search_flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+			</div>
+
+		</div>
+
+		<div class="iv_vendorlist">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Re-Hire Vendor</a>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Re-Hire Vendor</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div id="invitevendors_savedbody" class="invitevendors_tabcontents">
+		<div class="optionalhead">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8" style="margin-top: 20px; padding-left: 40px;">
+				<input type="text" class="iv_search_mainsearch_widget" />
+				<button class="iv_search_searchbtn"><i class="fa fa-search" aria-hidden="true"></i></button>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+				<button class="iv_search_filters_widget" (click)="ivsaved_search_flag_add = true"><i class="fa fa-sliders" aria-hidden="true"></i>&nbsp;Filters</button>
+			</div>
+		</div>
+		<div class="optionalbody" [hidden]="!ivsaved_search_flag_add">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Earned Amount</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any amount earned
+							<input type="radio" name="ivsaved_radio" checked="checked" [(ngModel)]="ivsaved_search_model.earnedamount" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1+ earned
+							<input type="radio" name="ivsaved_radio" [(ngModel)]="ivsaved_search_model.earnedamount" value="1+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$100+ earned
+							<input type="radio" name="ivsaved_radio" [(ngModel)]="ivsaved_search_model.earnedamount" value="100+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$1k+ earned
+							<input type="radio" name="ivsaved_radio" [(ngModel)]="ivsaved_search_model.earnedamount" value="1k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">$10k+ earned
+							<input type="radio" name="ivsaved_radio" [(ngModel)]="ivsaved_search_model.earnedamount" value="10k+"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">No earnings yet
+							<input type="radio" name="ivsaved_radio" [(ngModel)]="ivsaved_search_model.earnedamount" value="none"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Job Success</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any job success
+							<input type="radio" name="ivsaved_radio2" checked="checked" [(ngModel)]="ivsaved_search_model.jobsuccess" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">80% & up
+							<input type="radio" name="ivsaved_radio2" [(ngModel)]="ivsaved_search_model.jobsuccess" value="80"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">90% & up
+							<input type="radio" name="ivsaved_radio2" [(ngModel)]="ivsaved_search_model.jobsuccess" value="90"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">English level</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any level
+							<input type="radio" name="ivsaved_radio3" checked="checked" [(ngModel)]="ivsaved_search_model.englvl" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Basic
+							<input type="radio" name="ivsaved_radio3" [(ngModel)]="ivsaved_search_model.englvl" value="basic"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Conversational
+							<input type="radio" name="ivsaved_radio3" [(ngModel)]="ivsaved_search_model.englvl" value="conversational"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Fluent
+							<input type="radio" name="ivsaved_radio3" [(ngModel)]="ivsaved_search_model.englvl" value="fluent"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Native or bilingual
+							<input type="radio" name="ivsaved_radio3" [(ngModel)]="ivsaved_search_model.englvl" value="native"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="padding-left: 40px; padding-top: 10px;">
+				<h4 style="font-weight: 700;">Last Activity</h4>
+				<div class="ivscontrol-group">
+						<label class="ivscontrol ivscontrol--radio">Any time
+							<input type="radio" name="ivsaved_radio4" checked="checked" [(ngModel)]="ivsaved_search_model.lastactive" value="any"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 weeks
+							<input type="radio" name="ivsaved_radio4" [(ngModel)]="ivsaved_search_model.lastactive" value="2week"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 1 month
+							<input type="radio" name="ivsaved_radio4" [(ngModel)]="ivsaved_search_model.lastactive" value="1month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+						<label class="ivscontrol ivscontrol--radio">Within 2 months
+							<input type="radio" name="ivsaved_radio4" [(ngModel)]="ivsaved_search_model.lastactive" value="2month"/>
+							<div class="ivscontrol__indicator"></div>
+						</label>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category</label>
+				<angular2-multiselect [data]="ev_category_dropdownList" [(ngModel)]="ivsaved_search_model.ev_category" [settings]="ev_category_dropdownSettings"
+									(onSelect)="onecItemSelect($event)" 
+								    (onDeSelect)="OnecItemDeSelect($event)"
+								    (onSelectAll)="onecSelectAll($event)"
+								    (onDeSelectAll)="onecDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Event Category Details</label>
+				<angular2-multiselect [data]="ev_category_detail_dropdownList" [(ngModel)]="ivsaved_search_model.ev_category_detail_selectedItems" [settings]="ev_category_detail_dropdownSettings"
+									(onSelect)="onecdItemSelect($event)" 
+								    (onDeSelect)="OnecdItemDeSelect($event)"
+								    (onSelectAll)="onecdSelectAll($event)"
+								    (onDeSelectAll)="onecdDeSelectAll($event)">
+				  <c-item>
+				          <ng-template let-item="item">
+				            <label style="color: #333;min-width: 150px;">{{item.itemName}}</label>
+				            <img [src]="item.image" style="width: 30px; border: 1px solid #efefef;margin-right: 20px;" />
+				          </ng-template>
+				  </c-item>    
+				</angular2-multiselect>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<label>Location</label>
+				<input name="service_location" [(ngModel)]="ivsaved_search_model.service_location" #service_location="ngModel" type="text" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control gibc-widget" #search3 required />
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px">
+				<button class="save_close_btn" (click)="ivsaved_search_flag_add = false"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Save & Close</button>
+			</div>
+
+		</div>
+
+		<div class="iv_vendorlist">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<button class="invitetojob_btn">Invite To Job</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 each_ivs_vendors">
+				<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 logodiv">
+					<img class="img-responsive cirular_img" src="/assets/images/vendor1.jpg" />
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+					<div>
+						<h5 style="font-size: 16px; font-weight: 600;">Nol Girae</h5>
+						<h5 style="font-size: 16px; font-weight: 600;">Senior Wedding / Album Vedor located in China</h5>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="padding: 0;">
+							<h5 style="font-size: 16px; font-weight: 600;">$1k+ earned</h5>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 15px;">29% Job Success</h5>
+							<progressbar class="jsuccess" [value]="32" [max]="100"></progressbar>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;">
+							<h5 style="font-size: 16px; font-weight: 600;"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;China</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align: center;padding: 20px;">
+					<button class="invitetojob_btn">Invite To Job</button>
+					<p></p>
+					<a class="hirevendor_a" href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;&nbsp;Hire Vendor</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

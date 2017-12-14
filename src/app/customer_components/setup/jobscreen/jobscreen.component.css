@@ -58,120 +58,423 @@
 /* Style the tab content */
 .tabcontent {
     display: none;
-    padding: 6px 12px;
+    padding: 10px 40px;
     border: 1px solid #ccc;
     border-top: none;
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.category_view{
+    margin-top: 50px;
+}
+.ct_tags{
+    background-color: #e8e8e8;
+    border-radius: 5px;
+    padding: 7px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.posted_time{
+    font-size: 16px;
+    margin-left: 40px;
+    color: #b3b3b3;
 }
 
+.detail_content{
+    padding: 0;
+    margin-top: 50px;
+}
+.require_detail{
+    padding: 0;
+    margin-top: 70px;
+}
+.rdcontent{
+    margin-left: 70px;
+    border-left: solid;
+    border-color: #a2a2a2;
+    padding-left: 30px;
+}
+.eventtype{
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #a2a2a2;
+    margin-top: 50px;
 
-.postings{
-	margin-top: 100px;
-	margin-bottom: 50px;
 }
-.postings_mainbody{
-	background-color: white;
-	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+.eventdetail_view{
+    margin-top: 50px;
+}
+.jothers{
+    padding:0px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#viewjobpost_content{
+    margin-bottom: 100px;
+}
+
+/*invite vendors*/
+
+.invitevendors_subtab {
+    overflow: hidden;
+    height: 40px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #a7a7a7;
+}
+
+.invitevendors_tablinks{
+    padding: 0px;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
+/* Change background color of buttons on hover */
+.invitevendors_tablinks:hover {
+    color: #eeda38;
+}
+
+/* Create an active/current tablink class */
+.invitevendors_tablinks.active {
+    color: #eeda38;
+    border-bottom: solid;
+    border-color: #efda38;
+    border-width: 4px;
 
 }
-.postings_header{
-	background-color: whitesmoke;
-    padding: 10px;
-    height: 80px;
+
+/* Style the tab content */
+.invitevendors_tabcontents {
+    display: none;
 }
-.postnewjob{
-    color: white;
+
+.optionalhead{
+    background-color: whitesmoke;
+    height: 100px;
+    margin-left: -40px;
+    margin-right: -40px;
+    border-bottom: solid 1px #adadad;
+}
+.optionalbody{
+    margin-left: -40px;
+    margin-right: -40px;
+    height: 600px;
+    background-color: whitesmoke;
+    border-bottom: solid 1px #adadad;
+}
+.iv_search_mainsearch_widget{
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 17px;
+    border-color: #bdbdbd;
     margin-top: 10px;
-    margin-left: 30px;
-    background-color: #dabc06;
-    width: 180px;
+    border-width: 1px;
+    float: left;
+}
+.iv_search_mainsearch_widget:hover{
+    border-color: #e5cd32;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.iv_search_searchbtn{
+    color: white;
+    background-color: #e5cd32;
+    width: 5%;
     height: 40px;
     font-size: 15px;
     font-weight: 700; 
     border: #e5cd32;
     border-radius: 1px;
-    padding-top: 9px;
+    padding: 8px;
+    text-decoration-line: none;
+    margin-top: 10px;
     box-shadow: 0 1px 6px rgba(57,73,76,.35);
 }
-.postnewjob:hover{
+.iv_search_searchbtn:hover{
     background-color: #c5b12d;
     box-shadow: 0 1px 15px rgba(57,73,76,.35);
 }
-
-.postings_content{
-	background-color: white;
-    padding-bottom: 30px;
-}
-.dpadding{
-	padding: 0;
-}
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-.theader{
-	border-bottom:solid 1px;
-	border-top:solid 1px;
-	padding-top: 20px;
-	border-color: #d8d8d8;
-}
-th{
-	font-size: 15px;
-    padding: 20px;
-}
-td {
-    padding: 20px;
-    
-}
-
-.jtitle{
-	font-size: 19px;
-	color: #dabc07;
-	font-weight: 700;
-}
-
-.configbtn{
-	font-size: 18px;
-    border-radius: 50px;
-    color: #dabc06;
+.iv_search_filters_widget{
+    color: #e5cd32;
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    margin-top: 30px;
+    float: left;
     box-shadow: 0 1px 6px rgba(57,73,76,.35);
 }
-.configbtn:hover{
-	box-shadow: 0 1px 16px rgba(57,73,76,.35);
+.iv_search_filters_widget:hover{
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
 }
 
-:host >>> .tooltip-inner {
-        background-color: white;
-        color: black;
-        border: solid;
-        border-color: #e5cd32;
-        font-size: 15px;
-      }
-:host >>> .tooltip.top .tooltip-arrow:before,
-:host >>> .tooltip.top .tooltip-arrow {
-        border-top-color: #e5cd32;
+.ivscontrol-group {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+.ivscontrol {
+    font-size: 16px;
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    font-weight: 100;
+}
+
+.ivscontrol input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.ivscontrol__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+
+.ivscontrol--radio .ivscontrol__indicator {
+    border-radius: 50%;
+}
+
+/* Hover and focus states */
+.ivscontrol:hover input ~ .ivscontrol__indicator,
+.ivscontrol input:focus ~ .ivscontrol__indicator {
+    background: #b9b9b9;
+}
+
+/* Checked state */
+.ivscontrol input:checked ~ .ivscontrol__indicator {
+    background: #e6cd32;
+}
+
+/* Hover state whilst checked */
+.ivscontrol:hover input:not([disabled]):checked ~ .ivscontrol__indicator,
+.ivscontrol input:checked:focus ~ .ivscontrol__indicator {
+    background: #e6cd32;
+}
+
+/* Check mark */
+.ivscontrol__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.ivscontrol input:checked ~ .ivscontrol__indicator:after {
+    display: block;
+}
+
+/* Radio button inner circle */
+.ivscontrol--radio .ivscontrol__indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.save_close_btn{
+    color: #e5cd32;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    float: left;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.save_close_btn:hover{
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.cirular_img{
+    border-radius: 100px;
+}
+.logodiv:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: #fba612;
+    width: 18px;
+    height: 18px;
+    right: 15px;
+    top: 59px;
+}
+
+.invitetojob_btn{
+    color: white;
+    background-color: #eeda38;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.invitetojob_btn:hover{
+    color: white;
+    background-color: #c7b72e;
+}
+
+.savevendor_btn{
+    color: #eeda38;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.savevendor_btn:hover{
+    box-shadow: 0 1px 16px rgba(57,73,76,.35);
+}
+
+.each_ivs_vendors{
+    height: 140px;
+    margin-top: 30px;
+    border-bottom: solid 1px #d4d4d4;
+}
+
+.hirevendor_a{
+    font-size: 16px;
+    font-weight: 700;
+    color: #e5cd32;
+    text-decoration: none;
 }
 
 
-.contracts{
-	margin-top: 50px;
-	margin-bottom: 100px;
-}
-.contracts_mainbody{
-	background-color: white;
-	box-shadow: 0 1px 6px rgba(57,73,76,.35);
 
-}
-.contracts_header{
-	background-color: whitesmoke;
-    padding: 10px;
-    height: 80px;
-}
-.contracts_content{
-	background-color: white;
-    padding-bottom: 30px;
+/*review proposals*/
+.reviewproposal_subtab {
+    overflow: hidden;
+    height: 40px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: #a7a7a7;
 }
 
-.nonecontracts{
-	padding: 20px;
+.reviewproposal_tablinks{
+    padding: 0px;
+    text-align: center;
+    height: 100%;
+    cursor: pointer;
+}
+/* Change background color of buttons on hover */
+.reviewproposal_tablinks:hover {
+    color: #eeda38;
+}
+
+/* Create an active/current tablink class */
+.reviewproposal_tablinks.active {
+    color: #eeda38;
+    border-bottom: solid;
+    border-color: #efda38;
+    border-width: 4px;
+
+}
+
+/* Style the tab content */
+.reviewproposal_tabcontents {
+    display: none;
+}
+
+
+.each_rp_vendors{
+    height: 190px;
+    margin-top: 30px;
+    border-bottom: solid 1px #d4d4d4;
+}
+
+.message_btn{
+    color: white;
+    background-color: #eeda38;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.message_btn:hover{
+    color: white;
+    background-color: #c7b72e;
+}
+
+.archive_btn{
+    color: #eeda38;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.archive_btn:hover{
+    box-shadow: 0 1px 16px rgba(57,73,76,.35);
+}
+
+
+/*hire*/
+
+.hire_tabcontents {
+}
+
+
+.each_hr_vendors{
+    height: 190px;
+    margin-top: 30px;
+    border-bottom: solid 1px #d4d4d4;
+}
+
+.endcontract_btn{
+    color: white;
+    background-color: #eeda38;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.endcontract_btn:hover{
+    color: white;
+    background-color: #c7b72e;
 }

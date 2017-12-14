@@ -1,0 +1,128 @@
+.rfheader{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.rfbody{
+    margin-bottom: 50px;
+}
+
+.control-group {
+    display: inline-block;
+    margin: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+.control {
+    font-size: 16px;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.control__indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #e6e6e6;
+}
+
+.control--check .control__indicator {
+    border-radius: 50%;
+}
+
+/* Hover and focus states */
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+    background: #ccc;
+}
+
+/* Checked state */
+.control input:checked ~ .control__indicator {
+    background: #e6cd32;
+}
+
+/* Hover state whilst checked */
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+    background: #e6cd32;
+}
+
+/* Check mark */
+.control__indicator:after {
+    position: absolute;
+    display: none;
+    content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .control__indicator:after {
+    display: block;
+}
+
+/* Radio button inner circle */
+.control--check .control__indicator:after {
+    top: 7px;
+    left: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+rating{
+    font-size: 30px;
+    color: #d6be12;
+}
+
+.each_ratebody{
+    width: 300px; height: 50px;
+}
+.each_ratetitle{
+    font-size: 17px; float: left; margin-top: 12px;
+}
+.each_rateval{
+    float: right;
+}
+
+.reviewcontents{
+    width: 500px;
+    height: 250px;
+    outline: none;
+    border: solid 2px #d6d6d6;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.savefeedback{
+    color: white;
+    background-color: #e5cd32;
+    width: 250px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    margin-top: 10px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.savefeedback:hover{
+    background-color: #ceb830;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.endbody{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}

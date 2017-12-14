@@ -1,0 +1,47 @@
+﻿<div class="container rfheader">
+	<h2>Review & Feedback</h2>
+	<h3 style="text-align: center; font-weight: 600; color:#e5cd32; margin-top: 50px;">Need Wedding with Fireworks and Cake&Flower at Los Angeles (Sunday)</h3>
+</div>
+<div class="container rfbody">
+	<div class="control-group">
+		<label class="control control--check">Job Completed Successfully?
+			<input type="checkbox" name="check" checked="checked" [(ngModel)]="paidway" value="bymilestone"/>
+			<div class="control__indicator"></div>
+		</label>
+		<h4 style="margin-left: 30px; font-size: 15px;">if your job completed successfully, check this</h4>
+	</div>
+	<h4 style="font-size: 19px; font-weight: 700; margin-top: 30px;"><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;&nbsp;What is our service rate?</h4>
+	<rating style="margin-left: 30px;" [(ngModel)]="ourrate" [max]="ourrate_max"></rating>
+
+    <h4 style="font-size: 19px; font-weight: 700; margin-top: 30px;"><i class="fa fa-diamond" aria-hidden="true"></i>&nbsp;&nbsp;Rate to Vendor</h4>
+    <div style="margin-left: 30px;">
+	    <div class="each_ratebody">
+		    <span class="each_ratetitle">Service delivery</span>
+		    <rating class="each_rateval" [(ngModel)]="vendorrate_service" [max]="vendorrate_max"></rating>
+	    </div>
+	    <div class="each_ratebody">
+		    <span class="each_ratetitle">Timeline</span>
+		    <rating class="each_rateval" [(ngModel)]="vendorrate_timeline" [max]="vendorrate_max"></rating>
+	    </div>
+	    <div class="each_ratebody">
+		    <span class="each_ratetitle">Quality of Work</span>
+		    <rating class="each_rateval" [(ngModel)]="vendorrate_quality" [max]="vendorrate_max"></rating>
+	    </div>
+	    <div class="each_ratebody">
+		    <span class="each_ratetitle">Communication</span>
+		    <rating class="each_rateval" [(ngModel)]="vendorrate_speaking" [max]="vendorrate_max"></rating>
+	    </div>
+	    <div class="each_ratebody">
+		    <span class="each_ratetitle">Budget</span>
+		    <rating class="each_rateval" [(ngModel)]="vendorrate_budget" [max]="vendorrate_max"></rating>
+	    </div>
+	    
+    </div>
+
+    <h4 style="font-size: 19px; font-weight: 700; margin-top: 30px;"><i class="fa fa-ticket" aria-hidden="true"></i>&nbsp;&nbsp;Review contents for Vendor</h4>
+    <p></p>
+    <textarea class="reviewcontents"></textarea>
+    <div class="endbody">
+    	<button class="savefeedback">Save and End Contract</button>
+    </div>
+</div>

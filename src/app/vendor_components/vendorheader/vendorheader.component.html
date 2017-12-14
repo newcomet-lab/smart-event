@@ -11,17 +11,17 @@
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Events <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
-          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/vendor/eventlist']">
             <div>
               <a [routerLink]="['/vendor/eventlist']">All Events</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/newevent']">
             <div>
               <a [routerLink]="['/vendor/newevent']">New Event</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/listingbill']">
             <div>
               <a [routerLink]="['/vendor/listingbill']">Listing Bill</a>
             </div>
@@ -31,17 +31,17 @@
       <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Booking <i class="fa fa-angle-down" aria-hidden="true"></i></a>
           <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
-            <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+            <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/vendor/bookinglist']">
               <div>
                 <a [routerLink]="['/vendor/bookinglist']">Booking List</a>
               </div>
             </li>
-            <li class="menuitem-body" style="height: 60px;">
+            <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/bookingnew']">
               <div>
                 <a [routerLink]="['/vendor/bookingnew']">New Booking</a>
               </div>
             </li>
-            <li class="menuitem-body" style="height: 60px;">
+            <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/calendarview']">
               <div>
                 <a [routerLink]="['/vendor/calendarview']">Calendar View</a>
               </div>
@@ -51,17 +51,17 @@
       <li class="dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Messages <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul class="dropdown-menu menuitem" style="border-color: #e0e0e0; border-width: 2px;">
-          <li class="menuitem-body" style="height: 60px; margin-top: -8px;">
+          <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/vendor/mailbox']">
             <div>
               <a [routerLink]="['/vendor/mailbox']">Mailbox</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/invoicelist']">
             <div>
               <a [routerLink]="['/vendor/invoicelist']">Invoices</a>
             </div>
           </li>
-          <li class="menuitem-body" style="height: 60px;">
+          <li class="menuitem-body" style="height: 60px;" [routerLink]="['/vendor/chatbox']">
             <div>
               <a [routerLink]="['/vendor/chatbox']">Chat</a>
             </div>
@@ -80,7 +80,7 @@
               <label class="btn btn-success" [(ngModel)]="memberstatus" btnRadio="invisible" uncheckable>Invisible</label>
             </div>
           </li>
-          <li class="profileitem-body" style="height: 130px;">
+          <li class="profileitem-body" style="height: 130px;" [routerLink]="['/vendor/myprofile']">
             <div style="float: left;">
                 <img src="assets/images/marktim.png" alt="my-image" class="mitem-circular-image" />
             </div>
@@ -92,7 +92,7 @@
                   </div>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" [routerLink]="['/vendor/setting']">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-cog" aria-hidden="true"></i>
             </div>
@@ -100,7 +100,7 @@
                 <a [routerLink]="['/vendor/setting']" style="margin-right: 160px;">Setting</a>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" [routerLink]="['/']">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-bullseye" aria-hidden="true"></i>
             </div>
@@ -108,7 +108,7 @@
                 <a [routerLink]="['/']" style="margin-right: 95px;">View Frontend</a>
             </div>
           </li>
-          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;">
+          <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" (click)="logout()">
             <div style="float: left;">
                 <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-sign-out" aria-hidden="true"></i>
             </div>

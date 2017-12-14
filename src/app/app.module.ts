@@ -63,6 +63,8 @@ import { AngularMultiSelectModule } from 'angular2-multiselect-dropdown/angular2
 
 import { DxVectorMapModule } from 'devextreme-angular';
 
+import {SelectModule} from 'ng2-select';
+
 /*Customer part*/
 
 import { CustomerheaderComponent } from './customer_components/customerheader/index';
@@ -73,6 +75,16 @@ import { AllcontractsComponent } from './customer_components/setup/allcontracts/
 import { PostjobComponent } from './customer_components/setup/postjob/index';
 
 import { JobscreenComponent } from './customer_components/setup/jobscreen/index';
+
+import { FindvendorsComponent } from './customer_components/setup/findvendors/index';
+import { MyvendorsComponent } from './customer_components/setup/myvendors/index';
+
+import { CustomerSettingComponent } from './customer_components/setup/setting/index';
+
+import { CustomertransactionhistoryComponent } from './customer_components/setup/transactionhistory/index';
+
+import { MakepaymentComponent } from './customer_components/setup/makepayment/index';
+import { EndcontractComponent } from './customer_components/setup/endcontract/index';
 
 import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
 import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
@@ -112,6 +124,9 @@ import { Medium_wratingComponent } from './vendor_components/widget/medium_wrati
 
 import { environment } from '../environments/environment';
 
+import { ModalComponent } from './global_components/modal/index';
+import { ModalService } from './_services/index';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -145,11 +160,14 @@ import { environment } from '../environments/environment';
         AngularMultiSelectModule,
         PaginationModule.forRoot(),
         TooltipModule.forRoot(),
-        DxVectorMapModule
+        DxVectorMapModule,
+        SelectModule
     ],
     declarations: [
         AppComponent,
         AlertComponent,
+
+        ModalComponent,
 
         FirstheaderComponent,
         FirstfooterComponent,
@@ -163,36 +181,69 @@ import { environment } from '../environments/environment';
         HiworkcardComponent,
         RadiotoggleComponent,
 
+
+
+/*customer part*/
+
+
+
         CustomerheaderComponent,
+
         CustomerLayoutComponent,
+
         MyjobsComponent,
         AlljobpostingComponent,
         AllcontractsComponent,
         PostjobComponent,
+
         JobscreenComponent,
+
+        FindvendorsComponent,
+        MyvendorsComponent,
+
+        CustomerSettingComponent,
+
+        CustomertransactionhistoryComponent,
+
+        MakepaymentComponent,
+        EndcontractComponent,
+
         CinvoicelistComponent,
         CmailboxComponent,
         CchatboxComponent,
 
 
+
+/*vendor part*/
+
+
+
         VendorLayoutComponent,
+
         VendorheaderComponent,
+
         StorefrontComponent,
         SettingComponent,
+
         NeweventComponent,
         EventlistComponent,
+
         Listing_billComponent,
         Bill_previewComponent,
+
         BookinglistComponent,
         CalendarviewComponent,
         BookingnewComponent,
         InvoicelistComponent,
+
         MailboxComponent,
         ChatboxComponent,
+
         FindcustomersComponent,
         CustomersjobComponent,
         VsubmitproposalComponent,
         Vendor_event_detailComponent,
+
         MyprofileComponent,
         MyckeditorComponent,
         Small_wratingComponent,
@@ -203,6 +254,7 @@ import { environment } from '../environments/environment';
         AlertService,
         AuthenticationService,
         UserService,
+        ModalService,
 
         // providers used to create fake backend
         fakeBackendProvider,

@@ -24,6 +24,7 @@
     "@angular/router": "^4.2.4",
     "@types/date-fns": "^2.6.0",
     "@types/googlemaps": "^3.30.0",
+    "@types/underscore": "^1.8.5",
     "angular-calendar": "^0.22.1",
     "angular2-fontawesome": "^0.9.3",
     "angular2-fullcalendar": "^1.0.19",
@@ -42,11 +43,13 @@
     "ng2-ckeditor": "^1.1.9",
     "ng2-page-scroll": "^4.0.0-beta.12",
     "ng2-progress-bar": "0.0.8",
+    "ng2-select": "^2.0.0",
     "ng2-sticky-nav": "^0.1.0",
     "ngx-bootstrap": "^2.0.0-beta.8",
     "ngx-progressbar": "^2.1.1",
     "rxjs": "^5.4.2",
     "tinymce": "^4.7.3",
+    "underscore": "^1.8.3",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {

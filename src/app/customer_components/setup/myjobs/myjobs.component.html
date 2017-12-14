@@ -40,7 +40,7 @@
 			    	<div class="btn-group" dropdown>
 			    		<span dropdownToggle class="btn dropdown-toggle configbtn" ><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
 			    		  <ul *dropdownMenu class="dropdown-menu" role="menu">
-							    <li role="menuitem"><a class="dropdown-item" href="#">View Proposals</a></li>
+							    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/jobscreen']">View Proposals</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">Make Private</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">View Job Posting</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">Edit Posting</a></li>
@@ -71,7 +71,7 @@
 			    	<div class="btn-group" dropdown>
 			    		<span dropdownToggle class="btn dropdown-toggle configbtn" ><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
 			    		  <ul *dropdownMenu class="dropdown-menu" role="menu">
-							    <li role="menuitem"><a class="dropdown-item" href="#">View Proposals</a></li>
+							    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/jobscreen']">View Proposals</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">Make Private</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">View Job Posting</a></li>
 							    <li role="menuitem"><a class="dropdown-item" href="#">Edit Posting</a></li>
@@ -101,7 +101,45 @@
 		</div>
 		<div class="contracts_content">
 			<div class="nonecontracts">
-				<h4 style="font-size: 17px; margin-left: 25px;">Once you hire a Vendor, you can view your active contracts here.</h4>
+				<table>
+				  <tr class="theader">
+				    <th style="width: 50%; padding-left: 45px;">JOB TITLE</th>
+				    <th style="width: 10%;">STATUS</th>
+				    <th style="width: 10%;">VENDOR</th>
+				    <th style="width: 10%;">PAID</th>
+				    <th style="width: 10%;">TOTAL BUDGET</th>
+				    <th style="width: 10%;"></th>
+				  </tr>
+				  <tr>
+				    <td style="padding-left: 45px;">
+				    	<h4 class="jtitle">I need Wedding service Vendor located in Lagos</h4>
+				    	<h4 style="font-size: 17px;">Started 2 days ago</h4>
+				    </td>
+				    <td>
+				    	<h4>Active</h4>
+				    </td>
+				    <td>
+				    	<h4>Marji</h4>
+				    </td>
+				    <td>
+				    	<h4>$120</h4>
+				    </td>
+				    <td>
+				    	<h4>$300</h4>
+				    </td>
+				    <td>
+				    	<div class="btn-group" dropdown>
+				    		<span dropdownToggle class="btn dropdown-toggle configbtn" ><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span>
+				    		  <ul *dropdownMenu class="dropdown-menu" role="menu">
+								    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/makepayment']">Make a Payment</a></li>
+								    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/endcontract']">End Contract</a></li>
+								    <li role="menuitem"><a class="dropdown-item" href="#">Dispute</a></li>
+							  </ul>
+				    	</div>
+				    </td>
+				  </tr>
+
+				</table>
 			</div>
 		</div>	
 	</div>

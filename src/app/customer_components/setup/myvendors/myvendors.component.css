@@ -1,0 +1,197 @@
+.myvendors_body{
+    margin-top: 50px;
+}
+
+
+/* Style the buttons inside the tab */
+div.tab button {
+    display: block;
+    color: #e5cd32;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    font-weight: 600;
+    height: 50px;
+    padding-top: 12px;
+    background-color: transparent;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: transparent;
+}
+
+/* Create an active/current "tab button" class */
+div.tab button.active {
+   background-color: transparent;
+    color: #e5cd32;
+    padding: 10px 20px 9px;
+    text-decoration: none;
+}
+div.tab button.active:before {
+    content: " ";
+    position: relative;
+    border-left: 5px solid #e5cd32;
+    left: 0;
+    right: auto;
+    top: -15px;
+    margin-right: 20px;
+    margin-left: -20px;
+    border-bottom: 30px solid #e5cd32;
+}
+
+/* Style the tab content */
+
+div.tab h4{
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.search input:hover{
+    
+}
+.search input:focus{
+    border-color: #e5cd32;
+    outline-width: 0;
+}
+.search input { 
+
+  margin-bottom: 20px;
+
+  width: 200px;
+  height: 40px;
+
+  background: transparent;
+  border: 2px solid #cecece;
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search { 
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    font-size: 20px;
+    color: #efda38;
+}
+
+.hired_body{
+    border: solid #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 100px;
+}
+
+.pasthires_body{
+    border: solid #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 100px;
+}
+
+.hired_vendors_body{
+    height: 170px;
+    margin-top: 50px;
+}
+
+.pasthire_vendors_body{
+    height: 150px;
+    margin-top: 50px;
+}
+
+.circular_img{
+    width: 70%;
+    border-radius: 100px;
+}
+.vendorname{
+    font-size: 20px;
+    font-weight: 600;
+}
+.vendortimezone{
+    color: #a2a2a2;
+
+}
+
+.rehire_btn{
+    color: white;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: #dabc06;
+    width: 100px;
+    height: 40px;
+    font-size: 19px;
+    font-weight: 700;
+    border: #e5cd32;
+    border-radius: 1px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.rehire_btn:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.configbtn{
+    width: 80px;
+    height: 40px;
+    color: #dabc06;
+    background-color: transparent;
+    border: solid #e0e0e0;
+    border-radius: 1px;
+    margin-top: -5px;
+}
+.configbtn:focus{
+    border-color: #dabc06;
+}
+
+.dropdown-menu>li>a{
+    font-size: 17px;
+}
+
+.jobtilte{
+    color: #dabc06;
+    text-decoration: none;
+}
+
+.endcontract_btn{
+    color: white;
+    margin-left: 30px;
+    background-color: #dabc06;
+    width: 140px;
+    height: 40px;
+    font-size: 19px;
+    font-weight: 700;
+    border: #e5cd32;
+    border-radius: 1px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.endcontract_btn:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+
+.dispute_btn{
+    color: white;
+    margin-top: 10px;
+    margin-left: 30px;
+    background-color: #da3e06;
+    width: 140px;
+    height: 40px;
+    font-size: 19px;
+    font-weight: 700;
+    border: #e5cd32;
+    border-radius: 1px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.dispute_btn:hover{
+    background-color: #c13908;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}

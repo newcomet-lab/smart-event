@@ -85,6 +85,11 @@
     border-color: #e0e0e0;
     border-style: solid;
     border-width: 1px;
+    cursor: pointer;
+}
+.profileitem-body:hover{
+    border-width: 2px;
+    border-color: #e5cd32;
 }
 .profile_progress{
     margin-top: 20px;
@@ -109,6 +114,11 @@
     border-style: solid;
     border-width: 1px;
     padding-top: 23px;
+    cursor: pointer;
+}
+.menuitem-body:hover{
+    border-color: #e6cd32;
+    border-width: 2px;
 }
 .menuitem-body a{
     margin-left: 40px;
