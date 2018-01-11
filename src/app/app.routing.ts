@@ -7,6 +7,16 @@ import { RegisterComponent } from './firstcomponents/register/index';
 
 import { AuthGuard } from './_guards/index';
 
+/*Admin part*/
+
+import {AdminLayoutComponent} from "./admin_components/admin-layout/admin-layout.component";
+import {DashboardComponent} from "./admin_components/setup/dashboard/index";
+import {Vendor_manageComponent} from "./admin_components/setup/vendor_manage/index";
+import {Vendor_vieweditComponent} from "./admin_components/setup/vendor_viewedit/index";
+import {PermissionComponent} from "./admin_components/setup/permission/index";
+import {BillingComponent} from "./admin_components/setup/billing/index";
+
+
 /*customer part*/
 
 import {CustomerLayoutComponent} from "./customer_components/customer-layout/customer-layout.component";
@@ -27,6 +37,8 @@ import { CustomertransactionhistoryComponent } from './customer_components/setup
 
 import { MakepaymentComponent } from './customer_components/setup/makepayment/index';
 import { EndcontractComponent } from './customer_components/setup/endcontract/index';
+import { DisputeboardComponent } from './customer_components/setup/disputeboard/index';
+import { CustomerdisputehistoryComponent } from './customer_components/setup/disputehistory/index';
 
 import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
 import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
@@ -66,6 +78,17 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'forgot', component: ForgotComponent },
     { path: '', component: LandinghomeComponent },
+    { path: 'admin',
+	  component: AdminLayoutComponent,
+	  canActivate: [AuthGuard],
+	  children: [
+	  		{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+	  		{ path: 'vendor_manage', component: Vendor_manageComponent, canActivate: [AuthGuard] },
+	  		{ path: 'vendor_viewedit', component: Vendor_vieweditComponent, canActivate: [AuthGuard] },
+	  		{ path: 'permission', component: PermissionComponent, canActivate: [AuthGuard] },
+	  		{ path: 'billing', component: BillingComponent, canActivate: [AuthGuard] }
+	]},
+
     {
 	    path: 'customer',
 	    component: CustomerLayoutComponent,
@@ -84,6 +107,8 @@ const appRoutes: Routes = [
 	    	
 	    	{ path: 'makepayment', component: MakepaymentComponent, canActivate: [AuthGuard] },
 	    	{ path: 'endcontract', component: EndcontractComponent, canActivate: [AuthGuard] },
+	    	{ path: 'disputeboard', component: DisputeboardComponent, canActivate: [AuthGuard] },
+	    	{ path: 'disputehistory', component: CustomerdisputehistoryComponent, canActivate: [AuthGuard] },
 
 	    	{ path: 'transactionhistory', component: CustomertransactionhistoryComponent, canActivate: [AuthGuard] },
 

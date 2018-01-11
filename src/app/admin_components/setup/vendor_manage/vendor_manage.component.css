@@ -1,0 +1,76 @@
+.manageboard{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+.searchbykey{
+	width: 100%;
+	height: 40px;
+	font-size: 17px;
+}
+
+.searchboxes input { text-indent: 32px;}
+.searchboxes .fa-search { 
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 20px;
+    color: #efda38;
+}
+
+
+.actions{
+	width: 150px;
+	height: 40px;
+	font-size: 17px;
+}
+
+.pager{
+	background-color: #d4d4d4;
+    font-size: 20px;
+    padding: 5px;
+    width: 40px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.numfield{
+	width: 40px;
+	height: 40px;
+	margin-left: 30px;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.approve_status{
+	padding: 5px;
+    border-radius: 5px;
+    background-color: #47dcc7;
+    font-size: 17px;
+}
+
+.disapprove_status{
+	padding: 5px;
+    border-radius: 5px;
+    background-color: #dcb547;
+    font-size: 17px;
+}

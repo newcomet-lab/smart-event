@@ -109,3 +109,116 @@ td {
 .nonecontracts{
 	padding: 0px;
 }
+
+
+/* MODAL STYLES
+-------------------------------*/
+modal {
+    /* modals are hidden by default */
+    display: none;
+}
+    modal .modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* z-index must be higher than .modal-background */
+        z-index: 1000;
+        
+        /* enables scrolling for tall modals */
+        overflow: auto;
+
+        display: block;
+
+        
+    }
+    modal .modal .modal-body {
+            padding: 20px;
+            background: #fff;
+
+            /* margin exposes part of the modal background */
+            margin: auto;
+            margin-top: 100px;
+            width: 800px !important;
+            margin-bottom: 100px;
+        }
+
+    modal .modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+        
+        /* z-index must be below .modal and above everything else  */
+        z-index: 900;
+    }
+
+.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+.modalheader{
+    height: 100px;
+}
+.closebtn{
+    text-decoration: none;
+    cursor: pointer;
+    color: #e5cd32;
+    font-size: 40px;
+    float: right;
+}
+
+.djtitle{
+    height: 90px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+}
+
+.select_wid{
+    height: 40px;
+    width: 250px;
+}
+.select_wid:hover{
+    border: solid 1px #e5cd32;
+}
+
+.eachform{
+    height: 50px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.formlabel{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.disputesave{
+    background-color: #e5cd32;
+    color: white;
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    margin-top: 20px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.disputesave:hover{
+    background-color: #bdaa2b;
+}
+
+.dtxtarea_wid{
+    width: 100%;
+    height: 200px;
+}
+.dtxtarea_wid:hover{
+    border: solid 1px #e5cd32;
+}

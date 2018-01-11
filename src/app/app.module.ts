@@ -65,6 +65,16 @@ import { DxVectorMapModule } from 'devextreme-angular';
 
 import {SelectModule} from 'ng2-select';
 
+/*Admin part*/
+
+import { AdminheaderComponent } from './admin_components/adminheader/index';
+import {AdminLayoutComponent} from './admin_components/admin-layout/admin-layout.component';
+import {DashboardComponent} from './admin_components/setup/dashboard/index';
+import {Vendor_manageComponent} from './admin_components/setup/vendor_manage/index';
+import {Vendor_vieweditComponent} from './admin_components/setup/vendor_viewedit/index';
+import {PermissionComponent} from './admin_components/setup/permission/index';
+import {BillingComponent} from './admin_components/setup/billing/index';
+
 /*Customer part*/
 
 import { CustomerheaderComponent } from './customer_components/customerheader/index';
@@ -85,6 +95,8 @@ import { CustomertransactionhistoryComponent } from './customer_components/setup
 
 import { MakepaymentComponent } from './customer_components/setup/makepayment/index';
 import { EndcontractComponent } from './customer_components/setup/endcontract/index';
+import { DisputeboardComponent } from './customer_components/setup/disputeboard/index';
+import { CustomerdisputehistoryComponent } from './customer_components/setup/disputehistory/index';
 
 import { CinvoicelistComponent } from './customer_components/setup/cinvoicelist/index';
 import { CmailboxComponent } from './customer_components/setup/cmailbox/index';
@@ -181,6 +193,17 @@ import { ModalService } from './_services/index';
         HiworkcardComponent,
         RadiotoggleComponent,
 
+/*admin part*/
+
+
+        AdminheaderComponent,
+        AdminLayoutComponent,
+        DashboardComponent,
+        Vendor_manageComponent,
+        Vendor_vieweditComponent,
+        PermissionComponent,
+        BillingComponent,
+
 
 
 /*customer part*/
@@ -207,6 +230,8 @@ import { ModalService } from './_services/index';
 
         MakepaymentComponent,
         EndcontractComponent,
+        DisputeboardComponent,
+        CustomerdisputehistoryComponent,
 
         CinvoicelistComponent,
         CmailboxComponent,

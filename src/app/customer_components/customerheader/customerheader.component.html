@@ -48,10 +48,15 @@
       </li>
       <li class="dropdown">
           <a href="#" data-toggle="dropdown" class="dropdown-toggle" style="margin-top: -3px;">Reports<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-          <ul class="dropdown-menu menuitem" style="height: 61px; border-color: #e0e0e0; border-width: 2px;">
+          <ul class="dropdown-menu menuitem" style="height: 121px; border-color: #e0e0e0; border-width: 2px;">
             <li class="menuitem-body" style="height: 60px; margin-top: -8px;" [routerLink]="['/customer/transactionhistory']">
               <div>
                 <a [routerLink]="['/customer/transactionhistory']">Transaction</a>
+              </div>
+            </li>
+            <li class="menuitem-body" style="height: 60px;" [routerLink]="['/customer/disputehistory']">
+              <div>
+                <a [routerLink]="['/customer/disputehistory']">Dispute History</a>
               </div>
             </li>
           </ul>

@@ -1,0 +1,84 @@
+.billingdash{
+	padding: 20px;
+	margin-top: 50px;
+}
+
+.daterangerer{
+	width: 300px;
+    font-size: 20px;
+    background-color: #defff124;
+}
+
+.minibod{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(121, 119, 30, 0.35);
+	padding: 20px;
+	margin-bottom: 50px;
+}
+
+.preview{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+.income_invoices{
+	margin-bottom: 30px;
+}
+
+.invoices{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(121, 119, 30, 0.35);
+	padding: 20px;
+}
+
+.eachheaders{
+	background-color: #e8e8e8;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.topvendorincome{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(121, 119, 30, 0.35);
+	padding: 20px;
+}
+
+.others{
+	margin-bottom: 100px;
+	margin-top: 60px;
+
+}
+
+.manage_subscription{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(121, 119, 30, 0.35);
+	padding: 20px;
+}
+
+.active_span{
+	background-color: #31afb5;
+    padding: 10px;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+}

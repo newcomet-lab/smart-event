@@ -1,0 +1,128 @@
+﻿<div class="container manageboard">
+	<h3>Manage Vendor</h3>
+	<div class="filterboard">
+		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 searchboxes">
+			<input class="searchbykey" type="text" placeholder="search by keywords" />
+			<span class="fa fa-search"></span>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px;">
+			<select class="actions">
+				<option value="">Action</option>
+				<option value="Approve">Approve</option>
+				<option value="Disapprove">Disapprove</option>
+			</select>
+			<span style="margin-left: 30px; color: gray;">15 records found</span>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px;">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<select class="actions">
+					<option value="20">20</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="10">15</option>
+				</select>
+				<span style="color: gray;">per page</span>
+			</div>
+
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="margin-top: -20px; text-align: right;">
+				<span class="btn pager"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+				<input class="numfield" type="number" />
+				<span style="margin-left: 20px; font-size: 17px;">of 3</span>
+				<span class="btn pager"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="tablerepo" style="margin-top: 180px;">
+		
+		<table>
+		  <tr>
+		    <th style="width: 50px;"><input type="checkbox" />&nbsp;&nbsp;#</th>
+		    <th style="width: 80px;">No</th>
+		    <th style="width: 30%;">Email</th>
+		    <th style="width: 15%;">First Name</th>
+		    <th style="width: 15%;">Last Name</th>
+		    <th style="width: 10%;">Status</th>
+		    <th style="width: 7%;">Rate</th>
+		    <th style="width: 10%;">Action</th>
+		  </tr>
+		  <tr>
+		    <td><input type="checkbox" /></td>
+		    <td>2</td>
+		    <td>roland23@gmail.com</td>
+		    <td>James</td>
+		    <td>Roland</td>
+		    <td><span class="approve_status">Approve</span></td>
+			<td>4.5</td>
+			<td>
+				<div class="btn-group" dropdown>
+				  <button type="button" class="btn btn-success">Action</button>
+				  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+				    <span class="caret"></span>
+				    <span class="sr-only">Split button!</span>
+				  </button>
+				  <ul *dropdownMenu class="dropdown-menu" role="menu">
+				    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/admin/vendor_viewedit']">View/Edit</a></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Reject</a>
+				    </li>
+				  </ul>
+				</div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><input type="checkbox" /></td>
+		    <td>4</td>
+		    <td>roland23@gmail.com</td>
+		    <td>James</td>
+		    <td>Roland</td>
+		    <td><span class="disapprove_status">Disapprove</span></td>
+			<td>4.5</td>
+			<td>
+				<div class="btn-group" dropdown>
+				  <button type="button" class="btn btn-success">Action</button>
+				  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+				    <span class="caret"></span>
+				    <span class="sr-only">Split button!</span>
+				  </button>
+				  <ul *dropdownMenu class="dropdown-menu" role="menu">
+				    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/admin/vendor_viewedit']">View/Edit</a></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Reject</a>
+				    </li>
+				  </ul>
+				</div>
+			</td>
+		  </tr>
+
+		  <tr>
+		    <td><input type="checkbox" /></td>
+		    <td>9</td>
+		    <td>roland23@gmail.com</td>
+		    <td>James</td>
+		    <td>Roland</td>
+		    <td><span class="approve_status">Approve</span></td>
+			<td>4.5</td>
+			<td>
+				<div class="btn-group" dropdown>
+				  <button type="button" class="btn btn-success">Action</button>
+				  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+				    <span class="caret"></span>
+				    <span class="sr-only">Split button!</span>
+				  </button>
+				  <ul *dropdownMenu class="dropdown-menu" role="menu">
+				    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/admin/vendor_viewedit']">View/Edit</a></li>
+				    <li role="menuitem"><a class="dropdown-item" href="#">Reject</a>
+				    </li>
+				  </ul>
+				</div>
+			</td>
+		  </tr>
+
+		</table>
+
+	</div>
+
+</div>

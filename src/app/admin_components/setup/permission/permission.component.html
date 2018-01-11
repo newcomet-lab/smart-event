@@ -1,0 +1,578 @@
+﻿<div class="container permissionboard">
+	<div class="headers">
+		<h3>Permissions</h3>
+	</div>
+	
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<div class="tabtitle">
+	  		<h4>PERMISSIONS</h4>
+	  	</div>
+	  	<button id="defaultOpen" class="tablinks" (click)="openTabPage($event, 'managevendors')">Manage Vendors</button>
+	  	<button  class="tablinks" (click)="openTabPage($event, 'manageusers')">Manage Users</button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'setting')">Setting</button>
+	</div>
+
+	<div id="managevendors" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Manage Vendors</h4>
+	  <div class="actionbtn_group">
+	    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Add New Vendor</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Delete Vendor</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Acivate Vendor</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Inactivate Vendor</button>
+		</div>
+	  </div>
+
+	  <div class="filterpanel">
+	  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Email:
+				<input type="email" class="filterwidget" />
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Location:
+				<input type="text" class="filterwidget" />
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Name:
+				<input type="text" class="filterwidget" />
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Category:
+				<select class="filterwidget">
+					<option value="">-any-</option>
+					<option value="category1">category1</option>
+					<option value="category2">category2</option>
+					<option value="category3">category3</option>
+				</select>
+			</label>
+		</div>
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 20px;">
+			<button class="savebtn">Search</button>
+		</div>
+	  </div>
+
+	  <div class="paginationboard">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 60px; padding: 0;">
+			<span style="color: gray;">15 records found</span>
+		</div>
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="margin-top: 30px;">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<select class="actions">
+					<option value="20">20</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="10">15</option>
+				</select>
+				<span style="color: gray;">per page</span>
+			</div>
+
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="margin-top: -20px; text-align: right;">
+				<span class="btn pager"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+				<input class="numfield" type="number" />
+				<span style="margin-left: 20px; font-size: 17px;">of 3</span>
+				<span class="btn pager"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+			</div>
+
+		</div>
+	  </div>
+
+	  <div class="filtered_results">
+	  	 <table>
+	  	 	<tr>
+	  	 		<th style="width: 5%;">No</th>
+	  	 		<th style="width: 10%;">Name</th>
+	  	 		<th style="width: 15%;">Email</th>
+	  	 		<th style="width: 10%;">Location</th>
+	  	 		<th style="width: 10%;">Status</th>
+	  	 		<th style="width: 10%;">Actions</th>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td>USA</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="active_span"><i style="font-weight: 700;" class="fa fa-chevron-circle-down" aria-hidden="true">&nbsp;&nbsp;Active</i></span>
+	  	 		</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'vendor_view_editF0')" >View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td>USA</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="inactive_span"><i style="font-weight: 700;" class="fa fa-window-close" aria-hidden="true">&nbsp;&nbsp;Inactive</i></span>
+	  	 		</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'vendor_view_editF0')">View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td>USA</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="deactive_span"><i style="font-weight: 700;" class="fa fa-yelp" aria-hidden="true">&nbsp;&nbsp;Suspend</i></span>
+	  	 		</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'vendor_view_editF0')">View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+
+
+	  	 </table>
+	  </div>
+	  
+	</div>
+
+
+	<div id="vendor_view_edit" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		<h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Edit Vendors Permission</h4>
+		<div class="vendor_brief_info">
+			<h3>Vendor Information & Current Status</h3>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 30px;">
+				<img src="/assets/images/vendor1.jpg" class="img-reponsive vendor_logo" />
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="margin-top: 120px;">
+				<label style="font-size: 17px;">Current Permission : </label>
+				<span class="active_span"><i style="font-weight: 700;" class="fa fa-chevron-circle-down" aria-hidden="true">&nbsp;&nbsp;Active</i></span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px; padding: 0px 100px;">
+				<label style="font-size: 17px;">First Name : </label>
+				<span style="font-size: 17px;">Jessica</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px; padding: 0px 100px;">
+				<label style="font-size: 17px;">Last Name : </label>
+				<span style="font-size: 17px;">Samowalen</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Date : </label>
+				<span style="font-size: 17px;">02/04/2017</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Gender : </label>
+				<span style="font-size: 17px;">Women</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Username : </label>
+				<span style="font-size: 17px;">jessicasamo432</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Email : </label>
+				<span style="font-size: 17px;">jessicasamo432@yandex.com</span>
+			</div>
+		</div>
+
+		<div class="will_change">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<h4>Will you change the Permission?</h4>
+			</div>
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+				<select class="permissionlist">
+					<option value="">-Select Permission-</option>
+					<option value="Active">Active</option>
+					<option value="InActive">InActive</option>
+					<option value="Suspend">Suspend</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="permission_subbtns">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin-top: 50px;"></div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 50px;">
+				<button class="tablinks btn submiters" (click)="openTabPage($event, 'managevendorsF0')"> Back </button>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 50px;">
+				<button class="tablinks btn submiters" (click)="saveVendorPermission(1 , null, '')"> Save </button>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 50px;">
+				<button style="width: 200px;" class="tablinks btn submiters" (click)="saveVendorPermission(2 , $event, 'managevendorsF0')"> Save & Continue </button>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<div id="manageusers" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Manage Users</h4>
+	  <div class="actionbtn_group">
+	    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Add New User</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Delete User</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Acivate User</button>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="text-align: center;">
+			<button class="btn normalbtn">Inactivate User</button>
+		</div>
+	  </div>
+
+	  <div class="filterpanel" style="height: 110px;">
+	  	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Email:
+				<input type="email" class="filterwidget" />
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Name:
+				<input type="text" class="filterwidget" />
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+			<label>
+				Category:
+				<select class="filterwidget">
+					<option value="">-any-</option>
+					<option value="category1">category1</option>
+					<option value="category2">category2</option>
+					<option value="category3">category3</option>
+				</select>
+			</label>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 20px;">
+			<button class="savebtn">Search</button>
+		</div>
+	  </div>
+
+	  <div class="paginationboard">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 60px; padding: 0;">
+			<span style="color: gray;">15 records found</span>
+		</div>
+		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="margin-top: 30px;">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+				<select class="actions">
+					<option value="20">20</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="10">15</option>
+				</select>
+				<span style="color: gray;">per page</span>
+			</div>
+
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7" style="margin-top: -20px; text-align: right;">
+				<span class="btn pager"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+				<input class="numfield" type="number" />
+				<span style="margin-left: 20px; font-size: 17px;">of 3</span>
+				<span class="btn pager"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+			</div>
+
+		</div>
+	  </div>
+
+	  <div class="filtered_results">
+	  	 <table>
+	  	 	<tr>
+	  	 		<th style="width: 5%;">No</th>
+	  	 		<th style="width: 10%;">Name</th>
+	  	 		<th style="width: 15%;">Email</th>
+	  	 		<th style="width: 10%;">Status</th>
+	  	 		<th style="width: 5%;">Role</th>
+	  	 		<th style="width: 10%;">Actions</th>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="active_span"><i style="font-weight: 700;" class="fa fa-chevron-circle-down" aria-hidden="true">&nbsp;&nbsp;Active</i></span>
+	  	 		</td>
+	  	 		<td>Super Admin</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'user_view_editF0')">View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="inactive_span"><i style="font-weight: 700;" class="fa fa-window-close" aria-hidden="true">&nbsp;&nbsp;Inactive</i></span>
+	  	 		</td>
+	  	 		<td>Admin</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'user_view_editF0')">View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+	  	 	<tr>
+	  	 		<td>1</td>
+	  	 		<td>James herald</td>
+	  	 		<td>jhmun216@gmail.com</td>
+	  	 		<td style="text-align: center;">
+	  	 			<span class="deactive_span"><i style="font-weight: 700;" class="fa fa-yelp" aria-hidden="true">&nbsp;&nbsp;Suspended</i></span>
+	  	 		</td>
+	  	 		<td>User</td>
+	  	 		<td>
+	  	 			<div class="btn-group" dropdown>
+					  <button type="button" class="btn btn-success"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;&nbsp;Action</button>
+					  <button type="button" dropdownToggle class="btn btn-success dropdown-toggle dropdown-toggle-split">
+					    <span class="caret"></span>
+					    <span class="sr-only">Split button!</span>
+					  </button>
+					  <ul *dropdownMenu class="dropdown-menu" role="menu">
+					    <li role="menuitem"><a class="dropdown-item" (click)="openTabPage($event, 'user_view_editF0')">View/Edit</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Activate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Inactivate</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Remove</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Suspend</a>
+					    </li>
+					    <li role="menuitem"><a class="dropdown-item" href="#">Reactivate</a>
+					    </li>
+					  </ul>
+					</div>
+	  	 		</td>
+	  	 	</tr>
+
+
+	  	 </table>
+	  </div>
+
+	</div>
+
+
+	<div id="user_view_edit" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+		<h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Edit User Permission</h4>
+		<div class="user_brief_info">
+			<h3>User Information & Current Status</h3>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 30px;">
+				<img src="/assets/images/vendor1.jpg" class="img-reponsive vendor_logo" />
+			</div>
+			<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style="margin-top: 120px;">
+				<label style="font-size: 17px;">Current Permission : </label>
+				<span class="active_span"><i style="font-weight: 700;" class="fa fa-chevron-circle-down" aria-hidden="true">&nbsp;&nbsp;Active</i></span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px; padding: 0px 100px;">
+				<label style="font-size: 17px;">First Name : </label>
+				<span style="font-size: 17px;">Jessica</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px; padding: 0px 100px;">
+				<label style="font-size: 17px;">Last Name : </label>
+				<span style="font-size: 17px;">Samowalen</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Date : </label>
+				<span style="font-size: 17px;">02/04/2017</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Gender : </label>
+				<span style="font-size: 17px;">Women</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Username : </label>
+				<span style="font-size: 17px;">jessicasamo432</span>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 0px 100px;">
+				<label style="font-size: 17px;">Email : </label>
+				<span style="font-size: 17px;">jessicasamo432@yandex.com</span>
+			</div>
+		</div>
+
+		<div class="will_change">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h4>Will you change the Permission?</h4>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="text-align: right; margin-top: 30px;">
+				<select class="rolelist">
+					<option value="">-Select Role-</option>
+					<option value="Super Admin">Super Admin</option>
+					<option value="Admin">Admin</option>
+					<option value="Basic User">Basic User</option>
+				</select>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="margin-top: 30px;">
+				<select class="permissionlist">
+					<option value="">-Select Permission-</option>
+					<option value="Active">Active</option>
+					<option value="InActive">InActive</option>
+					<option value="Suspend">Suspend</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="permission_subbtns">
+			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin-top: 50px;"></div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 50px;">
+				<button class="tablinks btn submiters" (click)="openTabPage($event, 'manageusersF0')"> Back </button>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top: 50px;">
+				<button class="tablinks btn submiters" (click)="saveUserPermission(1 , null, '')"> Save </button>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-top: 50px;">
+				<button style="width: 200px;" class="tablinks btn submiters" (click)="saveUserPermission(2 , $event, 'manageusersF0')"> Save & Continue </button>
+			</div>
+		</div>
+		
+	</div>
+
+
+	<div id="setting" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Settings</h4>
+	  <h4 style="margin-top: 40px;">These Settings apply to the users and vendor </h4>
+	  <h4>Field Visibility and Permissions</h4>
+
+	  <div class="control-group">
+		<label class="control control--radio">Everyone can view
+			<input type="radio" name="radio" checked="checked" [(ngModel)]="permission_self" value="everyone"/>
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Only Super Users can view
+			<input type="radio" name="radio" [(ngModel)]="permission_self" value="onlysuperuser"/>
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Only Users
+			<input type="radio" name="radio" [(ngModel)]="permission_self" value="onlyuser"/>
+			<div class="control__indicator"></div>
+		</label>
+		<label class="control control--radio">Customer Permission
+			<input type="radio" name="radio" [(ngModel)]="permission_self" value="customer"/>
+			<div class="control__indicator"></div>
+		</label>
+	  </div>
+
+	  <div class="somesetting">
+	  	<table>
+	  		<tr>
+	  			<th>Some Stting pages</th>
+	  			<th>Permission</th>
+	  		</tr>
+	  		<tr>
+	  			<td></td>
+	  			<td></td>
+	  		</tr>
+	  		<tr>
+	  			<td></td>
+	  			<td></td>
+	  		</tr>
+	  	</table>
+	  </div>
+
+	</div>
+
+</div>

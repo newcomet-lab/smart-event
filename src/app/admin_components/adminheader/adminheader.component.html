@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default" style="background-color: white; margin-bottom: 0px; box-shadow: 1px 1px 5px #888888;">
+  <div class="container-fluid">
+    <div class="navbar-header rom-header">
+      <h1>
+        <a class="logo" href="/" style="background: url('assets/images/logo.png') no-repeat center;" >MKG</a>
+      </h1>
+    </div>
+    <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 25px;  margin-left: 30px;">
+      <li class="dropdown">
+        <a [routerLink]="['/admin/dashboard']">Dashboard</a>
+      </li>
+      <li class="dropdown">
+        <a [routerLink]="['/admin/billing']">Billing</a>
+      </li>
+      <li class="dropdown">
+          <a [routerLink]="['/admin/vendor_manage']">Vendors</a>
+      </li>
+      <li class="dropdown">
+          <a href="#">Customers</a>
+      </li>
+      <li class="dropdown">
+        <a [routerLink]="['/admin/permission']">Permission</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav firstheaderright" style="float: right; margin-top: 20px;">
+
+      <li>
+        <a href="#">
+          <span><i class="fa fa-bell-o" aria-hidden="true"></i></span>
+          <span class="badge green" style="font-size: 15px; color: white; margin-top: 20px; margin-right: 10px;">8</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+          <span class="badge yellow" style="font-size: 15px; color: white; margin-top: 20px; margin-right: 10px;">8</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+          <span class="badge red" style="font-size: 15px; color: white; margin-top: 20px; margin-right: 10px;">8</span>
+        </a>
+      </li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <span><img src="assets/images/marktim.png" alt="my-image" class="circular-image" /></span>&nbsp;&nbsp;Tim Mark <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </a>
+          <h4 class="currentdate">{{date | date :'longDate'}}</h4>
+          <ul class="dropdown-menu profileitem" style="border-color: #e0e0e0; border-width: 2px; margin-top: -50px;">
+            <li class="profileitem-body" style="height: 80px; margin-top: -5px;">
+              <div style="float: left;">
+                  <img src="assets/images/marktim.png" alt="my-image" class="mitem-circular-image" />
+              </div>
+              <div style="float: right; padding-top: 16px;" class="namewithtype">
+                    <a href="#" style="color: #cebd35;">Tim Mark</a>
+                    <h6>Super Admin</h6>
+              </div>
+            </li>
+            <li class="profileitem-body" style=" padding-top: 15px; padding-bottom: 35px;" (click)="logout()">
+              <div style="float: left;">
+                  <i style="font-size: 23px; color: #777; margin-left: 23px;" class="fa fa-sign-out" aria-hidden="true"></i>
+              </div>
+              <div style="float: right; margin-top: 1px; margin-right: 40px;" class="signouttitle">
+                  <a href="#" style="margin-right: 157px;" (click)="logout()">SignOut</a>
+              </div>
+            </li>
+          </ul>
+
+      </li>
+    </ul>
+  </div>
+</nav>

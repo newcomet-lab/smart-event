@@ -1,0 +1,152 @@
+.dboard_head{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.didtitle{
+    margin-top: 30px;
+    color: #bda213;
+}
+.dboard_mainbody{
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+    margin-bottom : 100px;
+}
+
+.dipute_list{
+    height: 500px;
+    overflow: auto;
+    border: solid #d4d4d4;
+    margin-top: 30px;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.dipute_history{
+    padding: 30px;
+}
+
+.brieftitle{
+    color: #ad5f5f;
+}
+.briefcontent{
+    float: right;
+    color: #adadad;
+    margin: 0;
+}
+
+.eachbriefbody{
+    height: 50px; 
+    margin-top: 20px;
+}
+
+.statusval{
+    font-size: 15px;
+    color: white;
+    background-color: #79a3c5;
+    padding: 5px;
+    border-radius: 4px;
+}   
+.eachdlist_item{
+    margin-top: 10px;
+}
+
+.dmem_name{
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+.dmem_time{
+    text-align: center;
+    font-size: 13px;
+}
+
+.edl_logo{
+    text-align: center;
+}
+.edl_contents_opposite{
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
+.edl_contents_mine{
+    background-color: #d1f3ff;
+    border-radius: 10px;
+}
+.opposite_logo{
+    width: 80px;
+    border: solid #f3f3f3;
+    border-radius: 100px;
+    display: unset;
+}
+.mine_logo{
+    width: 80px;
+    border: solid #d2f3fe;
+    border-radius: 100px;
+    display: unset;
+}
+
+.typboard_pan{
+    padding: 0;
+    margin-top: 30px;
+}
+.typboard_btngroup{
+    padding: 0;
+    margin-top: 30px;
+}
+.typeboard{
+    width: 100%;
+    height: 100px;
+    border: solid #d4d4d4;
+}
+
+
+.typboard_btngroup{
+    text-align: center;
+}
+.dsubmit_btn{
+    color: white;
+    background-color: #e5cd32;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.dsubmit_btn:hover{
+    background-color: #ceb830;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+.help_btn{
+    color: white;
+    background-color: #608eef;
+    width: 200px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #608eef;
+    border-radius: 1px;
+    margin-top: 17px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.help_btn:hover{
+    background-color: #5881d6;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}
+
+.solved_btn{
+    color: white;
+    background-color: #30b3ce;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #30b3ce;
+    border-radius: 1px;
+    margin-top: 17px;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+.solved_btn:hover{
+    background-color: #2a9ab1;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+}

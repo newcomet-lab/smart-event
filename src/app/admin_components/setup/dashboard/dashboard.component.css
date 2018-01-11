@@ -1,0 +1,211 @@
+.dboard{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+	text-align: center;
+}
+
+.boards{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.up{
+	color: #0cc800;
+}
+
+.down{
+	color: #c84c00;
+}
+
+.sale_by_region{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+}
+
+.visitor_by_region{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+	margin-top: 30px;
+	margin-top: 30px;
+}
+
+#vector-map {
+    height: 440px;
+    width: 100%;
+    display: block;
+    margin-top: 40px;
+}
+
+.visitor_by_region nav ul{height:400px; width:100%; margin-top: 20px; list-style-type: none;}
+.visitor_by_region nav ul{overflow:hidden; overflow-y:scroll;}
+.visitor_by_region nav ul li
+{
+	font-size: 20px;
+    border-top: solid;
+    border-width: 1px;
+    border-color: #e0e0e0;
+    padding: 6px;
+    height: 50px;
+}
+
+.chartpanels{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.qaction_vendor{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.circular_img{
+    border-radius: 200px;
+}
+
+.namer{
+	font-size: 17px;
+}
+
+.namer_panel{
+	padding: 0;
+    margin-top: 10px;
+}
+
+.pagination_btns{
+	height: 50px;
+	margin-top: 10px;
+}
+
+.quickactions{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+.recent_activities{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+}
+
+.accepted_status{
+	background-color: #5bb85b;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.rejected_status{
+	background-color: #da524f;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.filter_panels{
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.fbyname{
+	height: 35px;
+    font-size: 16px;
+}
+
+.activity_feeds{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.followbody{
+	height: 80px;
+}
+
+.ssize{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.facebook_feeds{
+
+	color: #4c4ce4e8;
+}
+
+.twitter_feeds{
+	
+	color: #4cbae4e8;
+}
+
+.social_feeds{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+	height: 250px;
+}
+
+.reviews_box{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+}
+
+.review_cate{
+	height: 35px;
+    font-size: 16px;
+}
+
+.dispute_box{
+	background-color: white;
+	box-shadow: 0 1px 6px rgba(57,73,76,.35);
+	padding: 20px;
+}
+
+.dispute_status{
+	font-size: 16px;
+}
+
+.inprogress_status{
+	background-color: #5bb85b;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.open_status{
+	background-color: #5bb85b;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.solved_status{
+	background-color: #5ac1de;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.review_disputes{
+	margin-top: 30px;
+	margin-bottom: 50px;
+}

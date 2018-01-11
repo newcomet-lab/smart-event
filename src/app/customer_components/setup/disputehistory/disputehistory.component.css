@@ -1,0 +1,21 @@
+.eachhistory{
+    border: solid 1px #d2d2d2;
+}
+th{
+    padding: 10px;
+}
+.eachhistory td{
+    padding: 10px;
+}
+
+.job_link{
+    cursor: pointer;
+    color: #ca8400;
+}
+
+.openstatus{
+    background-color: #79a3c5;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+}

@@ -133,7 +133,7 @@
 				    		  <ul *dropdownMenu class="dropdown-menu" role="menu">
 								    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/makepayment']">Make a Payment</a></li>
 								    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/customer/endcontract']">End Contract</a></li>
-								    <li role="menuitem"><a class="dropdown-item" href="#">Dispute</a></li>
+								    <li role="menuitem"><a class="dropdown-item" (click)="openModal('dispute_modal')">Dispute</a></li>
 							  </ul>
 				    	</div>
 				    </td>
@@ -144,3 +144,68 @@
 		</div>	
 	</div>
 </div>
+
+<modal id="dispute_modal">
+	    <div class="modal">
+	        <div class="container modal-body">
+	        	
+	        	<div class="modalheader">
+		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		            	<h2>Dispute</h2>
+		            </div>
+		            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+		            	<a class="closebtn" (click)="closeModal('dispute_modal');"><i class="fa fa-times" aria-hidden="true"></i></a>
+		            </div>
+	            </div>
+	            <div class="djtitle">
+	            	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+	            		<h3 style="color: #9c8a16; font-weight: 700;">Need Wedding with Fireworks and some Cake&Flower at San Mario</h3>
+	            	</div>
+	            	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="color: #a76565; text-align: right;">
+	            		<h4>Total Budget : $500</h4>
+	            		<h4>Paid : $200</h4>
+	            	</div>
+	            </div>
+
+	            <div class="dmainbody">
+	            	<form name="form" (ngSubmit)="disputeform.form.valid && gotoDispute()" #disputeform="ngForm" novalidate>
+
+		            	<div class="form-group eachform" [ngClass]="{ 'has-error': disputeform.submitted && !reason.valid }">
+			            	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><h4 class="formlabel">Reason</h4></div>
+			            	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			            		<select class="form-control select_wid" name="reason" [(ngModel)]="disputeform.reason" #reason="ngModel" required >
+			            			<option value="">--Select Reason--</option>
+			            			<option value="aa">A</option>
+			            			<option value="bb">B</option>
+			            			<option value="cc">C</option>
+			            			<option value="dd">D</option>
+			            		</select>
+			            		<div *ngIf="disputeform.submitted && !reason.valid" class="help-block">Reason is required</div>
+			            	</div>
+			            </div>
+			            <div class="form-group eachform" [ngClass]="{ 'has-error': disputeform.submitted && !refundmoney.valid }" style="margin-top: 30px;">
+			            	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><h4 class="formlabel">Refund Request Money</h4></div>
+			            	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			            		<input type="number" class="form-control select_wid" name="refundmoney" [(ngModel)]="disputeform.refundmoney" #refundmoney="ngModel" required />
+			            		<div *ngIf="disputeform.submitted && !refundmoney.valid" class="help-block">Refund money is required</div>
+			            	</div>
+			            </div>
+			            <div class="form-group eachform" [ngClass]="{ 'has-error': disputeform.submitted && !dcontent.valid }" style="margin-top: 30px;">
+			            	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"><h4 class="formlabel">Content </h4></div>
+			            	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+			            		<textarea type="number" class="form-control dtxtarea_wid" name="dcontent" [(ngModel)]="disputeform.dcontent" #dcontent="ngModel" required >
+			            		</textarea>
+			            		<div *ngIf="disputeform.submitted && !dcontent.valid" class="help-block">Content is required</div>
+			            	</div>
+			            </div>
+			            <div class="form-group" style="text-align: right;">
+				  			<button class="btn disputesave">Submit</button>
+				  		</div>
+
+			        </form>
+	            </div>
+
+	        </div>
+	    </div>
+	<div class="modal-background"></div>
+</modal>

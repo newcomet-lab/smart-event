@@ -1,0 +1,213 @@
+﻿<div class="container billingdash">
+	<label>
+	    Date Range : 
+		<input class="form-control daterangerer" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+	</label>
+</div>
+
+<div class="container preview">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		<div class="minibod">
+			<div style="height: 50px;">
+				<i style="float: left; font-size: 50px; color: #248ad2;" class="fa fa-university" aria-hidden="true"></i>
+				<h3 style="float: right;">$1,000,000</h3>
+			</div>
+			<div style="height: 50px; text-align: right;">
+				<h2 style="color: #2589d3; font-weight: 700;">Paid</h2>
+			</div>
+			<div style="height: 50px;">
+				<h4 style="float: left;">View Report</h4>
+				<a href="#" style="float: right;">
+					<i style="font-size: 25px; color: #2589d3; margin-top: 5px;" class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		<div class="minibod">
+			<div style="height: 50px;">
+				<i style="float: left; font-size: 50px; color: #5fd224;" class="fa fa-area-chart" aria-hidden="true"></i>
+				<h3 style="float: right;">$500,000</h3>
+			</div>
+			<div style="height: 50px; text-align: right;">
+				<h2 style="color: #5fd224; font-weight: 700;">Due</h2>
+			</div>
+			<div style="height: 50px;">
+				<h4 style="float: left;">View Report</h4>
+				<a href="#" style="float: right;">
+					<i style="font-size: 25px; color: #5fd224; margin-top: 5px;" class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		<div class="minibod">
+			<div style="height: 50px;">
+				<i style="float: left; font-size: 50px; color: #d24c24;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				<h3 style="float: right;">$0.00</h3>
+			</div>
+			<div style="height: 50px; text-align: right;">
+				<h2 style="color: #d24c24; font-weight: 700;">Refunds</h2>
+			</div>
+			<div style="height: 50px;">
+				<h4 style="float: left;">View Report</h4>
+				<a href="#" style="float: right;">
+					<i style="font-size: 25px; color: #d24c24; margin-top: 5px;" class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="container income_invoices">
+	<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+		<div class="invoices">
+			<h3 class="eachheaders" style="width: 120px;">Invoices</h3>
+			<table style="margin-top: 30px;">
+				<tr>
+					<th>Date</th>
+					<th>Issues</th>
+					<th>Pending</th>
+				</tr>
+				<tr>
+					<td>
+						02/04/17
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+				</tr>
+				<tr>
+					<td>
+						02/04/17
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+				</tr>
+				<tr>
+					<td>
+						02/04/17
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+					<td>
+						lorem ipsum lorema lea
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+		<div class="topvendorincome">
+			<h3 class="eachheaders" style="width: 320px;">Top Vendors by Income</h3>
+			<table style="margin-top: 30px;">
+				<tr>
+					<th>Name</th>
+					<th>Invoice Paid</th>
+					<th>Date</th>
+				</tr>
+				<tr>
+					<td>
+						John favour
+					</td>
+					<td>
+						$234
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr>
+				<tr>
+					<td>
+						John favour
+					</td>
+					<td>
+						$234
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr><tr>
+					<td>
+						John favour
+					</td>
+					<td>
+						$234
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+<div class="container others">
+	<div class="manage_subscription">
+		<h3 class="eachheaders" style="width: 260px;">Manage Subscription</h3>
+		<table style="margin-top: 30px;">
+				<tr>
+					<th>Vendor Name</th>
+					<th>Status</th>
+					<th>Subscription Paid</th>
+					<th>Date</th>
+				</tr>
+				<tr>
+					<td>
+						XYZ Company
+					</td>
+					<td>
+						<span class="active_span">Active</span>
+					</td>
+					<td>
+						$2343
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr>
+				<tr>
+					<td>
+						XYZ Company
+					</td>
+					<td>
+						<span class="active_span">Active</span>
+					</td>
+					<td>
+						$2343
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr>
+				<tr>
+					<td>
+						XYZ Company
+					</td>
+					<td>
+						<span class="active_span">Active</span>
+					</td>
+					<td>
+						$2343
+					</td>
+					<td>
+						02/04/17
+					</td>
+				</tr>
+			</table>
+	</div>
+</div>
