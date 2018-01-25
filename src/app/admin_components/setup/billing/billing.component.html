@@ -1,7 +1,16 @@
 ﻿<div class="container billingdash">
-	<label>
+	<label style="float: left;">
 	    Date Range : 
 		<input class="form-control daterangerer" #drp="bsDaterangepicker" bsDaterangepicker [(ngModel)]="bsRangeValue">
+	</label>
+	<label style="float : left; margin-left: 40px;">
+	    Vendor Category : 
+		<select class="form-control daterangerer" [(ngModel)]="mycategory">
+			<option value="">-Choose Category-</option>
+			<option value="1">category 1</option>
+			<option value="2">category 2</option>
+			<option value="3">category 3</option>
+		</select>
 	</label>
 </div>
 
@@ -9,7 +18,7 @@
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 		<div class="minibod">
 			<div style="height: 50px;">
-				<i style="float: left; font-size: 50px; color: #248ad2;" class="fa fa-university" aria-hidden="true"></i>
+				<i style="float: left; font-size: 100px; color: #248ad2;" class="fa fa-university" aria-hidden="true"></i>
 				<h3 style="float: right;">$1,000,000</h3>
 			</div>
 			<div style="height: 50px; text-align: right;">
@@ -27,7 +36,7 @@
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 		<div class="minibod">
 			<div style="height: 50px;">
-				<i style="float: left; font-size: 50px; color: #5fd224;" class="fa fa-area-chart" aria-hidden="true"></i>
+				<i style="float: left; font-size: 100px; color: #5fd224;" class="fa fa-area-chart" aria-hidden="true"></i>
 				<h3 style="float: right;">$500,000</h3>
 			</div>
 			<div style="height: 50px; text-align: right;">
@@ -45,7 +54,7 @@
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 		<div class="minibod">
 			<div style="height: 50px;">
-				<i style="float: left; font-size: 50px; color: #d24c24;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+				<i style="float: left; font-size: 100px; color: #d24c24;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
 				<h3 style="float: right;">$0.00</h3>
 			</div>
 			<div style="height: 50px; text-align: right;">

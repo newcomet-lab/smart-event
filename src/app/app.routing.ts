@@ -15,7 +15,8 @@ import {Vendor_manageComponent} from "./admin_components/setup/vendor_manage/ind
 import {Vendor_vieweditComponent} from "./admin_components/setup/vendor_viewedit/index";
 import {PermissionComponent} from "./admin_components/setup/permission/index";
 import {BillingComponent} from "./admin_components/setup/billing/index";
-
+import {Customer_manageComponent} from "./admin_components/setup/customer_manage/index";
+import {Customer_vieweditComponent} from "./admin_components/setup/customer_viewedit/index";
 
 /*customer part*/
 
@@ -86,7 +87,9 @@ const appRoutes: Routes = [
 	  		{ path: 'vendor_manage', component: Vendor_manageComponent, canActivate: [AuthGuard] },
 	  		{ path: 'vendor_viewedit', component: Vendor_vieweditComponent, canActivate: [AuthGuard] },
 	  		{ path: 'permission', component: PermissionComponent, canActivate: [AuthGuard] },
-	  		{ path: 'billing', component: BillingComponent, canActivate: [AuthGuard] }
+	  		{ path: 'billing', component: BillingComponent, canActivate: [AuthGuard] },
+	  		{ path: 'customer_manage', component: Customer_manageComponent, canActivate: [AuthGuard] },
+	  		{ path: 'customer_viewedit', component: Customer_vieweditComponent, canActivate: [AuthGuard] }
 	]},
 
     {

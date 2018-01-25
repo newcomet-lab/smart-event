@@ -1,5 +1,5 @@
 ﻿<first-navbar></first-navbar>
-<mslider></mslider>
+<mslider id="market_slider"></mslider>
 <div class="container landingbody ">
 	<div class="searchbox">
 		<div class="col-md-3 col-sm-3 col-xs-12 vendordropdown">
@@ -29,7 +29,7 @@
 			</span>
 		</div>
 	</div>
-	<div class="reviews_list">
+	<div id="reviews_list" class="reviews_list">
 		<h1 class="reviews_title">Recently Reviewed Events/Vendors</h1>
 		<div *ngFor="let rwitem of reviewData" class="col-md-4">
 				<reviewcard [contents]="rwitem.contents"
@@ -42,7 +42,7 @@
 		</div>
 	</div>
 </div>
-<div class="how_it_work">
+<div id="how_it_work" class="how_it_work">
 	<h1 class="how_it_work_title">Special Features</h1>
 	<div class="container hiworkbody">
 		<div *ngFor="let hiitem of hiworkData" class="col-md-4">
@@ -53,26 +53,26 @@
 		</div>
 	</div>
 </div>
-<div class="progressing">
+<div id="progressing" class="progressing">
 	<h1 class="progressing_title">How it Works</h1>
 	<div class="container progressingbody">
 		<div class="col-md-3">
-			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<img class="proimage" src="/assets/images/how_it_work/select_event.jpg" alt=""/>
 			<h2 class="protitle">Select Event</h2>
 			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
 		</div>
 		<div class="col-md-3">
-			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<img class="proimage" src="/assets/images/how_it_work/find_vendor_matched.jpg" alt=""/>
 			<h2 class="protitle">Find Vendor Matching Budget</h2>
 			<h4 class="procontents" style="margin-top: 17px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
 		</div>
 		<div class="col-md-3">
-			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<img class="proimage" src="/assets/images/how_it_work/hire_vendor.jpg" alt=""/>
 			<h2 class="protitle">Hire Vendor</h2>
 			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
 		</div>
 		<div class="col-md-3">
-			<img class="proimage" src="/assets/images/se.png" alt=""/>
+			<img class="proimage" src="/assets/images/how_it_work/feedback.jpg" alt=""/>
 			<h2 class="protitle">Give Feedback</h2>
 			<h4 class="procontents" style="margin-top: 50px;">lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor lorem ipsum bong toie ceor</h4>
 		</div>
@@ -106,3 +106,12 @@
 	</div>
 </div>
 <first-footer></first-footer>
+
+<!--Scroll to top-->
+<div class="scroll-to-top" [ngClass]="{'show-scroll': navIsFixed}">
+    <button class="stt_widget" (click)="scrollToTop()">
+        <i class="fa fa-arrow-up" aria-hidden="true" style="font-size: 26px;
+    		color: #c84c00;"></i>
+    </button>
+
+</div>

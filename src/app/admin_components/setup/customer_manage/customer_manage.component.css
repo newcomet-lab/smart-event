@@ -6,12 +6,6 @@
 	margin-bottom: 100px;
 }
 
-.searchbykey{
-	width: 100%;
-	height: 40px;
-	font-size: 17px;
-}
-
 .mainfilter{
     background-color: #e2e2e2;
     padding: 20px; 
@@ -23,23 +17,10 @@
     font-size: 17px;
 }
 
-.dofilter{
-    color: white;
-    background-color: #e5cd32;
-    width: 100%;
-    height: 40px;
-    font-size: 15px;
-    font-weight: 700; 
-    border: #e5cd32;
-    border-radius: 1px;
-    padding: 8px;
-    text-decoration-line: none;
-    box-shadow: 0 1px 6px rgba(57,73,76,.35);
-}
-
-.dofilter:hover{
-    background-color: #c5b12d;
-    box-shadow: 0 1px 15px rgba(57,73,76,.35);
+.searchbykey{
+	width: 100%;
+	height: 40px;
+	font-size: 17px;
 }
 
 .searchboxes input { text-indent: 32px;}
@@ -103,4 +84,24 @@ tr:nth-child(even) {
     border-radius: 5px;
     background-color: #dcb547;
     font-size: 17px;
+}
+
+
+.dofilter{
+    color: white;
+    background-color: #e5cd32;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 700; 
+    border: #e5cd32;
+    border-radius: 1px;
+    padding: 8px;
+    text-decoration-line: none;
+    box-shadow: 0 1px 6px rgba(57,73,76,.35);
+}
+
+.dofilter:hover{
+    background-color: #c5b12d;
+    box-shadow: 0 1px 15px rgba(57,73,76,.35);
 }

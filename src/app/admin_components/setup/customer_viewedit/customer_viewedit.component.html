@@ -1,0 +1,135 @@
+﻿<div class="container vieweditboard">
+	<div class="actionbtn_group">
+		<button class="btn savebtn">Save Customer</button>
+		<button class="btn normalbtn">Save and Continue Edit</button>
+		<button class="btn normalbtn">Delete</button>
+		<button class="btn normalbtn"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;Back</button>
+	</div>
+	<div class="tab col-lg-3 col-md-3 col-sm-3 col-xs-3">
+		<div class="tabtitle">
+	  		<h4>CUSTOMER INFORMATION</h4>
+	  	</div>
+	  	<button id="defaultOpen" class="tablinks" (click)="openTabPage($event, 'dashboard')">Dashboard</button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'customer_info')">Customer Information</button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'account')">Account</button>
+	  	<button class="tablinks" (click)="openTabPage($event, 'social_vendor')">Social Vendor</button>
+	</div>
+
+	<div id="dashboard" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700;">Customer Commission</h4>
+	  <div style="height: 100px;">
+	  	<h4 style="font-size: 20px; float: left;">Comission : 10% </h4> 
+	  	<button class="btn comissionchange">Change</button>
+	  </div>
+	  <h3 class="bottomborder">Marketplace Dashboard</h3>
+	  <div class="market_dash">
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Total Amount Spent</h4>
+	  		<h4 class="each_md_item_value">$ 945</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">No of times Customer worked with Vendor</h4>
+	  		<h4 class="each_md_item_value">4h : 30m : 22s</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Type of Vendors</h4>
+	  		<h4 class="each_md_item_value">lorem ipsum lorem</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Number of Active Project</h4>
+	  		<h4 class="each_md_item_value">2</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Number of Completed Project</h4>
+	  		<h4 class="each_md_item_value">5</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Number of Pending Project</h4>
+	  		<h4 class="each_md_item_value">1</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Number of Complants Project</h4>
+	  		<h4 class="each_md_item_value">1</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Amount Refunded</h4>
+	  		<h4 class="each_md_item_value">$ 5432</h4>
+	  	</div>
+	  </div>
+	</div>
+
+
+	<div id="customer_info" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">Customer Information</h4>
+
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right; ">
+	  	 	First Name <span style="color: red;">*</span>
+	  	 	<input class="vinfo_widget" type="text" [(ngModel)]="customerinfo.firstname" />
+	  	 </label>
+	  </div>
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right;">
+	  	 	Last Name <span style="color: red;">*</span>
+	  	 	<input class="vinfo_widget" type="text" [(ngModel)]="customerinfo.lastname" />
+	  	 </label>
+	  </div>
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right;">
+	  	 	Email <span style="color: red;">*</span>
+	  	 	<input class="vinfo_widget" type="email" [(ngModel)]="customerinfo.email" />
+	  	 </label>
+	  </div>
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right;">
+	  	 	Address
+	  	 	<input class="vinfo_widget" type="text" [(ngModel)]="customerinfo.address" />
+	  	 </label>
+	  </div>
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right;">
+	  	 	Phone
+	  	 	<input class="vinfo_widget" type="text" [(ngModel)]="customerinfo.phone" />
+	  	 </label>
+	  </div>
+	  <div class="each_info_form">
+	  	 <label style="width: 100%; text-align: right;">
+	  	 	Description
+	  	 	<textarea class="vinfo_widget" style="height: 100px;" [(ngModel)]="customerinfo.description">
+	  	 	</textarea>
+	  	 </label>
+	  </div>
+
+
+	</div>
+	
+
+	<div id="account" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">Account Information</h4>
+
+	  <div class="market_dash">
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Username</h4>
+	  		<h4 class="each_md_item_value">JohnAlexander</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Email</h4>
+	  		<h4 class="each_md_item_value">JohnAlexander23@gmail.com</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Joined At</h4>
+	  		<h4 class="each_md_item_value">2017-02-09 00:55:33</h4>
+	  	</div>
+	  	<div class="each_md_item bottomborder">
+	  		<h4 class="each_md_item_label">Work With Vendor Category : </h4>
+	  		<h4 class="each_md_item_value">Celebration Vendor</h4>
+	  	</div>
+	  </div>
+	  
+	</div>
+
+	<div id="social_vendor" class="tabcontent col-lg-9 col-md-9 col-sm-9 col-xs-9">
+	  <h4 class="bottomborder" style="font-size: 20px; font-weight: 700; margin-bottom: 30px;">Social Vendor</h4>
+	</div>
+
+</div>

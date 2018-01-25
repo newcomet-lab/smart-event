@@ -7,25 +7,21 @@ import { Router } from '@angular/router';
 
 @Component({
     moduleId: module.id.toString(),
-    templateUrl: 'billing.component.html',
-    styleUrls: ['billing.component.css']
+    templateUrl: 'customer_manage.component.html',
+    styleUrls: ['customer_manage.component.css']
 })
 
-export class BillingComponent implements OnInit {
+export class Customer_manageComponent implements OnInit {
 
-	mycategory: String = "";
+
 
     constructor(private router: Router , private userService: UserService , private modalService: ModalService) {
 
     }
 
     ngOnInit() {
-
-    	
         
     }
-
-    
 
     
 }

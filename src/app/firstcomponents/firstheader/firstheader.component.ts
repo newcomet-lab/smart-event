@@ -1,7 +1,11 @@
 // core/static.component.ts
-import { Component } from '@angular/core';
+import { Component, Inject, ViewChild, ElementRef } from '@angular/core';
 import { AlertService, AuthenticationService } from '../../_services/index';
 import { Router } from '@angular/router';
+
+import { DOCUMENT} from '@angular/common';
+import { PageScrollConfig, PageScrollService, PageScrollInstance } from 'ng2-page-scroll';
+ 
 
 @Component({
     selector: 'first-navbar',
@@ -11,7 +15,10 @@ import { Router } from '@angular/router';
 export class FirstheaderComponent{
     isIn = false;   // store state
 
-    constructor(private router: Router , private authService: AuthenticationService) { }
+    @ViewChild('container')
+    private container: ElementRef;
+
+    constructor(private router: Router , private authService: AuthenticationService, private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any) { }
 
     toggleState() { // click handler
         let bool = this.isIn;
@@ -23,6 +30,12 @@ export class FirstheaderComponent{
     	this.authService.logout();
     	this.router.navigate(['/login']);
 
+    }
+
+    gothere(target)
+    {
+        let pageScrollInstance: PageScrollInstance = PageScrollInstance.newInstance({document: this.document, scrollTarget: target, pageScrollSpeed : 3000});
+        this.pageScrollService.start(pageScrollInstance);
     }
 
 }

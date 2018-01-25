@@ -7,8 +7,9 @@
     </div>
     <ul class="nav navbar-nav firstheaderleft" style="float: left; margin-top: 20px;  margin-left: 30px;">
       <li><a [routerLink]="['/']">Home</a></li>
-      <li><a href="#">Vendor Category</a></li>
-      <li><a href="#">How it Works</a></li>
+      <li><a (click)="gothere('#reviews_list')">Recently Reviewed</a></li>
+      <li><a (click)="gothere('#how_it_work')">Special Features</a></li>
+      <li><a (click)="gothere('#progressing')">How it Works</a></li>
     </ul>
     <ul class="nav navbar-nav firstheaderright" style="float: right; margin-top: 20px;">
       <li><a [routerLink]="['/login']"><span style="color: #c19415;"><i class="fa fa-sign-in" aria-hidden="true"></i></span>&nbsp;&nbsp;Sign In</a></li>

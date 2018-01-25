@@ -209,3 +209,10 @@ tr:nth-child(even) {
 	margin-top: 30px;
 	margin-bottom: 50px;
 }
+
+.helpspan{
+	padding: 5px;
+    background: #f55a5a;
+    border-radius: 5px;
+    color: white;
+}

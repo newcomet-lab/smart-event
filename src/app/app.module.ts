@@ -74,6 +74,8 @@ import {Vendor_manageComponent} from './admin_components/setup/vendor_manage/ind
 import {Vendor_vieweditComponent} from './admin_components/setup/vendor_viewedit/index';
 import {PermissionComponent} from './admin_components/setup/permission/index';
 import {BillingComponent} from './admin_components/setup/billing/index';
+import {Customer_manageComponent} from './admin_components/setup/customer_manage/index';
+import {Customer_vieweditComponent} from './admin_components/setup/customer_viewedit/index';
 
 /*Customer part*/
 
@@ -203,6 +205,8 @@ import { ModalService } from './_services/index';
         Vendor_vieweditComponent,
         PermissionComponent,
         BillingComponent,
+        Customer_manageComponent,
+        Customer_vieweditComponent,
 
 
 
